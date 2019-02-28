@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
+import static com.andrewhun.finance.util.NamedConstants.*;
 
 public class SceneSwitcher {
 
@@ -22,16 +23,14 @@ public class SceneSwitcher {
 
     public void showMainWindow() {
 
-        String title = "Desktop Finance";
         String fxmlPath = "/fxml/MainWindow.fxml";
-        showSelectedWindow(fxmlPath, title);
+        showSelectedWindow(fxmlPath, MAIN_WINDOW_TITLE);
     }
 
     public void showWelcomePane() {
 
-        String title = "Welcome to Desktop Finance!";
         String fxmlPath = "/fxml/WelcomePane.fxml";
-        showSelectedWindow(fxmlPath, title);
+        showSelectedWindow(fxmlPath, WELCOME_PANE_TITLE);
     }
 
     private void showSelectedWindow(String fxmlPath, String title) {

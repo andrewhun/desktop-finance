@@ -28,9 +28,31 @@ import java.sql.*;
 import java.util.List;
 import java.util.ArrayList;
 import com.andrewhun.finance.models.User;
-import com.andrewhun.finance.exceptions.UserNotFoundException;
 
-public class UserTableProcedures extends StoredProceduresBaseClass {
+public class UserTableProcedures extends ResultSetProcessor<User> {
+
+    public void createUsersTable() throws SQLException {
+
+        connectToDatabase();
+        statement = connection.createStatement();
+        statement.executeUpdate("DROP TABLE IF EXISTS Users");
+        String queryScript = "CREATE TABLE Users (\n"
+                + "id INTEGER PRIMARY KEY ASC AUTOINCREMENT\n"
+                + "UNIQUE\n"
+                + "NOT NULL\n"
+                + "DEFAULT (1),\n"
+                + "username STRING UNIQUE\n"
+                + "NOT NULL,\n"
+                + "password_hash BLOB NOT NULL,\n"
+                + "balance DECIMAL NOT NULL\n"
+                + "DEFAULT (10000.0),\n"
+                + "is_logged_in BOOLEAN NOT NULL \n"
+                + "DEFAULT (false), \n"
+                + "hash_salt BLOB NOT NULL \n"
+                + ");";
+        statement.executeUpdate(queryScript);
+        disconnectFromDatabase();
+    }
 
     public void addUserToDatabase(User incompleteUserModel) throws SQLException {
 
@@ -60,7 +82,7 @@ public class UserTableProcedures extends StoredProceduresBaseClass {
         disconnectFromDatabase();
     }
 
-    public User getUserById(Integer id) throws SQLException, UserNotFoundException {
+    public User getUserById(Integer id) throws Exception {
 
         connectToDatabase();
         String queryScript = "SELECT * FROM Users WHERE id = ?";
@@ -68,12 +90,12 @@ public class UserTableProcedures extends StoredProceduresBaseClass {
         preparedStatement.setInt(1, id);
         resultSet = preparedStatement.executeQuery();
 
-        User selectedUser = getUser(resultSet);
+        User selectedUser = getSingleEntry(resultSet);
         disconnectFromDatabase();
         return selectedUser;
     }
 
-    public User getUserByUsername(String username) throws SQLException, UserNotFoundException {
+    public User getUserByUsername(String username) throws Exception {
 
         connectToDatabase();
         String queryScript = "SELECT * FROM Users WHERE username = ?";
@@ -81,33 +103,25 @@ public class UserTableProcedures extends StoredProceduresBaseClass {
         preparedStatement.setString(1, username);
         resultSet = preparedStatement.executeQuery();
 
-        User selectedUser = getUser(resultSet);
+        User selectedUser = getSingleEntry(resultSet);
         disconnectFromDatabase();
         return selectedUser;
     }
 
-    public User getLoggedInUser() throws SQLException, UserNotFoundException {
+    public User getLoggedInUser() throws Exception {
 
         connectToDatabase();
         statement = connection.createStatement();
         String queryScript = "SELECT * FROM Users WHERE is_logged_in = true";
         resultSet = statement.executeQuery(queryScript);
 
-        User loggedInUser = getUser(resultSet);
+        User loggedInUser = getSingleEntry(resultSet);
         disconnectFromDatabase();
         return loggedInUser;
     }
 
-    private User getUser(ResultSet resultSet) throws SQLException, UserNotFoundException {
-
-        if (resultSet.next()) {
-
-            return createUserModelFromResultSet(resultSet);
-        }
-        throw new UserNotFoundException("Could not find user");
-    }
-
-    private User createUserModelFromResultSet(ResultSet resultSet) throws SQLException {
+    @Override
+    User createModelFromResultSet(ResultSet resultSet) throws SQLException {
 
         Integer id = resultSet.getInt("id");
         String username = resultSet.getString("username");
@@ -145,5 +159,15 @@ public class UserTableProcedures extends StoredProceduresBaseClass {
         }
         disconnectFromDatabase();
         return usernames;
+    }
+
+    public void deleteUser(String username) throws SQLException {
+
+        connectToDatabase();
+        String queryScript = "DELETE FROM Users WHERE username = ?";
+        preparedStatement = connection.prepareStatement(queryScript);
+        preparedStatement.setString(1, username);
+        preparedStatement.executeUpdate();
+        disconnectFromDatabase();
     }
 }

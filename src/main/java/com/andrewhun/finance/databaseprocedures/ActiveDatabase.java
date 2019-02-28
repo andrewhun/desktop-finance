@@ -3,6 +3,7 @@
 * is used for switching between using the production database and the
 * test database.
  */
+
 package com.andrewhun.finance.databaseprocedures;
 
 public enum ActiveDatabase {PRODUCTION, TEST}

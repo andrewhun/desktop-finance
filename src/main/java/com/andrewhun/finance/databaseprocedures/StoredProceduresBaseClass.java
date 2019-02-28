@@ -12,8 +12,8 @@ public class StoredProceduresBaseClass {
     private final String DATABASE_PATH = System.getProperty("user.dir") + "/src/main/resources/database/";
     private final String URL_STUB = "jdbc:sqlite:" + DATABASE_PATH;
     private String currentDatabaseFile = "desktop_finance_2019.db";
-    private String productionDatabaseUrl = URL_STUB + currentDatabaseFile;
-    private String testDatabaseUrl = URL_STUB + "test_database.db";
+    String productionDatabaseUrl = URL_STUB + currentDatabaseFile;
+    String testDatabaseUrl = URL_STUB + "test_database.db";
 
     Connection connection = null;
     Statement statement = null;

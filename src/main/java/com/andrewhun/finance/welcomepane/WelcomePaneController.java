@@ -8,6 +8,7 @@
 * I chose this implementation to avoid needlessly duplicating the contents of the
 * switchToMainWindow routine.
  */
+
 package com.andrewhun.finance.welcomepane;
 
 import javafx.fxml.FXML;
@@ -17,18 +18,18 @@ import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Tab;
 import com.andrewhun.finance.util.SceneSwitcher;
-import com.andrewhun.finance.databaseprocedures.UserTableProcedures;
+import com.andrewhun.finance.services.UserService;
 
 public class WelcomePaneController {
 
-    @FXML private LoginTabController loginTabController;
-    @FXML private CreateProfileTabController createProfileTabController;
-    @FXML private Tab physicalCreateProfileTab;
+    @FXML private LoginTabPageController loginTabPageController;
+    @FXML private RegisterTabPageController registerTabPageController;
+    @FXML private Tab registerTab;
 
     @FXML private void initialize() {
 
-        loginTabController.injectWelcomePaneController(this);
-        createProfileTabController.injectWelcomePaneController(this);
+        loginTabPageController.injectWelcomePaneController(this);
+        registerTabPageController.injectWelcomePaneController(this);
         limitNumberOfUsers();
     }
 
@@ -61,12 +62,11 @@ public class WelcomePaneController {
 
     private void disableUserCreation() {
 
-        physicalCreateProfileTab.setDisable(true);
+        registerTab.setDisable(true);
     }
 
     private int getNumberOfUsers() throws SQLException {
 
-        UserTableProcedures userTableProcedures = new UserTableProcedures();
-        return userTableProcedures.getListOfUsernames().size();
+        return new UserService().getNumberOfUsers();
     }
 }

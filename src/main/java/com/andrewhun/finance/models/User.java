@@ -38,14 +38,7 @@ public class User {
         this.hashSalt = hashSalt;
     }
 
-    public User(String username, byte[] passwordHash, Double balance, byte[] hashSalt) {
-
-        this.username = username;
-        this.passwordHash = passwordHash;
-        this.balance = balance;
-        this.isLoggedIn = false;
-        this.hashSalt = hashSalt;
-    }
+    public User() {}
 
     public Integer getId() {
 
@@ -95,5 +88,10 @@ public class User {
     public byte[] getHashSalt() {
 
         return hashSalt;
+    }
+
+    public void setHashSalt(byte[] salt) {
+
+        this.hashSalt = salt;
     }
 }
