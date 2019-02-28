@@ -9,11 +9,11 @@
       <TabPane prefHeight="400.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Log In">
-              <fx:include fx:id="loginTab" source="LoginTab.fxml" />
+              <fx:include fx:id="loginTabPage" source="LoginTabPage.fxml" />
           </Tab>
-          <Tab fx:id="physicalCreateProfileTab" text="Create Profile">
+          <Tab fx:id="registerTab" text="Create Profile">
                <content>
-                  <fx:include fx:id="createProfileTab" source="CreateProfileTab.fxml" />
+                  <fx:include fx:id="registerTabPage" source="RegisterTabPage.fxml" />
                </content></Tab>
         </tabs>
       </TabPane>
