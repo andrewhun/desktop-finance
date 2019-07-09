@@ -1,0 +1,8 @@
+language: java
+jdk: openjdk11
+cache:
+  directories:
+    - $home/.m2
+install: true
+script:
+  - mvn clean test

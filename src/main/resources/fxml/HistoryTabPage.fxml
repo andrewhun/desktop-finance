@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="historyTabPage" prefHeight="975.0" prefWidth="536.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.andrewhun.finance.mainwindow.HistoryTabPageController">
+   <children>
+      <Label fx:id="statementEntriesTableError" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="261.0" prefHeight="17.0" prefWidth="382.0" />
+      <TableView fx:id="statementEntriesTable" layoutX="81.0" layoutY="62.0" prefHeight="113.0" prefWidth="374.0">
+        <columns>
+          <TableColumn fx:id="statementEntryIdCol" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="statementEntryTypeCol" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="statementEntryTitleCol" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="statementEntryAmountCol" prefWidth="75.0" text="Amount" />
+            <TableColumn fx:id="statementEntryTimeCol" prefWidth="75.0" text="Time" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="statementEntryType" layoutX="200.0" layoutY="337.0" prefWidth="150.0" />
+      <TextField fx:id="statementEntryTitle" layoutX="200.0" layoutY="380.0" />
+      <TextField fx:id="statementEntryAmount" layoutX="200.0" layoutY="421.0" />
+      <Button fx:id="addStatementEntry" layoutX="234.0" layoutY="539.0" mnemonicParsing="false" onAction="#processFormInput" text="Add entry" />
+      <Label fx:id="addStatementEntryError" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="466.0" prefHeight="38.0" prefWidth="382.0" textAlignment="CENTER" />
+      <Label layoutX="202.0" layoutY="289.0" text="Add statement entry">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="341.0" text="Type:" />
+      <Label layoutX="132.0" layoutY="384.0" text="Title:" />
+      <Label layoutX="122.0" layoutY="425.0" text="Amount:" />
+      <Button fx:id="deleteSelectedStatementEntry" layoutX="210.0" layoutY="202.0" mnemonicParsing="false" onAction="#deleteSelectedStatementEntry" text="Delete selected entry" />
+      <Button fx:id="deleteAllStatementEntries" layoutX="376.0" layoutY="202.0" mnemonicParsing="false" onAction="#deleteAllStatementEntriesForUser" text="Delete all entries" />
+      <Button fx:id="editSelectedStatementEntry" layoutX="43.0" layoutY="202.0" mnemonicParsing="false" onAction="#showEditStatementEntryForm" text="Edit selected entry" />
+      <Label layoutX="219.0" layoutY="20.0" text="Statements">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="15.0" layoutY="564.0" prefHeight="400.0" prefWidth="500.0">
+         <children>
+            <fx:include source="TransactionsTable.fxml" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

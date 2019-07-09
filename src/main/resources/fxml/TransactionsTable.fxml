@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.andrewhun.finance.mainwindow.TransactionsTableController">
+    <TableView fx:id="transactionsTable" layoutX="26.0" layoutY="130.0" prefHeight="141.0" prefWidth="452.0">
+        <columns>
+            <TableColumn fx:id="transactionIdCol" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="transactionTypeCol" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="transactionStockCol" prefWidth="75.0" text="Stock" />
+            <TableColumn fx:id="transactionPriceCol" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="transactionSharesCol" prefWidth="75.0" text="Shares" />
+            <TableColumn fx:id="transactionTimeCol" prefWidth="75.0" text="Time" />
+        </columns>
+    </TableView>
+    <Button fx:id="hideTransactions" layoutX="195.0" layoutY="310.0" mnemonicParsing="false" onAction="#hideTransactionsTable" text="Hide Transactions" />
+    <Button fx:id="showTransactions" layoutX="195.0" layoutY="310.0" mnemonicParsing="false" onAction="#showTransactionsTable" text="Show Transactions" visible="false" />
+    <Label fx:id="transactionsLabel" layoutX="167.0" layoutY="52.0" text="Transaction History">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+</AnchorPane>
