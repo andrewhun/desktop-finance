@@ -7,4 +7,4 @@ cache:
     - $home/.m2
 install: true
 script:
-  - xvfb-run mvn clean test
+  - xvfb-run --server-args="-screen 0 1024x768x24" mvn clean test
