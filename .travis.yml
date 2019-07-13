@@ -1,8 +1,7 @@
 language: java
-include:
-- os: linux
-  dist: trusty
-  jdk: openjdk11
+os: linux
+dist: trusty
+jdk: openjdk11
 services:
   - xvfb
 cache:
