@@ -1,7 +1,10 @@
 language: java
-os: linux
-dist: trusty
-jdk: openjdk11
+matrix:
+  include:
+    # Headed Linux
+    - os: linux
+      dist: trusty
+      jdk: openjdk11
 services:
   - xvfb
 cache:
