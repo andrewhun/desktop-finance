@@ -118,9 +118,6 @@
             <argLine>
               --add-exports javafx.graphics/com.sun.javafx.application=ALL-UNNAMED
             </argLine>
-            <argline>
-              -Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dprism.order=sw -Dprism.text=t2k -Dtestfx.setup.timeout=2500
-            </argline>
           </configuration>
         </plugin>
         <plugin>
