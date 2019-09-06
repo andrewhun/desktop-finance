@@ -8,8 +8,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.StackPane?>
 
-<AnchorPane fx:id="historyTabPage" prefHeight="975.0" prefWidth="536.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.andrewhun.finance.mainwindow.HistoryTabPageController">
+<AnchorPane fx:id="historyTabPage" prefHeight="975.0" prefWidth="536.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" StackPane.alignment="CENTER" fx:controller="com.andrewhun.finance.mainwindow.HistoryTabPageController">
    <children>
       <Label fx:id="statementEntriesTableError" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="261.0" prefHeight="17.0" prefWidth="382.0" />
       <TableView fx:id="statementEntriesTable" layoutX="81.0" layoutY="62.0" prefHeight="113.0" prefWidth="374.0">

@@ -58,7 +58,7 @@ class WindowServiceTest extends DummyApplication {
         WindowService windowService = new WindowService(new Stage());
         FXMLLoader loader = new FXMLLoader(getClass().getResource(NamedConstants.TEST_EDIT_FORM_PATH));
         Parent root = loader.load();
-        windowService.showPopupWindow("Popup window", root);
+        windowService.showWindow("Popup window", root);
     }
 
     @Test void testShowSelectedWindow() {

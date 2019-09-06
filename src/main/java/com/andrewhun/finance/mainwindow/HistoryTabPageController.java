@@ -11,21 +11,19 @@ package com.andrewhun.finance.mainwindow;
 
 import java.util.*;
 import java.net.URL;
+
+import com.andrewhun.finance.models.User;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
-import com.andrewhun.finance.util.*;
 import com.andrewhun.finance.services.*;
-import com.andrewhun.finance.models.User;
 import com.andrewhun.finance.uiaction.PageReloader;
 import com.andrewhun.finance.models.StatementEntry;
 import com.andrewhun.finance.uiaction.UIActionFactory;
 import static com.andrewhun.finance.util.NamedConstants.*;
 import com.andrewhun.finance.forminputprocessor.FormController;
-import com.andrewhun.finance.databaseprocedures.UserTableProcedures;
 import com.andrewhun.finance.forminputprocessor.FormInputProcessorFactory;
-import com.andrewhun.finance.databaseprocedures.TransactionTableProcedures;
 import com.andrewhun.finance.databaseprocedures.StatementEntryTableProcedures;
 import static com.andrewhun.finance.util.ErrorMessages.INVALID_NUMERIC_INPUT_MESSAGE;
 
@@ -36,8 +34,6 @@ public class HistoryTabPageController implements  ModifiableEntriesTableControll
             statementEntryTableProcedures = new StatementEntryTableProcedures();
 
     private NumericInputProcessor processor = new NumericInputProcessor(new AmountInputValidationService());
-
-    private UserTableProcedures userTableProcedures = new UserTableProcedures();
 
     @FXML ChoiceBox<String> statementEntryType;
     @FXML TextField statementEntryTitle;
@@ -99,15 +95,6 @@ public class HistoryTabPageController implements  ModifiableEntriesTableControll
     }
 
     @Override
-    public void carryOutTasksAfterDeletingSelectedEntry(StatementEntry selectedEntry) throws Exception {
-
-        User currentUser = userTableProcedures.findLoggedInUser();
-        Double balance = currentUser.getBalance();
-        balance = BalanceUtil.modifyBalanceWhenStatementEntryIsDeleted(balance, selectedEntry);
-        currentUser.updateBalance(balance);
-    }
-
-    @Override
     public Boolean entryCanBeDeleted(StatementEntry statementEntry) {
 
         return (statementEntry != null && !statementEntry.hasType(BALANCE));
@@ -115,7 +102,10 @@ public class HistoryTabPageController implements  ModifiableEntriesTableControll
 
     public void deleteAllStatementEntriesForUser() throws Exception {
 
-        entriesTableService.deleteAllEntriesForCurrentUser();
+        if (userHasConfirmedDeletingAllEntries()) {
+            StatementEntry.deleteAllEntriesForUser(User.getCurrentUserId());
+            entriesTableService.reloadPage();
+        }
     }
 
     @Override
@@ -137,28 +127,6 @@ public class HistoryTabPageController implements  ModifiableEntriesTableControll
                 "to 10,000.00 USD. Do you wish to proceed?");
 
         return alert;
-    }
-
-    @Override
-    public void carryOutTasksAfterDeletingAllEntries() throws Exception {
-
-        User currentUser = userTableProcedures.findLoggedInUser();
-        currentUser.updateBalance(DEFAULT_BALANCE);
-        createStartingBalanceEntry();
-    }
-
-    private void createStartingBalanceEntry() throws Exception {
-
-        StatementEntry balanceEntry =
-                StatementEntry.createIncompleteEntry(BALANCE, STARTING_BALANCE,
-                        DEFAULT_BALANCE, UserUtil.getCurrentUserId());
-        statementEntryTableProcedures.addEntryToDatabase(balanceEntry);
-        deleteAllTransactionsForUser();
-    }
-
-    private void deleteAllTransactionsForUser() throws Exception {
-
-        new TransactionTableProcedures().deleteAllTransactionsForUser(UserUtil.getCurrentUserId());
     }
 
     public void showEditStatementEntryForm() throws Exception {
@@ -189,8 +157,7 @@ public class HistoryTabPageController implements  ModifiableEntriesTableControll
     public void makeChangesToDatabase(ActionEvent buttonPush) throws Exception {
 
         StatementEntry incompleteEntry = setUpStatementEntry();
-        statementEntryTableProcedures.addEntryToDatabase(incompleteEntry);
-        changeUserBalance(incompleteEntry);
+        incompleteEntry.createDatabaseRecord();
     }
 
     public void reflectChangesOnUserInterface(Stage stage) throws Exception {
@@ -203,15 +170,7 @@ public class HistoryTabPageController implements  ModifiableEntriesTableControll
         String type = statementEntryType.getValue();
         String title = statementEntryTitle.getText();
         Double amount = processor.castToDouble(statementEntryAmount.getText());
-        return StatementEntry.createIncompleteEntry(type, title, amount, UserUtil.getCurrentUserId());
-    }
-
-    private void changeUserBalance(StatementEntry statementEntry) throws Exception {
-
-        User currentUser = userTableProcedures.findLoggedInUser();
-        Double balance = currentUser.getBalance();
-        balance = BalanceUtil.calculateBalanceWhenStatementEntryIsCreated(balance, statementEntry);
-        currentUser.updateBalance(balance);
+        return StatementEntry.createIncompleteEntry(type, title, amount, User.getCurrentUserId());
     }
 
     public void reactToIncorrectInput() {

@@ -4,7 +4,7 @@
  */
 package com.andrewhun.finance.models;
 
-public class TestEntry implements ModifiableEntry {
+public abstract class TestEntry implements ModifiableEntry {
 
     private String test;
 
@@ -22,4 +22,6 @@ public class TestEntry implements ModifiableEntry {
 
         this.test = test;
     }
+
+    public abstract void delete();
 }

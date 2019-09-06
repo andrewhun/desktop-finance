@@ -26,18 +26,10 @@ public interface ModifiableEntriesTableController<T> extends EntriesTableControl
         return entryCanBeEdited(entry);
     }
 
-    default void carryOutTasksAfterDeletingSelectedEntry(T selectedEntry) throws Exception {
-
-        // By default, no actions are taken after deleting a selected entry of a certain type.
-    }
     default Boolean userHasConfirmedDeletingAllEntries() {
 
         // By default, no confirmation process is in place for deleting all entries of a certain type.
         return true;
-    }
-
-    default void carryOutTasksAfterDeletingAllEntries() throws Exception {
-        // By default, no actions will be taken after deleting all entries of a certain type.
     }
 
 

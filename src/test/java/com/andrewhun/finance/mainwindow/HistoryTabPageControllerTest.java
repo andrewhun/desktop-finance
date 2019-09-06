@@ -1,14 +1,14 @@
 package com.andrewhun.finance.mainwindow;
 
 import java.util.List;
+
+import com.andrewhun.finance.models.User;
 import javafx.scene.Node;
 import org.junit.jupiter.api.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.control.ChoiceBox;
 import org.testfx.api.FxRobotException;
-import com.andrewhun.finance.util.UserUtil;
 import com.andrewhun.finance.TestFxBaseClass;
-import com.andrewhun.finance.models.Transaction;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.testfx.api.FxAssert.verifyThat;
 import com.andrewhun.finance.services.TestService;
@@ -18,16 +18,13 @@ import static com.andrewhun.finance.util.ErrorMessages.*;
 import static com.andrewhun.finance.util.NamedConstants.*;
 import static org.testfx.matcher.control.LabeledMatchers.hasText;
 import static org.testfx.matcher.control.TableViewMatchers.hasNumRows;
-import com.andrewhun.finance.databaseprocedures.TransactionTableProcedures;
+
 import com.andrewhun.finance.databaseprocedures.StatementEntryTableProcedures;
 
 class HistoryTabPageControllerTest extends TestFxBaseClass {
 
     private static StatementEntryTableProcedures
             statementEntryTableProcedures = new StatementEntryTableProcedures();
-
-    private static TransactionTableProcedures transactionTableProcedures =
-            new TransactionTableProcedures();
 
     @BeforeAll static void setUp() throws Exception {
 
@@ -36,9 +33,6 @@ class HistoryTabPageControllerTest extends TestFxBaseClass {
         statementEntryTableProcedures.createTable();
         TestService.createStartingBalanceStatementEntry(testUser);
         TestService.createDefaultStatementEntry();
-        transactionTableProcedures.createTable();
-        TestService.createBuyTransactionForUser(1);
-        TestService.createSellTransactionForUser(1);
     }
 
     @BeforeEach
@@ -100,7 +94,7 @@ class HistoryTabPageControllerTest extends TestFxBaseClass {
     @Test void testAddExpenseEntry() throws Exception {
 
         scrollUp();
-        Double originalBalance = UserUtil.getCurrentUserBalance();
+        double originalBalance = User.getCurrentUserBalance();
         addRentEntry();
         Assertions.assertEquals(3, statementEntryTableProcedures.findEntriesForUser(testUser.getId()).size());
         verifyThat(STATEMENT_ENTRIES_TABLE_ID, hasNumRows(3));
@@ -108,12 +102,12 @@ class HistoryTabPageControllerTest extends TestFxBaseClass {
 
         // The new expense entry's amount needs to be deducted from the user's balance
         Assertions.assertEquals(originalBalance - rentEntry.getAmount(),
-                UserUtil.getCurrentUserBalance(), 0.005);
+                User.getCurrentUserBalance(), 0.005);
     }
 
     @Test void testAddIncomeEntry() throws Exception {
 
-        Double originalBalance = UserUtil.getCurrentUserBalance();
+        double originalBalance = User.getCurrentUserBalance();
 
         scrollUp();
         clickOn(STATEMENT_ENTRY_TYPE_ID);
@@ -128,14 +122,14 @@ class HistoryTabPageControllerTest extends TestFxBaseClass {
 
         // The new income entry's amount needs to be added to the user's balance
         Assertions.assertEquals(originalBalance + THREE_HUNDRED,
-                UserUtil.getCurrentUserBalance(), 0.005);
+                User.getCurrentUserBalance(), 0.005);
     }
 
     @Test void testDeleteIncomeEntry() throws Exception {
 
         scrollUp();
         addRentEntry();
-        Double originalBalance = UserUtil.getCurrentUserBalance();
+        double originalBalance = User.getCurrentUserBalance();
         scrollUp();
         clickOn(getNthRowInTableView(STATEMENT_ENTRIES_TABLE_ID, 1));
         clickOn(DELETE_SELECTED_STATEMENT_ENTRY_BUTTON_ID);
@@ -144,21 +138,21 @@ class HistoryTabPageControllerTest extends TestFxBaseClass {
 
         // The deleted income entry's amount needs to be deducted from the user's balance
         Assertions.assertEquals(originalBalance - THREE_HUNDRED,
-                UserUtil.getCurrentUserBalance(), 0.005);
+                User.getCurrentUserBalance(), 0.005);
     }
 
     @Test void testDeleteExpenseEntry() throws Exception {
 
         scrollUp();
         addRentEntry();
-        Double originalBalance = UserUtil.getCurrentUserBalance();
+        double originalBalance = User.getCurrentUserBalance();
         scrollUp();
         clickOn(getNthRowInTableView(STATEMENT_ENTRIES_TABLE_ID, 2));
         clickOn(DELETE_SELECTED_STATEMENT_ENTRY_BUTTON_ID);
 
         //The deleted expense entry's amount needs to be added to the user's balance
         Assertions.assertEquals(originalBalance + FIVE_HUNDRED,
-                UserUtil.getCurrentUserBalance(), 0.005);
+                User.getCurrentUserBalance(), 0.005);
     }
 
     @Test void testTryingToDeleteBalanceEntry() throws Exception {
@@ -210,14 +204,11 @@ class HistoryTabPageControllerTest extends TestFxBaseClass {
         List<StatementEntry> statementEntries = statementEntryTableProcedures.findEntriesForUser(ID);
         Assertions.assertEquals(1, statementEntries.size());
         StatementEntry balanceEntry = statementEntries.get(0);
-        Assertions.assertEquals(DEFAULT_BALANCE, balanceEntry.getAmount());
+        Assertions.assertEquals(FIVE_HUNDRED, balanceEntry.getAmount());
         verifyThat(STATEMENT_ENTRIES_TABLE_ID, hasNumRows(1));
 
-        // The user's balance needs to be reset to the default amount
-        Assertions.assertEquals(DEFAULT_BALANCE, UserUtil.getCurrentUserBalance(), 0.005);
-
-        List<Transaction> transactions = transactionTableProcedures.findEntriesForUser(1);
-        Assertions.assertEquals(0, transactions.size());
+        // The user's balance needs to be reset to the original amount
+        Assertions.assertEquals(FIVE_HUNDRED, User.getCurrentUserBalance(), 0.005);
     }
 
     @Test void testCancelAccountReset() throws Exception {

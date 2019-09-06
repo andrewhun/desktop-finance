@@ -12,13 +12,14 @@ package com.andrewhun.finance.mainwindow;
 
 import java.net.URL;
 import java.util.List;
+
+import com.andrewhun.finance.models.User;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import java.util.ArrayList;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import com.andrewhun.finance.services.*;
-import com.andrewhun.finance.util.UserUtil;
 import com.andrewhun.finance.uiaction.PageReloader;
 import com.andrewhun.finance.models.RecurringEntry;
 import com.andrewhun.finance.uiaction.UIActionFactory;
@@ -107,7 +108,8 @@ public class SummaryTabPageController implements ModifiableEntriesTableControlle
 
     public void deleteAllRecurringEntriesForUser() throws Exception {
 
-        entriesTableService.deleteAllEntriesForCurrentUser();
+        RecurringEntry.deleteAllEntriesForUser(User.getCurrentUserId());
+        entriesTableService.reloadPage();
     }
 
     public void showEditRecurringEntryForm() throws Exception {
@@ -160,7 +162,7 @@ public class SummaryTabPageController implements ModifiableEntriesTableControlle
         Double amount = numericInputProcessor.castToDouble(recurringEntryAmount.getText());
         String frequency = recurringEntryFrequency.getValue();
 
-        return RecurringEntry.createIncompleteEntry(type, title, amount, UserUtil.getCurrentUserId(), frequency);
+        return RecurringEntry.createIncompleteEntry(type, title, amount, User.getCurrentUserId(), frequency);
 
     }
 

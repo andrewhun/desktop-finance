@@ -1,6 +1,6 @@
 package com.andrewhun.finance.forminputprocessor;
 
-import com.andrewhun.finance.forminputprocessor.EditFormController;
+import com.andrewhun.finance.util.NamedConstants;
 
 public class TestEditFormController<T> implements EditFormController<T> {
 

@@ -82,16 +82,15 @@
       <artifactId>sqlite-jdbc</artifactId>
       <version>3.25.2</version>
     </dependency>
-    
+
     <!-- https://mvnrepository.com/artifact/org.testfx/openjfx-monocle -->
     <dependency>
-        <groupId>org.testfx</groupId>
-        <artifactId>openjfx-monocle</artifactId>
-        <version>jdk-11+26</version>
-        <scope>test</scope>
+      <groupId>org.testfx</groupId>
+      <artifactId>openjfx-monocle</artifactId>
+      <version>jdk-11+26</version>
+      <scope>test</scope>
     </dependency>
 
-    
   </dependencies>
 
   <build>
@@ -118,6 +117,7 @@
             <argLine>
               --add-exports javafx.graphics/com.sun.javafx.application=ALL-UNNAMED
             </argLine>
+
           </configuration>
         </plugin>
         <plugin>

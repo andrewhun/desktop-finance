@@ -33,12 +33,6 @@ class TransactionTest {
         assertEquals(NamedConstants.ID, transaction.getId());
     }
 
-    @Test void testSetId() {
-
-        transaction.setId(NamedConstants.SECOND_ID);
-        assertEquals(NamedConstants.SECOND_ID, transaction.getId());
-    }
-
     @Test void testGetUserId() {
 
         assertEquals(NamedConstants.ID, transaction.getUserId());

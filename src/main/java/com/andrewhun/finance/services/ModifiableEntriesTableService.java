@@ -11,19 +11,19 @@ import javafx.fxml.FXMLLoader;
 import com.andrewhun.finance.util.*;
 import com.andrewhun.finance.models.ModifiableEntry;
 import com.andrewhun.finance.forminputprocessor.EditFormController;
+import com.andrewhun.finance.databaseprocedures.EntryTableProcedures;
 import com.andrewhun.finance.mainwindow.ModifiableEntriesTableController;
-import com.andrewhun.finance.databaseprocedures.ModifiableEntryTableProcedures;
 import static com.andrewhun.finance.util.ErrorMessages.NO_ENTRY_SELECTED_MESSAGE;
 
 public class ModifiableEntriesTableService<T extends ModifiableEntry>
        implements EntriesTableService {
 
     private ModifiableEntriesTableController<T> controller;
-    private ModifiableEntryTableProcedures<T> tableProcedures;
+    private EntryTableProcedures<T> tableProcedures;
 
     public ModifiableEntriesTableService
             (ModifiableEntriesTableController<T> controller,
-                                         ModifiableEntryTableProcedures<T> tableProcedures) {
+                                         EntryTableProcedures<T> tableProcedures) {
 
         this.controller = controller;
         this.tableProcedures = tableProcedures;
@@ -49,7 +49,8 @@ public class ModifiableEntriesTableService<T extends ModifiableEntry>
 
             case DELETE:
                 if(controller.entryCanBeDeleted(selectedEntry)) {
-                    deleteSelectedEntry(selectedEntry);
+                    selectedEntry.delete();
+                    reloadPage();
                     return;
                 }
 
@@ -73,8 +74,9 @@ public class ModifiableEntriesTableService<T extends ModifiableEntry>
             return;
         }
 
-        WindowService windowService = new WindowService(new Stage());
-        windowService.showPopupWindow("Edit selected entry", root);
+        Stage stage = (Stage) controller.getTable().getScene().getWindow();
+        WindowService windowService = new WindowService(stage);
+        windowService.showWindow("Edit selected entry", root);
     }
 
     private void passEntryToEditFormController(FXMLLoader loader, T selectedEntry) throws Exception {
@@ -93,23 +95,7 @@ public class ModifiableEntriesTableService<T extends ModifiableEntry>
         }
     }
 
-    private void deleteSelectedEntry(T selectedEntry) throws Exception {
-
-        tableProcedures.deleteEntry(selectedEntry);
-        controller.carryOutTasksAfterDeletingSelectedEntry(selectedEntry);
-        reloadPage();
-    }
-
-    public void deleteAllEntriesForCurrentUser() throws Exception {
-
-        if (controller.userHasConfirmedDeletingAllEntries()) {
-            tableProcedures.deleteAllEntriesForUser(UserUtil.getCurrentUserId());
-            controller.carryOutTasksAfterDeletingAllEntries();
-            reloadPage();
-        }
-    }
-
-    private void reloadPage() throws Exception {
+    public void reloadPage() throws Exception {
 
         Stage stage = (Stage) controller.getTable().getScene().getWindow();
         WindowUtil.reloadPage(stage, controller.getLocation());

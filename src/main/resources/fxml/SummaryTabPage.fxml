@@ -8,6 +8,8 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.StackPane?>
+
 
 <AnchorPane fx:id="summaryTabPage" prefHeight="741.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.andrewhun.finance.mainwindow.SummaryTabPageController">
    <children>

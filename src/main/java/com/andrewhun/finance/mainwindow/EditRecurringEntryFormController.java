@@ -6,7 +6,6 @@
 package com.andrewhun.finance.mainwindow;
 
 import javafx.fxml.FXML;
-import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.ChoiceBox;
@@ -15,7 +14,6 @@ import com.andrewhun.finance.services.*;
 import com.andrewhun.finance.models.RecurringEntry;
 import com.andrewhun.finance.forminputprocessor.EditFormController;
 import com.andrewhun.finance.forminputprocessor.FormInputProcessorFactory;
-import com.andrewhun.finance.databaseprocedures.RecurringEntryTableProcedures;
 
 public class EditRecurringEntryFormController implements EditFormController<RecurringEntry> {
 
@@ -61,9 +59,9 @@ public class EditRecurringEntryFormController implements EditFormController<Recu
         this.originalEntry = entry;
    }
 
-   public void makeChangesToDatabase(RecurringEntry editedEntry) throws SQLException {
+   public void makeChangesToDatabase(RecurringEntry editedEntry) throws Exception {
 
-       new RecurringEntryTableProcedures().editEntry(editedEntry);
+       editedEntry.edit();
    }
 
     public Boolean aChangeWasMade() {

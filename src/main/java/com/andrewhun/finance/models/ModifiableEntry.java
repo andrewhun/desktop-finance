@@ -5,4 +5,7 @@ This file contains the ModifiableEntry interface, which marks the classes which 
 package com.andrewhun.finance.models;
 
 public interface ModifiableEntry {
+
+    void delete() throws Exception;
+
 }

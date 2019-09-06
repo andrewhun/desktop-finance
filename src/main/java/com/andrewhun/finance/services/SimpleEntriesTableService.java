@@ -5,7 +5,7 @@ TableViews (setting up and populating them).
 
 package com.andrewhun.finance.services;
 
-import com.andrewhun.finance.util.UserUtil;
+import com.andrewhun.finance.models.User;
 import com.andrewhun.finance.mainwindow.EntriesTableController;
 import com.andrewhun.finance.databaseprocedures.EntryTableProcedures;
 
@@ -36,6 +36,6 @@ public class SimpleEntriesTableService<T> implements EntriesTableService {
     private void populateTable() throws Exception {
 
         tableViewService.populateTableView(controller.getTable(),
-                tableProcedures.findEntriesForUser(UserUtil.getCurrentUserId()));
+                tableProcedures.findEntriesForUser(User.getCurrentUserId()));
     }
 }

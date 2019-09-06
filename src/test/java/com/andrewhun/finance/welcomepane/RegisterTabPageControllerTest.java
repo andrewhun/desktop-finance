@@ -48,6 +48,12 @@ class RegisterTabPageControllerTest extends TestFxBaseClass {
         verifyThat(REGISTER_ERROR_LABEL_ID, hasText(REQUIRED_FIELD_EMPTY_MESSAGE));
     }
 
+    /*@Test
+    void testAllFieldsLeftEmpty() {
+
+        Assertions.assertTrue(lookup(REGISTER_BUTTON_ID).query().isDisabled());
+    }*/
+
     @Test
     void testOnlyUsernameIsFilled() {
 

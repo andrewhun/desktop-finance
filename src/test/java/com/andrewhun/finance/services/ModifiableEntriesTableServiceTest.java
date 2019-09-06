@@ -16,18 +16,17 @@ import com.andrewhun.finance.models.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.testfx.framework.junit5.ApplicationTest;
+import com.andrewhun.finance.databaseprocedures.EntryTableProcedures;
 import com.andrewhun.finance.mainwindow.ModifiableEntriesTableController;
-import com.andrewhun.finance.databaseprocedures.ModifiableEntryTableProcedures;
 
 public class ModifiableEntriesTableServiceTest extends ApplicationTest {
 
-    private ModifiableEntry entry = new TestEntry("first");
+    private ModifiableEntry entry = createTestEntry("first");
     private TableView<ModifiableEntry> tableView;
     private Button button;
-    private ModifiableEntryTableProcedures<ModifiableEntry> tableProcedures = createTableProcedures();
+    private EntryTableProcedures<ModifiableEntry> tableProcedures = createTableProcedures();
     private ModifiableEntriesTableController<ModifiableEntry> controller = createController();
     private Application application = createApplication();
-
     private List<ModifiableEntry> entries;
     private Label entriesTableError;
     private ModifiableEntriesTableService<ModifiableEntry> service;
@@ -36,7 +35,7 @@ public class ModifiableEntriesTableServiceTest extends ApplicationTest {
 
         entries = new ArrayList<>();
         entries.add(entry);
-        entries.add(new TestEntry("second"));
+        entries.add(createTestEntry("second"));
 
         service = createService();
         service.setUpEntriesTable();
@@ -66,10 +65,9 @@ public class ModifiableEntriesTableServiceTest extends ApplicationTest {
         tableView.getSelectionModel().select(0);
         Stage stage = (Stage) tableView.getScene().getWindow();
         clickOn(GuiElementIds.TEST_BUTTON_ID);
-        Assertions.assertFalse(stage.isFocused());
 
         ObservableList windows = Stage.getWindows();
-        Assertions.assertEquals(2, windows.size());
+        Assertions.assertEquals(1, windows.size());
         Assertions.assertTrue(windows.contains(stage));
 
     }
@@ -87,38 +85,31 @@ public class ModifiableEntriesTableServiceTest extends ApplicationTest {
         Assertions.assertEquals(ErrorMessages.NO_ENTRY_SELECTED_MESSAGE, entriesTableError.getText());
     }
 
-    @Test void testDeleteAllEntriesForCurrentUser() throws Exception {
-
-        service.deleteAllEntriesForCurrentUser();
-        Assertions.assertEquals(0, tableView.getItems().size());
-    }
 
     ModifiableEntriesTableService<ModifiableEntry> createService() {
 
         return new ModifiableEntriesTableService<>(controller, tableProcedures);
     }
 
-    private ModifiableEntryTableProcedures<ModifiableEntry> createTableProcedures() {
+    private EntryTableProcedures<ModifiableEntry> createTableProcedures() {
 
-        return new ModifiableEntryTableProcedures<>() {
-
-            @Override
-            public void deleteEntry(ModifiableEntry entry) {
-
-                entries.remove(entry);
-                tableView.getItems().setAll(entries);
-            }
-
-            @Override
-            public void deleteAllEntriesForUser(Integer userId) {
-
-                entries.clear();
-                tableView.getItems().setAll(entries);
-            }
+        return new EntryTableProcedures<>() {
 
             @Override
             public List<ModifiableEntry> findEntriesForUser(Integer userId){
                 return entries;
+            }
+        };
+    }
+
+    private TestEntry createTestEntry(String test) {
+
+        return new TestEntry(test) {
+            @Override
+            public void delete() {
+
+                entries.remove(this);
+                tableView.getItems().setAll(entries);
             }
         };
     }

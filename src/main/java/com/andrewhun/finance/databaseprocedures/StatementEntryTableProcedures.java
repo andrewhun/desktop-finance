@@ -14,7 +14,7 @@ import com.andrewhun.finance.util.DateUtil;
 import com.andrewhun.finance.models.StatementEntry;
 
 public class StatementEntryTableProcedures extends ResultSetProcessor<StatementEntry>
-implements ModifiableEntryTableProcedures<StatementEntry> {
+implements EntryTableProcedures<StatementEntry> {
 
     public void createTable() throws SQLException {
 
@@ -125,6 +125,6 @@ implements ModifiableEntryTableProcedures<StatementEntry> {
         String timeString = resultSet.getString("time");
         Date time = DateUtil.parseDateFromString(timeString);
 
-        return new StatementEntry(id, type, title, amount, userId, time);
+        return StatementEntry.create(id, type, title, amount, userId, time);
     }
 }

@@ -6,8 +6,11 @@
 package com.andrewhun.finance.services;
 
 import java.sql.SQLException;
+import java.util.List;
+
 import com.andrewhun.finance.models.*;
 import com.andrewhun.finance.databaseprocedures.*;
+
 import static com.andrewhun.finance.util.NamedConstants.*;
 
 public class TestService {
@@ -63,17 +66,28 @@ public class TestService {
         StatementEntry statementEntry =
                 StatementEntry.createIncompleteEntry(INCOME, WORK, THREE_HUNDRED, ID);
 
-        statementEntryTableProcedures.addEntryToDatabase(statementEntry);
-        return statementEntryTableProcedures.findById(ID);
+        //statementEntryTableProcedures.addEntryToDatabase(statementEntry);
+        statementEntry.createDatabaseRecord();
+        List<StatementEntry> entries = statementEntryTableProcedures.findEntriesForUser(ID);
+        for (StatementEntry entry: entries) {
+
+            if (entry.hasType(INCOME)) {
+
+                return entry;
+            }
+        }
+        return null;
     }
 
-    public static void createStartingBalanceStatementEntry(User user) throws SQLException {
+    public static void createStartingBalanceStatementEntry(User user) throws Exception {
 
         StatementEntry balanceEntry =
                 StatementEntry.createIncompleteEntry(BALANCE, STARTING_BALANCE,
                         user.getBalance(), user.getId());
 
-        statementEntryTableProcedures.addEntryToDatabase(balanceEntry);
+        //statementEntryTableProcedures.addEntryToDatabase(balanceEntry);
+        balanceEntry.createDatabaseRecord();
+
     }
 
     public static void createBuyTransactionForUser(Integer userId) throws SQLException {

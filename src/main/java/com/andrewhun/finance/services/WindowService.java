@@ -8,7 +8,6 @@ package com.andrewhun.finance.services;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
-import javafx.stage.Modality;
 import javafx.fxml.FXMLLoader;
 
 public class WindowService {
@@ -23,7 +22,6 @@ public class WindowService {
     public void showSelectedWindow(String fxmlPath, String title) {
 
         try {
-            stage.hide();
             Parent root = getFxmlLoader(fxmlPath).load();
             setUpStage(title, root);
         }
@@ -32,16 +30,17 @@ public class WindowService {
         }
     }
 
-    void showPopupWindow(String title, Parent root){
+    void showWindow(String title, Parent root){
 
-        stage.initModality(Modality.APPLICATION_MODAL);
         setUpStage(title, root);
     }
 
     private void setUpStage(String title, Parent root) {
 
+        stage.hide();
         stage.setTitle(title);
         stage.setScene(new Scene(root));
+        //stage.setFullScreen(true);
         stage.show();
     }
 

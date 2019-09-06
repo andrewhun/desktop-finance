@@ -17,7 +17,10 @@ class ResultSetProcessorTest {
         resultSetProcessor = new ResultSetProcessor<>() {
             @Override
             ModifiableEntry createModelFromResultSet(ResultSet resultSet) {
-                return new ModifiableEntry() {};
+                return new ModifiableEntry() {
+
+                    @Override public void delete() {}
+                };
             }
         };
         testResultSet = new TestResultSet();

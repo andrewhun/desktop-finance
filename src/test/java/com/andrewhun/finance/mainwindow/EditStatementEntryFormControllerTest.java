@@ -1,10 +1,10 @@
 package com.andrewhun.finance.mainwindow;
 
+import com.andrewhun.finance.models.User;
 import org.junit.jupiter.api.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ChoiceBox;
-import com.andrewhun.finance.util.UserUtil;
 import com.andrewhun.finance.TestFxBaseClass;
 import static org.testfx.api.FxAssert.verifyThat;
 import com.andrewhun.finance.services.TestService;
@@ -48,7 +48,7 @@ class EditStatementEntryFormControllerTest extends TestFxBaseClass {
         TestService.createDefaultStatementEntry();
 
         StatementEntry rentEntry = StatementEntry.createIncompleteEntry(EXPENSE, RENT, FIVE_HUNDRED, ID);
-        statementEntryTableProcedures.addEntryToDatabase(rentEntry);
+        rentEntry.createDatabaseRecord();
     }
 
     @Test void testOnlyAmountIsChangeableForBalanceEntries() {
@@ -71,19 +71,19 @@ class EditStatementEntryFormControllerTest extends TestFxBaseClass {
 
     @Test void testChangeBalanceEntryAmount() throws Exception {
 
-        double originalBalance = UserUtil.getCurrentUserBalance();
+        double originalBalance = User.getCurrentUserBalance();
         selectBalanceEntry();
         clickOn(EDIT_STATEMENT_ENTRY_AMOUNT_ID).write(DEFAULT_BALANCE.toString());
         submitForm();
 
         double expectedBalance = originalBalance - FIVE_HUNDRED + DEFAULT_BALANCE;
-        Assertions.assertEquals(expectedBalance, UserUtil.getCurrentUserBalance(), 0.005);
+        Assertions.assertEquals(expectedBalance, User.getCurrentUserBalance(), 0.005);
     }
 
     @Test void testChangeIncomeToExpense() throws Exception {
 
         selectIncomeEntry();
-        Double originalBalance = UserUtil.getCurrentUserBalance();
+        double originalBalance = User.getCurrentUserBalance();
         setExpenseAsType();
 
         ChoiceBox choiceBox = lookup(EDIT_STATEMENT_ENTRY_TYPE_ID).query();
@@ -98,13 +98,13 @@ class EditStatementEntryFormControllerTest extends TestFxBaseClass {
         * An income type statement entry is converted to an expense type one.
         * The income type's amount needs to be deducted from the user's balance, since there is one
         * less income entry in the database. The same amount then needs to be
-        * deducted once more, as now there is an extra expense entry with the same
+        * deducted once more, as now there is an extra expense entry with that
         * amount.
         */
 
         double expectedBalance = originalBalance - (THREE_HUNDRED * 2);
 
-        Assertions.assertEquals(expectedBalance, UserUtil.getCurrentUserBalance(), 0.005);
+        Assertions.assertEquals(expectedBalance, User.getCurrentUserBalance(), 0.005);
     }
 
     @Test void testChangingTitle() throws Exception {
@@ -120,7 +120,7 @@ class EditStatementEntryFormControllerTest extends TestFxBaseClass {
     @Test void testChangeAmountOnIncomeEntry() throws Exception {
 
         selectIncomeEntry();
-        Double originalAmount = UserUtil.getCurrentUserBalance();
+        double originalAmount = User.getCurrentUserBalance();
         set500AsAmount();
         submitForm();
 
@@ -132,7 +132,7 @@ class EditStatementEntryFormControllerTest extends TestFxBaseClass {
         * from the user's balance and the edited amount needs to be added to it.
          */
         double expectedAmount = originalAmount - THREE_HUNDRED + FIVE_HUNDRED;
-        Assertions.assertEquals(expectedAmount, UserUtil.getCurrentUserBalance(), 0.005);
+        Assertions.assertEquals(expectedAmount, User.getCurrentUserBalance(), 0.005);
     }
 
     @Test void testBogusAmount() throws Exception {
@@ -161,7 +161,7 @@ class EditStatementEntryFormControllerTest extends TestFxBaseClass {
 
     @Test void testChangeExpenseToIncome() throws Exception {
 
-        Double originalBalance = UserUtil.getCurrentUserBalance();
+        double originalBalance = User.getCurrentUserBalance();
         selectExpenseEntry();
         clickOn(EDIT_STATEMENT_ENTRY_TYPE_ID);
         type(KeyCode.DOWN);
@@ -175,12 +175,12 @@ class EditStatementEntryFormControllerTest extends TestFxBaseClass {
         * since there is an extra income entry with the same amount.
          */
         double expectedBalance = originalBalance + (FIVE_HUNDRED * 2);
-        Assertions.assertEquals(expectedBalance, UserUtil.getCurrentUserBalance(), 0.005);
+        Assertions.assertEquals(expectedBalance, User.getCurrentUserBalance(), 0.005);
     }
 
     @Test void testChangeAmountOnExpenseEntry() throws Exception {
 
-        Double originalBalance = UserUtil.getCurrentUserBalance();
+        double originalBalance = User.getCurrentUserBalance();
         selectExpenseEntry();
         clickOn(EDIT_STATEMENT_ENTRY_AMOUNT_ID).write(THREE_HUNDRED.toString());
         submitForm();
@@ -190,7 +190,7 @@ class EditStatementEntryFormControllerTest extends TestFxBaseClass {
         * to the user's balance and the edited amount needs to be deducted from it.
          */
         double expectedBalance = originalBalance + FIVE_HUNDRED - THREE_HUNDRED;
-        Assertions.assertEquals(expectedBalance, UserUtil.getCurrentUserBalance(), 0.005);
+        Assertions.assertEquals(expectedBalance, User.getCurrentUserBalance(), 0.005);
     }
 
     private void setExpenseAsType() {

@@ -14,7 +14,7 @@ import com.andrewhun.finance.util.DateUtil;
 import com.andrewhun.finance.models.RecurringEntry;
 
 public class RecurringEntryTableProcedures extends ResultSetProcessor<RecurringEntry>
-implements ModifiableEntryTableProcedures<RecurringEntry> {
+implements EntryTableProcedures<RecurringEntry> {
 
     public void createTable() throws SQLException {
 

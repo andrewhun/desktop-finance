@@ -85,7 +85,6 @@ class EditRecurringEntryFormControllerTest extends TestFxBaseClass {
         submitForm();
 
         verifyThat(EDIT_RECURRING_ENTRY_ERROR_ID, hasText(INVALID_NUMERIC_INPUT_MESSAGE));
-        Assertions.assertFalse(stage.isFocused());
         recurringEntry = recurringEntryTableProcedures.findById(ID);
         Assertions.assertEquals(THREE_HUNDRED, recurringEntry.getAmount());
     }

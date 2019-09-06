@@ -24,18 +24,43 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/App.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/WindowService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="134">
+              <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
               <folding>
-                <element signature="e#0#1172#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/forminputprocessor/TestEditFormController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/forminputprocessor/EditFormInputProcessorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="175" column="13" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -70,57 +95,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/EditFormInputProcessor.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/NewSimpleFormInputProcessorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/NewSimpleFormInputProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/FormInputProcessorFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/PageReloader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/PageChanger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/ChangePageAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/ReloadPageAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/UIAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/UIActionFactory.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/forminputprocessor/EditFormInputProcessorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/databaseprocedures/UserTableProcedures.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/databaseprocedures/EntryTableProcedures.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/models/TransactionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/models/TestEntry.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/databaseprocedures/ResultSetProcessorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/databaseprocedures/ModifiableEntryTableProcedures.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/databaseprocedures/TransactionTableProcedures.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/EditFormController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/EditFormInputProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/FormController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/FormInputProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/FormInputProcessorFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/SimpleFormInputProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/ModifiableEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/ModifiableEntry2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/databaseprocedures/RecurringEntryTableProcedures.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/ModifiableEntriesTableController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/RecurringEntry.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/services/TestService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/util/BalanceUtilTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/BalanceUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/databaseprocedures/StatementEntryTableProcedures.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/BalanceEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/IncomeEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/ExpenseEntry.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/models/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/models/RecurringEntryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/SimpleEntriesTableService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/util/UserUtilTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/UserUtil.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/models/StatementEntryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/mainwindow/EditStatementEntryFormControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/mainwindow/HistoryTabPageControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/SummaryTabPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/StatementEntry.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/welcomepane/RegisterTabPageControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/RegisterTabPage.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/welcomepane/RegisterTabPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/HistoryTabPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/ModifiableEntriesTableService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/mainwindow/EditRecurringEntryFormControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/services/ModifiableEntriesTableServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/EditRecurringEntryFormController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/EditStatementEntryFormController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/HistoryTabPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/ModifiableEntriesTableController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/EntriesTableController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/SummaryTabPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/TransactionsTableController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/ModifiableEntry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/Transaction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/security/PasswordEncryptionService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/EntriesTableService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/ModifiableEntriesTableService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/TableAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/TableViewService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/LoginTabPage.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/EditFormInputProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/SummaryTabPage.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/HistoryTabPage.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/EditRecurringEntryForm.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/EditStatementEntryForm.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/MainWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/WelcomePane.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/WindowService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/SimpleEntriesTableService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/UIAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/PageChanger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/PageReloader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/UIActionFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/ChangePageAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/ReloadPageAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/BalanceUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/DateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/GuiElementIds.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/WindowUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/welcomepane/LoginTabPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/welcomepane/RegisterTabPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/EditFormController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/forminputprocessor/TestEditFormController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/andrewhun/finance/forminputprocessor/EditFormInputProcessorTest.java" />
       </list>
     </option>
   </component>
@@ -141,7 +166,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,6 +206,51 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="finance" type="462c0819:PsiDirectoryNode" />
+              <item name="databaseprocedures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finance" type="462c0819:PsiDirectoryNode" />
+              <item name="forminputprocessor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finance" type="462c0819:PsiDirectoryNode" />
+              <item name="mainwindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finance" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finance" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finance" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -197,13 +266,80 @@
               <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
               <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finance" type="462c0819:PsiDirectoryNode" />
+              <item name="forminputprocessor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finance" type="462c0819:PsiDirectoryNode" />
+              <item name="mainwindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finance" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desktopfinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desktopfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finance" type="462c0819:PsiDirectoryNode" />
+              <item name="welcomepane" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,15 +370,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EditFormInputProcessorTest.testNoChangesWereMade">
-    <configuration name="All in desktopfinance (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="desktopfinance" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.All in desktopfinance">
     <configuration name="All in desktopfinance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="desktopfinance" />
       <option name="PACKAGE_NAME" value="" />
@@ -251,59 +379,71 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditFormInputProcessorTest.testNoChangesWereMade" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SummaryTabPageControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="desktopfinance" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.andrewhun.finance.forminputprocessor.*" />
+          <option name="PATTERN" value="com.andrewhun.finance.mainwindow.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.andrewhun.finance.forminputprocessor" />
-      <option name="MAIN_CLASS_NAME" value="com.andrewhun.finance.forminputprocessor.EditFormInputProcessorTest" />
-      <option name="METHOD_NAME" value="testNoChangesWereMade" />
+      <option name="PACKAGE_NAME" value="com.andrewhun.finance.mainwindow" />
+      <option name="MAIN_CLASS_NAME" value="com.andrewhun.finance.mainwindow.SummaryTabPageControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SummaryTabPageControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="desktopfinance" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:com.andrewhun.finance.mainwindow.SummaryTabPageControllerTest]" />
+      </uniqueIds>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SummaryTabPageControllerTest.testAllFieldsAreEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="desktopfinance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.andrewhun.finance.mainwindow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.andrewhun.finance.mainwindow" />
+      <option name="MAIN_CLASS_NAME" value="com.andrewhun.finance.mainwindow.SummaryTabPageControllerTest" />
+      <option name="METHOD_NAME" value="testAllFieldsAreEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTabPageControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SummaryTabPageControllerTest.testOnlyEntryTypeIsSelected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="desktopfinance" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.andrewhun.finance.welcomepane.*" />
+          <option name="PATTERN" value="com.andrewhun.finance.mainwindow.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.andrewhun.finance.welcomepane" />
-      <option name="MAIN_CLASS_NAME" value="com.andrewhun.finance.welcomepane.LoginTabPageControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegisterTabPageControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="desktopfinance" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.andrewhun.finance.welcomepane.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.andrewhun.finance.welcomepane" />
-      <option name="MAIN_CLASS_NAME" value="com.andrewhun.finance.welcomepane.RegisterTabPageControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.andrewhun.finance.mainwindow" />
+      <option name="MAIN_CLASS_NAME" value="com.andrewhun.finance.mainwindow.SummaryTabPageControllerTest" />
+      <option name="METHOD_NAME" value="testOnlyEntryTypeIsSelected" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EditFormInputProcessorTest.testNoChangesWereMade" />
-        <item itemvalue="JUnit.All in desktopfinance (1)" />
         <item itemvalue="JUnit.All in desktopfinance" />
-        <item itemvalue="JUnit.RegisterTabPageControllerTest" />
-        <item itemvalue="JUnit.LoginTabPageControllerTest" />
+        <item itemvalue="JUnit.SummaryTabPageControllerTest.testAllFieldsAreEmpty" />
+        <item itemvalue="JUnit.SummaryTabPageControllerTest (1)" />
+        <item itemvalue="JUnit.SummaryTabPageControllerTest.testOnlyEntryTypeIsSelected" />
+        <item itemvalue="JUnit.SummaryTabPageControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -318,48 +458,49 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_desktopfinance - 2019.06.13 at 13h 04m 57s.xml">
+    <history-entry file="SummaryTabPageControllerTest_testOnlyEntryTypeIsSelected - 2019.09.02 at 20h 06m 07s.xml">
+      <configuration name="SummaryTabPageControllerTest.testOnlyEntryTypeIsSelected" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SummaryTabPageControllerTest_(1) - 2019.09.02 at 20h 07m 52s.xml">
+      <configuration name="SummaryTabPageControllerTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_desktopfinance - 2019.09.02 at 20h 15m 13s.xml">
       <configuration name="All in desktopfinance" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModifiableEntriesTableServiceTest_testDeleteAllEntriesForCurrentUser - 2019.06.13 at 13h 31m 55s.xml">
-      <configuration name="ModifiableEntriesTableServiceTest.testDeleteAllEntriesForCurrentUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HistoryTabPageControllerTest - 2019.06.13 at 13h 49m 21s.xml">
-      <configuration name="HistoryTabPageControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SummaryTabPageControllerTest - 2019.06.13 at 13h 52m 06s.xml">
-      <configuration name="SummaryTabPageControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LoginTabPageControllerTest - 2019.06.13 at 13h 54m 21s.xml">
-      <configuration name="LoginTabPageControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterTabPageControllerTest - 2019.06.13 at 13h 56m 09s.xml">
-      <configuration name="RegisterTabPageControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_desktopfinance - 2019.06.13 at 14h 05m 38s.xml">
+    <history-entry file="All_in_desktopfinance - 2019.09.02 at 20h 23m 02s.xml">
       <configuration name="All in desktopfinance" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_desktopfinance_(1) - 2019.06.13 at 14h 22m 52s.xml">
-      <configuration name="All in desktopfinance (1)" configurationId="JUnit" />
+    <history-entry file="SummaryTabPageControllerTest_(1) - 2019.09.03 at 20h 03m 32s.xml">
+      <configuration name="SummaryTabPageControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EditFormInputProcessorTest_testNoChangesWereMade - 2019.06.13 at 14h 23m 46s.xml">
-      <configuration name="EditFormInputProcessorTest.testNoChangesWereMade" configurationId="JUnit" />
+    <history-entry file="SummaryTabPageControllerTest_(1) - 2019.09.03 at 20h 07m 40s.xml">
+      <configuration name="SummaryTabPageControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EditFormInputProcessorTest_testNoChangesWereMade - 2019.06.16 at 12h 06m 59s.xml">
-      <configuration name="EditFormInputProcessorTest.testNoChangesWereMade" configurationId="JUnit" />
+    <history-entry file="SummaryTabPageControllerTest_(1) - 2019.09.03 at 20h 07m 56s.xml">
+      <configuration name="SummaryTabPageControllerTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SummaryTabPageControllerTest_testAllFieldsAreEmpty - 2019.09.03 at 20h 08m 30s.xml">
+      <configuration name="SummaryTabPageControllerTest.testAllFieldsAreEmpty" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_desktopfinance - 2019.09.03 at 20h 20m 32s.xml">
+      <configuration name="All in desktopfinance" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_desktopfinance - 2019.09.06 at 20h 06m 02s.xml">
+      <configuration name="All in desktopfinance" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3290469" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29727685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32872504" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.34101382" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.34101382" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -409,80 +550,205 @@
     <SUITE FILE_PATH="coverage/desktopfinance$All_in_desktopfinance.ic" NAME="All in desktopfinance Coverage Results" MODIFIED="1558335400556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/databaseprocedures/StatementEntryTableProcedures.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/RecurringEntry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
           <folding>
-            <element signature="e#0#5105#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/databaseprocedures/ResultSetProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#1143#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/EditFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/FormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#622#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/EditFormInputProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1947#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/FormInputProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/FormInputProcessorFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/BalanceUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/util/BalanceUtilTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/databaseprocedures/StatementEntryTableProceduresTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/databaseprocedures/StatementEntryTableProcedures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/services/TestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
           <folding>
-            <element signature="e#0#407#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/BalanceEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/models/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2074">
+          <caret line="122" column="25" lean-forward="true" selection-start-line="122" selection-start-column="25" selection-end-line="122" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/ExpenseEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/models/RecurringEntryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/SimpleEntriesTableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/models/StatementEntryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2829">
+          <caret line="302" column="30" selection-start-line="302" selection-start-column="30" selection-end-line="302" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/UserUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/util/UserUtilTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/SummaryTabPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/welcomepane/WelcomePaneControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/SimpleFormInputProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+        <state relative-caret-position="102">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/welcomepane/RegisterTabPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="70" column="7" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
           <folding>
-            <element signature="e#0#1881#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/HistoryTabPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/NamedConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/EditStatementEntryFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/services/ModifiableEntriesTableServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-350">
+          <caret line="74" column="15" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/welcomepane/RegisterTabPageControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/welcomepane/LoginTabPageControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/mainwindow/HistoryTabPageControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3247">
+          <caret line="210" column="74" selection-start-line="210" selection-start-column="74" selection-end-line="210" selection-end-column="74" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -490,403 +756,107 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/EditRecurringEntryFormController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#3948#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/EditStatementEntryFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#4125#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/MainWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/HistoryTabPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#8946#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/EntriesTableController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="71" selection-start-line="2" selection-start-column="71" selection-end-line="2" selection-end-column="71" />
+        <state relative-caret-position="1870">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/ModifiableEntriesTableController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/mainwindow/EditRecurringEntryFormControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
+        <state relative-caret-position="68">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/TransactionsTableController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/mainwindow/EditStatementEntryFormControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+        <state relative-caret-position="799">
+          <caret line="60" selection-start-line="59" selection-end-line="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/mainwindow/SummaryTabPageController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/SummaryTabPage.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#6891#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" column="224" selection-start-line="13" selection-start-column="224" selection-end-line="13" selection-end-column="224" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/ModifiableEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="107" selection-start-line="1" selection-start-column="107" selection-end-line="1" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/StatementEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#2166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/RecurringEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#2492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#4034#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/security/PasswordEncryptionService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/EditStatementEntryForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#2603#0" expanded="true" />
-          </folding>
+          <caret line="10" column="252" selection-start-line="10" selection-start-column="252" selection-end-line="10" selection-end-column="252" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/AmountInputValidationService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/EditRecurringEntryForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#746#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="11" column="259" selection-start-line="11" selection-start-column="259" selection-end-line="11" selection-end-column="259" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/BalanceInputValidationService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/HistoryTabPage.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#696#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/ChoiceBoxService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/MainWindow.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#1062#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="544">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/EntryAttribute.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/RegisterTabPage.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#231#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="17" column="99" selection-start-line="17" selection-start-column="99" selection-end-line="17" selection-end-column="99" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/NumericInputProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/LoginTabPage.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#1302#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/NumericInputValidationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#293#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/EntriesTableService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/ModifiableEntriesTableService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="73" selection-start-line="2" selection-start-column="73" selection-end-line="2" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/SimpleEntriesTableService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#1198#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/TableAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="63" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/TableViewService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#1010#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/WindowService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/ChangePageAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="-100">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#470#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/PageChanger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="108" selection-start-line="2" selection-start-column="108" selection-end-line="2" selection-end-column="108" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/TransactionsTable.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/PageReloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="108" selection-start-line="2" selection-start-column="108" selection-end-line="2" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/ReloadPageAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#441#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/UIAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/uiaction/UIActionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="102" selection-start-line="1" selection-start-column="102" selection-end-line="1" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/BalanceUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#491#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/ErrorMessages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#1074#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/GuiElementIds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="73" selection-start-line="1" selection-start-column="73" selection-end-line="1" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/NamedConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#3210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/UserUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#669#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/util/WindowUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#599#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/welcomepane/LoginTabPageController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/WelcomePane.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#2719#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/welcomepane/RegisterTabPageController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/EditFormInputProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="918">
+          <caret line="63" column="83" selection-start-line="63" selection-start-column="83" selection-end-line="63" selection-end-column="83" />
           <folding>
-            <element signature="e#0#4960#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/welcomepane/WelcomePaneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#1606#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -894,14 +864,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="272">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#0#1172#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/ModifiableEntriesTableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/databaseprocedures/EntryTableProcedures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/forminputprocessor/EditFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/mainwindow/SummaryTabPageControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/StatementEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/models/IncomeEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/andrewhun/finance/services/WindowService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/forminputprocessor/TestEditFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/andrewhun/finance/forminputprocessor/EditFormInputProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="175" column="13" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

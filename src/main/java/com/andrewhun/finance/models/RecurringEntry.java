@@ -6,6 +6,8 @@
 
 package com.andrewhun.finance.models;
 
+import com.andrewhun.finance.databaseprocedures.RecurringEntryTableProcedures;
+
 import java.util.Date;
 
 public class RecurringEntry implements ModifiableEntry {
@@ -47,12 +49,23 @@ public class RecurringEntry implements ModifiableEntry {
 
     public RecurringEntry() {}
 
-    public Integer getId() {
-        return id;
+    public static void deleteAllEntriesForUser(Integer userId) throws Exception {
+
+        new RecurringEntryTableProcedures().deleteAllEntriesForUser(userId);
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void delete() throws Exception {
+
+        new RecurringEntryTableProcedures().deleteEntry(this);
+    }
+
+    public void edit() throws Exception {
+
+        new RecurringEntryTableProcedures().editEntry(this);
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getType() {

@@ -7,6 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Tooltip?>
+
+<?language javascript?>
 
 <VBox fx:id="registerTabPage" minHeight="370.0" minWidth="500.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.andrewhun.finance.welcomepane.RegisterTabPageController">
    <children>
@@ -25,7 +28,15 @@
                </font>
             </Label>
             <Label layoutX="50.0" layoutY="237.0" text="Starting Balance:" />
-            <TextField fx:id="startingBalance" layoutX="168.0" layoutY="233.0" />
+             <TextField fx:id="startingBalance" layoutX="168.0" layoutY="233.0"/>
+             <fx:script>
+                 var startingBalanceTip =
+                 new javafx.scene.control.Tooltip('This field is optional. Your starting balance will be set to 10000.00 USD if you leave it empty');
+                javafx.scene.control.Tooltip.install(startingBalance, startingBalanceTip);
+                var passwordTip =
+                new javafx.scene.control.Tooltip('Your password needs to be at least 8 characters long. It should contain at least one uppercase character and a number.');
+                javafx.scene.control.Tooltip.install(registerPassword, passwordTip);
+             </fx:script>
             <Label layoutX="326.0" layoutY="237.0" text="(optional)" />
             <Label fx:id="registerError" alignment="CENTER" layoutX="71.0" layoutY="277.0" prefHeight="25.0" prefWidth="337.0" />
          </children>

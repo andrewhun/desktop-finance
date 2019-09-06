@@ -9,14 +9,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import com.andrewhun.finance.services.*;
-import com.andrewhun.finance.models.User;
-import com.andrewhun.finance.util.BalanceUtil;
 import com.andrewhun.finance.models.StatementEntry;
 import static com.andrewhun.finance.util.NamedConstants.BALANCE;
 import com.andrewhun.finance.forminputprocessor.EditFormController;
-import com.andrewhun.finance.databaseprocedures.UserTableProcedures;
 import com.andrewhun.finance.forminputprocessor.FormInputProcessorFactory;
-import com.andrewhun.finance.databaseprocedures.StatementEntryTableProcedures;
 
 public class EditStatementEntryFormController implements EditFormController<StatementEntry> {
 
@@ -59,16 +55,7 @@ public class EditStatementEntryFormController implements EditFormController<Stat
 
     public void makeChangesToDatabase(StatementEntry editedEntry) throws Exception {
 
-        new StatementEntryTableProcedures().editEntry(editedEntry);
-        updateUserBalance(originalEntry, editedEntry);
-    }
-
-    private void updateUserBalance(StatementEntry originalEntry, StatementEntry editedEntry) throws Exception {
-
-        User currentUser = new UserTableProcedures().findLoggedInUser();
-        Double balance = currentUser.getBalance();
-        balance = BalanceUtil.adjustBalanceWhenStatementEntryIsEdited(balance, originalEntry, editedEntry);
-        currentUser.updateBalance(balance);
+        editedEntry.edit();
     }
 
     public Boolean aChangeWasMade() {
@@ -114,7 +101,7 @@ public class EditStatementEntryFormController implements EditFormController<Stat
 
     public StatementEntry copyOriginalEntry() {
 
-        return new StatementEntry(originalEntry.getId(), originalEntry.getType(), originalEntry.getTitle(),
+        return StatementEntry.create(originalEntry.getId(), originalEntry.getType(), originalEntry.getTitle(),
                 originalEntry.getAmount(), originalEntry.getUserId(), originalEntry.getTime());
     }
 

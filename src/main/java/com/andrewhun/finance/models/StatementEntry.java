@@ -5,25 +5,68 @@
 
 package com.andrewhun.finance.models;
 
+import com.andrewhun.finance.databaseprocedures.StatementEntryTableProcedures;
+import com.andrewhun.finance.databaseprocedures.UserTableProcedures;
 import java.util.Date;
+import java.util.List;
 
-public class StatementEntry implements ModifiableEntry {
+import static com.andrewhun.finance.util.NamedConstants.*;
 
-    private Integer id;
-    private String type;
-    private String title;
-    private Double amount;
-    private Integer userId;
-    private Date time;
+public abstract class StatementEntry implements ModifiableEntry {
 
-    public StatementEntry (Integer id, String type, String title, Double amount, Integer userId, Date time){
+    protected Integer id;
+    protected String type;
+    protected String title;
+    protected Double amount;
+    protected Integer userId;
+    protected Date time;
 
-        this.id = id;
-        this.type = type;
-        this.title = title;
-        this.amount = amount;
-        this.userId = userId;
-        this.time = time;
+    public static StatementEntry create
+            (Integer id, String type, String title, Double amount, Integer userId, Date time) {
+
+        if(type.equals(BALANCE)) {
+
+            return new BalanceEntry(id, title, amount, userId, time);
+        }
+        else if (type.equals(INCOME)) {
+
+            return new IncomeEntry(id, title, amount, userId, time);
+        }
+        else {
+            return new ExpenseEntry(id, title, amount, userId, time);
+        }
+    }
+
+    public static StatementEntry createIncompleteEntry(String type, String title, Double amount, Integer userId) {
+
+        if (type.equals(BALANCE)) {
+            return new BalanceEntry(title, amount, userId);
+        }
+        else if (type.equals(INCOME)) {
+            return new IncomeEntry(title, amount, userId);
+        }
+        else {
+            return new ExpenseEntry(title, amount, userId);
+        }
+    }
+
+    public static void deleteAllEntriesForUser(Integer userId) throws Exception {
+
+        List<StatementEntry> entries = new StatementEntryTableProcedures().findEntriesForUser(userId);
+        for (StatementEntry entry : entries) {
+
+            if (!entry.hasType(BALANCE)) {
+                entry.delete();
+            }
+        }
+    }
+
+    public void createDatabaseRecord() throws Exception {
+
+        new StatementEntryTableProcedures().addEntryToDatabase(this);
+        User user = getUser();
+        Double newBalance = calculateUserBalanceWhenEntryIsCreated(user.getBalance());
+        user.updateBalance(newBalance);
     }
 
     public Boolean hasType(String type) {
@@ -31,29 +74,54 @@ public class StatementEntry implements ModifiableEntry {
         return this.getType().equals(type);
     }
 
-    public static StatementEntry createIncompleteEntry(String type, String title, Double amount, Integer userId) {
+    public void delete() throws Exception {
 
-        return new StatementEntry(type, title, amount, userId);
+        new StatementEntryTableProcedures().deleteEntry(this);
+        User user = getUser();
+        Double newBalance = modifyUserBalanceWhenEntryIsDeleted(user.getBalance());
+        user.updateBalance(newBalance);
     }
 
-    private StatementEntry(String type, String title, Double amount, Integer userId) {
+    public void edit() throws Exception {
 
-        this.type = type;
-        this.title = title;
-        this.amount = amount;
-        this.userId = userId;
+        StatementEntryTableProcedures procedures = new StatementEntryTableProcedures();
+        User user = getUser();
+        StatementEntry originalEntry = procedures.findById(id);
+        StatementEntry editedEntry;
+        if (!this.type.equals(originalEntry.getType())) {
+            editedEntry = StatementEntry.createIncompleteEntry(type, title, amount, userId);
+        }
+        else {
+            editedEntry = this;
+        }
+        Double newBalance = adjustUserBalanceWhenEntryIsEdited(user.getBalance(), originalEntry, editedEntry);
+        user.updateBalance(newBalance);
+
+        procedures.editEntry(this);
     }
 
-    public StatementEntry() {}
+    protected abstract Double calculateUserBalanceWhenEntryIsCreated(Double balance);
+
+    protected Double adjustUserBalanceWhenEntryIsEdited
+
+            (Double balance, StatementEntry originalEntry, StatementEntry editedEntry) {
+
+        balance = originalEntry.modifyUserBalanceWhenEntryIsDeleted(balance);
+        balance = editedEntry.calculateUserBalanceWhenEntryIsCreated(balance);
+        return balance;
+    }
+
+    protected abstract Double modifyUserBalanceWhenEntryIsDeleted(Double balance);
+
+    private User getUser() throws Exception {
+
+        return new UserTableProcedures().findById(userId);
+
+    }
 
     public Integer getId() {
 
         return id;
-    }
-
-    public void setId(Integer newId) {
-
-        id = newId;
     }
 
     public String getType() {

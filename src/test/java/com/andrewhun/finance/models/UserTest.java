@@ -1,8 +1,11 @@
 package com.andrewhun.finance.models;
 
+import com.andrewhun.finance.exceptions.EntryNotFoundException;
 import org.junit.jupiter.api.*;
 import com.andrewhun.finance.services.TestService;
 import static com.andrewhun.finance.util.NamedConstants.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import com.andrewhun.finance.security.PasswordEncryptionService;
 import com.andrewhun.finance.databaseprocedures.UserTableProcedures;
 
@@ -132,5 +135,23 @@ class UserTest {
         testUser.updateBalance(DEFAULT_BALANCE);
         Assertions.assertEquals(DEFAULT_BALANCE, testUser.getBalance());
         Assertions.assertEquals(DEFAULT_BALANCE, userTableProcedures.findByUsername(USERNAME).getBalance());
+    }
+
+    @Test void testGetCurrentUserId() throws Exception {
+
+        testUser.login();
+        Assertions.assertEquals(testUser.getId(), User.getCurrentUserId());
+    }
+
+    @Test void tetGetCurrentUserBalance() throws Exception {
+
+        testUser.login();
+        Assertions.assertEquals(testUser.getBalance(), User.getCurrentUserBalance());
+    }
+
+    @Test void testEntryNotFoundExceptionIsThrown() {
+
+        assertThrows(EntryNotFoundException.class, User :: getCurrentUserId);
+        assertThrows(EntryNotFoundException.class, User :: getCurrentUserBalance);
     }
 }

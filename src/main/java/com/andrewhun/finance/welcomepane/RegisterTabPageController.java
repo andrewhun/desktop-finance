@@ -9,7 +9,11 @@
 package com.andrewhun.finance.welcomepane;
 
 import java.util.List;
+
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import java.sql.SQLException;
 import javafx.event.ActionEvent;
@@ -27,7 +31,6 @@ import com.andrewhun.finance.forminputprocessor.FormController;
 import com.andrewhun.finance.databaseprocedures.UserTableProcedures;
 import com.andrewhun.finance.services.BalanceInputValidationService;
 import com.andrewhun.finance.forminputprocessor.FormInputProcessorFactory;
-import com.andrewhun.finance.databaseprocedures.StatementEntryTableProcedures;
 
 public class RegisterTabPageController implements FormController, PageChanger {
 
@@ -36,10 +39,36 @@ public class RegisterTabPageController implements FormController, PageChanger {
     @FXML private PasswordField registerConfirmation;
     @FXML private TextField startingBalance;
     @FXML private Label registerError;
+    @FXML private Button registerButton;
 
     private UserTableProcedures userTableProcedures = new UserTableProcedures();
     private NumericInputProcessor numericInputProcessor =
             new NumericInputProcessor(new BalanceInputValidationService());
+
+    /*@FXML private void initialize() {
+
+        EventHandler<KeyEvent> commonHandler = new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+
+                System.out.println("Button released: " + event.getText());
+
+                if(registerUsername.getText().isEmpty() ||
+                        registerPassword.getText().isEmpty()||
+                registerConfirmation.getText().isEmpty() ||
+                registerPassword.getText().length() < 8 ||
+                registerConfirmation.getText().length() <8 ||
+                !registerPassword.getText().equals(registerConfirmation.getText())) {
+                    return;
+            }
+                registerButton.setDisable(false);
+        }
+        };
+
+        registerUsername.addEventHandler(KeyEvent.KEY_RELEASED, commonHandler);
+        registerPassword.addEventHandler(KeyEvent.KEY_TYPED, commonHandler);
+        registerConfirmation.addEventHandler(KeyEvent.KEY_TYPED, commonHandler);
+    }*/
 
     public void processFormInput(ActionEvent buttonPush) throws Exception {
 
@@ -101,8 +130,7 @@ public class RegisterTabPageController implements FormController, PageChanger {
 
         StatementEntry balanceEntry = StatementEntry.createIncompleteEntry
                 (BALANCE, STARTING_BALANCE, newUser.getBalance(), newUser.getId());
-
-        new StatementEntryTableProcedures().addEntryToDatabase(balanceEntry);
+        balanceEntry.createDatabaseRecord();
     }
 
     private Double getBalance() {

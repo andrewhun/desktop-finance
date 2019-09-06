@@ -7,13 +7,6 @@
 * implementation). Some credit also goes to the person behind the MVP Java
 * YouTube channel. I saw a similar implementation in one of his videos, and
 * it reminded me that "it can be done this way, too".
-*
-* The User class is somewhat special. While the rest of these "Model" classes
-* mostly serve as containers for data, this class has functionality attached to it.
-* Namely, you will find the authenticate, login and logout functions below.
-* My reasoning behind this arrangement is that users are special entities in this program.
-* Many other aspects of the program rely on them. Thus, I think it is necessary to add
-* these features to the class.
  */
 
 package com.andrewhun.finance.models;
@@ -25,7 +18,7 @@ import com.andrewhun.finance.databaseprocedures.UserTableProcedures;
 public class User {
 
     private PasswordEncryptionService passwordEncryptionService = new PasswordEncryptionService();
-    private UserTableProcedures userTableProcedures = new UserTableProcedures();
+    private static UserTableProcedures userTableProcedures = new UserTableProcedures();
 
     private Integer id;
     private String username;
@@ -43,6 +36,16 @@ public class User {
         this.balance = balance;
         this.isLoggedIn = isLoggedIn;
         this.hashSalt = hashSalt;
+    }
+
+    public static Integer getCurrentUserId() throws Exception {
+
+        return userTableProcedures.findLoggedInUser().getId();
+    }
+
+    public static Double getCurrentUserBalance() throws Exception {
+
+        return userTableProcedures.findLoggedInUser().getBalance();
     }
 
     public static User createIncompleteEntry(String username, String password, Double balance) throws Exception {

@@ -5,6 +5,8 @@ forms that allow users to edit existing database records.
 
 package com.andrewhun.finance.forminputprocessor;
 
+import com.andrewhun.finance.services.WindowService;
+import com.andrewhun.finance.util.NamedConstants;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import com.andrewhun.finance.util.WindowUtil;
@@ -36,7 +38,7 @@ public class EditFormInputProcessor<T> implements FormInputProcessor {
             controller.editUniqueFields(editedEntry);
             controller.makeChangesToDatabase(editedEntry);
         }
-        closeWindow(buttonPush);
+        returnToMainWindow(buttonPush);
     }
 
     private void editCommonFields(T editedEntry) throws NumberFormatException {
@@ -56,10 +58,9 @@ public class EditFormInputProcessor<T> implements FormInputProcessor {
             }
         }
     }
-    private void closeWindow(ActionEvent buttonPush) {
+    private void returnToMainWindow(ActionEvent buttonPush) {
 
         Stage stage = WindowUtil.getStageFromActionEvent(buttonPush);
-        stage.hide();
-        stage.close();
+        new WindowService(stage).showSelectedWindow(NamedConstants.MAIN_WINDOW_PATH, NamedConstants.MAIN_WINDOW_TITLE);
     }
 }

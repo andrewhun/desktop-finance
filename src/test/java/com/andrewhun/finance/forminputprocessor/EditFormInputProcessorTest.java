@@ -7,9 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.testfx.api.FxRobotException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class EditFormInputProcessorTest extends DummyApplication {
 
@@ -59,7 +57,6 @@ public class EditFormInputProcessorTest extends DummyApplication {
         clickOn(GuiElementIds.TEST_BUTTON_ID);
 
         assertValues(NamedConstants.ORIGINAL, NamedConstants.ORIGINAL, NamedConstants.ORIGINAL);
-        assertWindowIsClosed();
     }
 
     @Test void testChangingType() {
@@ -68,7 +65,6 @@ public class EditFormInputProcessorTest extends DummyApplication {
         clickOn(GuiElementIds.TEST_BUTTON_ID);
 
         assertValues(NamedConstants.EDITED, NamedConstants.ORIGINAL, NamedConstants.ORIGINAL);
-        assertWindowIsClosed();
     }
 
     @Test void testChangingTitle() {
@@ -77,7 +73,6 @@ public class EditFormInputProcessorTest extends DummyApplication {
         clickOn(GuiElementIds.TEST_BUTTON_ID);
 
         assertValues(NamedConstants.ORIGINAL, NamedConstants.EDITED, NamedConstants.ORIGINAL);
-        assertWindowIsClosed();
     }
 
     @Test void testNumberFormatException() {
@@ -94,7 +89,6 @@ public class EditFormInputProcessorTest extends DummyApplication {
         clickOn(GuiElementIds.TEST_BUTTON_ID);
 
         assertValues(NamedConstants.ORIGINAL, NamedConstants.ORIGINAL, NamedConstants.EDITED);
-        assertWindowIsClosed();
     }
 
     @Test void testChangingAll() {
@@ -106,7 +100,6 @@ public class EditFormInputProcessorTest extends DummyApplication {
         clickOn(GuiElementIds.TEST_BUTTON_ID);
 
         assertValues(NamedConstants.EDITED, NamedConstants.EDITED, NamedConstants.EDITED);
-        assertWindowIsClosed();
     }
 
     private void assertValues(String typeValue, String titleValue, String amountValue) {
@@ -114,11 +107,6 @@ public class EditFormInputProcessorTest extends DummyApplication {
         assertEquals(typeValue, type);
         assertEquals(titleValue, title);
         assertEquals(amountValue, amount);
-    }
-
-    private void assertWindowIsClosed() {
-
-        assertThrows(FxRobotException.class, () -> clickOn(GuiElementIds.TEST_BUTTON_ID));
     }
 
     private EditFormController<ModifiableEntry> createEditFormController() {
@@ -186,7 +174,6 @@ public class EditFormInputProcessorTest extends DummyApplication {
 
                 errorMessage = message;
             }
-
         };
     }
 }

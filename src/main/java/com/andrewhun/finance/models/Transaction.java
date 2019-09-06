@@ -52,11 +52,6 @@ public class Transaction {
         return id;
     }
 
-    public void setId(Integer id) {
-
-        this.id = id;
-    }
-
     public Integer getUserId() {
 
         return userId;
