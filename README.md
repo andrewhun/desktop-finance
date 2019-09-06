@@ -38,3 +38,19 @@ There are a great many issues I would like to address in the next few days/weeks
 - Controllers will most likely need to be separated from their current functionality. I have not done a lot on the front-end yet, but I will get around to that eventually. This means that the controllers will not be able to handle their current responsibilities without running the risk of becoming too big and complex to maintain. I’m looking forward to that time because it promises to be a challenging problem to solve.
 - I have many problems with my test cases. The main issue is that they take far too long to run. If at all possible, I would like to decrease the number of GUI tests to address this issue. They will also need refactoring. I have done what I could to them in the time I had to spend on them, but the work is far from done. Finally, I have yet to map these classes out with UML.
 - I also have an issue with getting Travis CI to work with some of my tests. The errors indicate that the configuration I use cannot handle popup windows (of which I use two in the application currently). I will need to do some research to find a solution to this problem. This is my top priority for the moment.
+
+# Changelog (06/09/2019)
+
+I'm back with a few more changes again. (It did not take half a year this time!) I do not have anything groundbreaking to be honest, just a few bits and pieces:
+
+- Removed two utility classes by merging their functionality into model object. I ended up creating three subclasses for one of the models though, so the fragmentation situation is pretty much the same...
+- I have changed edit forms to display in the main window instead of popping up a new one. Travis no longer chokes on them due to this (I still have a test failure which does not occur on my desktop, however)
+- I have finally spent some time on the user interface. Unfortunately, I did not make a lot of progress here. I have worked on three things: front-end validation, providing users with information interactively (using tooltips and status bars), and getting the GUI to work with all kinds of window sizes. Out of these, I had a bit of success with the interactive info bit, but other than that I could not get much done. I am determined to get this right, though (I am pretty bad at front-end so it is important to practice).
+
+What's next?
+
+I really wanted to avoid this, but it seems that I will be putting Desktop Finance on the back burner for now. A certain book has brought to my attention the fascinating topics of scripts, code generators and metaprogramming (looking at you, The Pragmatic Programmer). To be honest, multiple other books have mentioned these topics, but this one has provided examples which caught my interest. To put it simply, I cannot get enough of this stuff. I'm obsessed, and I just can't wait to learn more about these things. I have a few ideas as to where to start, such as:
+- Automate some of my own processes (such as deploying changes to GitHub)
+- Creating a small app that allows users to generate Java classes declaratively
+
+I will be preoccupied with learning about these topics for some time. I'm hoping that I will be able to apply my knowledge to the Desktop Finance app as well. I know one thing for sure: I will return to this project as soon as I have satisfied my curiosity.
