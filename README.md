@@ -54,3 +54,7 @@ I really wanted to avoid this, but it seems that I will be putting Desktop Finan
 - Creating a small app that allows users to generate Java classes declaratively
 
 I will be preoccupied with learning about these topics for some time. I'm hoping that I will be able to apply my knowledge to the Desktop Finance app as well. I know one thing for sure: I will return to this project as soon as I have satisfied my curiosity.
+
+# Changelog (19/09/2019)
+
+Great news! The commit automation script I have mentioned in my last update is now up and running. This log was pushed to the repository using it. Of course, I am far from done with the script. I am aiming to create a more generalized version using PowerShell functions as a next step. Once that is done, I will jump on the Java class generator which I wrote about earlier. I'm hoping to return to this project with new insights at the end of my adventures.

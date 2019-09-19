@@ -190,6 +190,7 @@ class HistoryTabPageControllerTest extends TestFxBaseClass {
         catch (FxRobotException e) {
 
             fail("Could not find Cancel button because the confirmation dialog did not show up.");
+
         }
     }
 
