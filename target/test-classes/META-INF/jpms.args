@@ -1,4 +1,0 @@
---patch-module
-desktopfinance=_
---add-reads
-desktopfinance=ALL-UNNAMED
