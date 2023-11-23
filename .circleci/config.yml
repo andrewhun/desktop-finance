@@ -4,7 +4,7 @@ orbs:
 
 jobs:
   package:
-    executor: default
+    executor: maven/default
     steps:
       - run:
           name: Maven Package
