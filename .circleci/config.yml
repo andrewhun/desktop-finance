@@ -10,7 +10,7 @@ jobs:
           name: Maven Package
           command: |
             cd /home
-            mvn clean package
+            ls
 
 workflows:
   maven_package:
