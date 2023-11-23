@@ -9,7 +9,6 @@ jobs:
       - run:
           name: Maven Package
           command: |
-            cd /home/circleci
             ls
 
 workflows:
