@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Maven Package
           command: |
-            cd /
+            cd /home
             mvn clean package
 
 workflows:
