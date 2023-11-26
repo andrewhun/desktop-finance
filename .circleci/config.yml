@@ -16,5 +16,5 @@ workflows:
   maven_test:
     jobs:
       - maven/test:
-          parameters:
-            executor: j21
+          executor:
+            tag: "21.0.0-node"
