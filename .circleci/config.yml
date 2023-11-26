@@ -17,5 +17,5 @@ workflows:
     jobs:
       - maven/test:
           executor:
-            name: default
+            name: maven/default
             tag: "21.0.0-node"
