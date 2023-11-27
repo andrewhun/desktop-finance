@@ -19,3 +19,4 @@ workflows:
           executor:
             name: maven/default
             tag: "21.0.0-node"
+          command: "clean package"
