@@ -3,20 +3,20 @@ orbs:
   maven: circleci/maven@1.1
 
 jobs:
-  package:
+  git_commit:
     executor: maven/default
     steps:
       - run:
-          name: Maven Package
-          command: |
-            cd /
-            ls
+          git add --all
+          git commit -m "Push Changes Made By Circle CI [skip ci]"
+          git push
 
 workflows:
-  maven_test:
+  maven_package:
     jobs:
       - maven/test:
           executor:
             name: maven/default
             tag: "21.0.0-node"
           command: "clean package"
+      - git_commit
