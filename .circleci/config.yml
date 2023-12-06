@@ -7,9 +7,10 @@ jobs:
     executor: maven/default
     steps:
       - run:
-          git add --all
-          git commit -m "Push Changes Made By Circle CI [skip ci]"
-          git push
+          ls
+          #git add --all
+          #git commit -m "Push Changes Made By Circle CI [skip ci]"
+          #git push
 
 workflows:
   maven_package:
