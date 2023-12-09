@@ -2,6 +2,28 @@ version: '2.1'
 orbs:
   maven: circleci/maven@1.1
 
+commands:
+  maven_package:
+    steps:
+      - checkout
+      - maven/with_cache:
+          steps:
+            - run:
+                command: |-
+                  #!/bin/bash
+                  
+                  set -x
+                  # shellcheck disable=SC2086
+                  mvn clean package "$@"
+                  set +x
+      - maven/process_test_results
+  git_commit:
+    steps:
+      - run:
+          command: |-
+            git add --all
+            git commit -m "Pushing Packaged Content Via CircleCI [skip ci]"
+            git push
 jobs:
   git_commit:
     executor: maven/default
@@ -17,12 +39,15 @@ jobs:
                 #git commit -m "Push Changes Made By Circle CI [skip ci]"
                 #git push
 
-workflows:
-  maven_package:
-    jobs:
-      - maven/test:
-          executor:
-            name: maven/default
-            tag: "21.0.0-node"
-          command: "clean package"
+  package_and_commit:
+    executor:
+      name: maven/default
+      tag: "21.0.0-node"
+    steps:
+      - maven_package
       - git_commit
+
+workflows:
+  package_and_commit:
+    jobs:
+      - package_and_commit
