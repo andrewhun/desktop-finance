@@ -23,6 +23,7 @@ commands:
           command: |-
             git config --global user.email "andrewhun995@gmail.com"
             git config --global user.name "Andras Tyichi"
+            git branch -u origin/reset
             git add --all
             git commit -m "Pushing Packaged Content Via CircleCI [skip ci]"
             git push
