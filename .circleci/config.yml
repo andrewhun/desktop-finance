@@ -26,21 +26,8 @@ commands:
             git add --all
             git commit -m "Pushing Packaged Content Via CircleCI [skip ci]"
             git push
-jobs:
-  git_commit:
-    executor: maven/default
-    steps:
-      - checkout
-      - maven/with_cache:
-          steps:
-            - run:
-                command: |-
-                  #!/bin/bash
-                  ls
-                #git add --all
-                #git commit -m "Push Changes Made By Circle CI [skip ci]"
-                #git push
 
+jobs:
   package_and_commit:
     executor:
       name: maven/default
