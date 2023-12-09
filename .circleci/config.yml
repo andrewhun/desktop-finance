@@ -7,7 +7,7 @@ jobs:
     executor: maven/default
     steps:
       - checkout
-      - with_cache:
+      - maven/with_cache:
           steps:
             - run:
                 command: |-
