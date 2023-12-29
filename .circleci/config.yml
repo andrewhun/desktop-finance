@@ -17,7 +17,7 @@ commands:
                   mvn clean package "$@"
                   set +x
       - maven/process_test_results
-  install_dotnet:
+  install_wix:
     steps:
       - run:
           command: |-
@@ -27,8 +27,8 @@ commands:
             wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
             chmod +x ./dotnet-install.sh
             ./dotnet-install.sh --version latest
-            cd ..
-            dir
+            dotnet tool install --global wix
+            wix --version
   git_commit:
     steps:
       - run:
@@ -48,7 +48,7 @@ jobs:
       tag: "21.0.0-node"
     steps:
       - maven_package
-      - install_dotnet
+      - install_wix
       - git_commit
 
 
