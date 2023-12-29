@@ -27,6 +27,13 @@ commands:
             git add --all
             git commit -m "Pushing Packaged Content Via CircleCI [skip ci]"
             git push
+  install_dotnet:
+    steps:
+      - run:
+          command: |-
+            wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+            chmod +x ./dotnet-install.sh
+            ./dotnet-install.sh --version latest
 
 jobs:
   package_and_commit:
@@ -34,8 +41,10 @@ jobs:
       name: maven/default
       tag: "21.0.0-node"
     steps:
+      - install_dotnet
       - maven_package
       - git_commit
+
 
 workflows:
   package_and_commit:
