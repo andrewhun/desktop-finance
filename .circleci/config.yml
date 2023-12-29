@@ -41,6 +41,7 @@ jobs:
       name: maven/default
       tag: "21.0.0-node"
     steps:
+      - install_dotnet
       - maven_package
       - git_commit
 
