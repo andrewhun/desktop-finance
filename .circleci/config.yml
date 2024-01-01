@@ -29,9 +29,12 @@ commands:
             ./dotnet-install.sh --version latest
             export DOTNET_ROOT=$HOME/.dotnet
             export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
-            dotnet --version
             dotnet tool install --global wix
-            wix --version
+  create_msi:
+    steps:
+      - run:
+          command: |-
+            dir
   git_commit:
     steps:
       - run:
@@ -52,6 +55,7 @@ jobs:
     steps:
       - maven_package
       - install_wix
+      - create_msi
       - git_commit
 
 
