@@ -18,8 +18,8 @@ commands:
                   set +x
       - maven/process_test_results
   install_wix:
+    description: Install Wix
     steps:
-      - name: Install Wix
       - run:
           command: |-
             cd ..
@@ -32,14 +32,14 @@ commands:
             export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
             dotnet tool install --global wix
   create_msi:
+    description: Create MSI
     steps:
-      - name: Create MSI
       - run:
           command: |-
             jpackage --input ./target dest ./installer --name "Desktop Finance" --main-jar desktop-finance.jar --main-class com.andrewhun.finance.App --type msi
   git_commit:
+    description: Commit to Git
     steps:
-      - name: Commit to Git
       - run:
           command: |-
             #!/bin/bash
