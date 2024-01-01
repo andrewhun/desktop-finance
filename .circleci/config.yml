@@ -27,6 +27,7 @@ commands:
             wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
             chmod +x ./dotnet-install.sh
             ./dotnet-install.sh --version latest
+            /home/circleci/.dotnet --version
             dotnet tool install --global wix
             wix --version
   git_commit:
