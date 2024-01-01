@@ -36,7 +36,7 @@ commands:
     steps:
       - run:
           command: |-
-            jpackage --input ./target --dest ./installer --name "Desktop Finance" --main-jar desktop-finance.jar --main-class com.andrewhun.finance.App --type "msi"
+            jpackage --input ./target --dest ./installer --name "Desktop Finance" --main-jar desktop-finance.jar --main-class com.andrewhun.finance.App --type "msi" --verbose
           name: Create MSI
   git_commit:
     steps:
