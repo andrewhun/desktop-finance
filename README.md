@@ -1,4 +1,4 @@
-#Welcome to the (rebooted) Desktop Finance project!
+# Welcome to the (rebooted) Desktop Finance project!
 
 Please use the links below to access the documentation:
 - [Project Overview](https://docs.google.com/document/d/1rEJrni2NJd3cZa_PTUovz3UoCTRWEdTSCw1qG0OebsE/edit?usp=sharing)
