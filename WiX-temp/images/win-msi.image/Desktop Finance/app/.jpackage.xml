@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<jpackage-state version="21.0.1" platform="windows">
+  <app-version>1.0</app-version>
+  <main-launcher>Desktop Finance</main-launcher>
+  <main-class>com.andrewhun.finance.Launcher</main-class>
+  <signed>false</signed>
+  <app-store>false</app-store></jpackage-state>

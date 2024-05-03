@@ -1,0 +1,1458 @@
+<?xml version="1.0" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <Fragment>
+    <ComponentGroup Id="FileAssociations"></ComponentGroup>
+    <DirectoryRef Id="dir0c2cf8d81360331f8e966334aede9968">
+      <Component Win64="yes" Id="cshortcutc0c0fbc71e49303d8c93cb47282e86c5" Guid="{c0c0fbc7-1e49-303d-8c93-cb47282e86c5}">
+        <Condition>JP_INSTALL_STARTMENU_SHORTCUT</Condition>
+        <RegistryKey Root="HKCU" Key="Software\Unknown\Desktop Finance\1.0">
+          <RegistryValue Type="string" KeyPath="yes" Name="ProductCode" Value="[ProductCode]"></RegistryValue>
+        </RegistryKey>
+        <RemoveFolder Id="rmabbaa14bfe553403ac6436c604e78270_1" On="uninstall"></RemoveFolder>
+        <Shortcut Id="shortcutc0c0fbc71e49303d8c93cb47282e86c5" Name="Desktop Finance" WorkingDirectory="INSTALLDIR" Advertise="no" Target="[#filec675faf4a3423acfb1f42db00e9a3397]"></Shortcut>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="TARGETDIR">
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="dir0c2cf8d81360331f8e966334aede9968" Name="andrewhun"></Directory>
+      </Directory>
+    </DirectoryRef>
+    <ComponentGroup Id="Shortcuts">
+      <ComponentRef Id="cshortcutc0c0fbc71e49303d8c93cb47282e86c5"></ComponentRef>
+    </ComponentGroup>
+    <DirectoryRef Id="dir9865718a90953e83aa74b102fc132487">
+      <Component Win64="yes" Id="cfilee709cd237ea738c99355efab22c3ce55" Guid="{e709cd23-7ea7-38c9-9355-efab22c3ce55}">
+        <File Id="filee709cd237ea738c99355efab22c3ce55" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\jdk.jfr\ADDITIONAL_LICENSE_INFO"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfilee3e0fa642a7f318db4e675275da8a5c3" Guid="{e3e0fa64-2a7f-318d-b4e6-75275da8a5c3}">
+        <File Id="filee3e0fa642a7f318db4e675275da8a5c3" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\freetype.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilea94e201d20ef3812a27ba4b48ee3f31f" Guid="{a94e201d-20ef-3812-a27b-a4b48ee3f31f}">
+        <File Id="filea94e201d20ef3812a27ba4b48ee3f31f" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-processthreads-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile7ee9ad88bf4033658b6cced645142a01" Guid="{7ee9ad88-bf40-3365-8b6c-ced645142a01}">
+        <File Id="file7ee9ad88bf4033658b6cced645142a01" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-stdio-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfile3e9b44e681943344b82b209ee8ad73f7" Guid="{3e9b44e6-8194-3344-b82b-209ee8ad73f7}">
+        <File Id="file3e9b44e681943344b82b209ee8ad73f7" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\LICENSE"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilea5c4078e9a943a1bb636e0f699735369" Guid="{a5c4078e-9a94-3a1b-b636-e0f699735369}">
+        <File Id="filea5c4078e9a943a1bb636e0f699735369" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-timezone-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilee7956724e65a3018a487947ff29096d5" Guid="{e7956724-e65a-3018-a487-947ff29096d5}">
+        <File Id="filee7956724e65a3018a487947ff29096d5" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\awt.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilea4dfe168ad5239e6965caa1f825a4e1e" Guid="{a4dfe168-ad52-39e6-965c-aa1f825a4e1e}">
+        <File Id="filea4dfe168ad5239e6965caa1f825a4e1e" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-sysinfo-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir162e27f67daa35a5967791019ecd6775">
+      <Component Win64="yes" Id="cfile5414037756733977bf977b917e94b165" Guid="{54140377-5673-3977-bf97-7b917e94b165}">
+        <File Id="file5414037756733977bf977b917e94b165" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\security\policy\limited\default_US_export.policy"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dire97c5b787ae13ca1a5f1d02aee383b04">
+      <Component Win64="yes" Id="cfile2a6a8a52ed0736d489bfc71b16feb2c3" Guid="{2a6a8a52-ed07-36d4-89bf-c71b16feb2c3}">
+        <File Id="file2a6a8a52ed0736d489bfc71b16feb2c3" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.xml\xerces.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dire97c5b787ae13ca1a5f1d02aee383b04">
+      <Component Win64="yes" Id="cfile72c28c1bc90039819fd4dd73ae670aca" Guid="{72c28c1b-c900-3981-9fd4-dd73ae670aca}">
+        <File Id="file72c28c1bc90039819fd4dd73ae670aca" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.xml\ADDITIONAL_LICENSE_INFO"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilef4417da55e3633ffbd6c7c2ea7b520f1" Guid="{f4417da5-5e36-33ff-bd6c-7c2ea7b520f1}">
+        <File Id="filef4417da55e3633ffbd6c7c2ea7b520f1" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-heap-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfile6beef31dd71d30f0b4fb1c742f738975" Guid="{6beef31d-d71d-30f0-b4fb-1c742f738975}">
+        <File Id="file6beef31dd71d30f0b4fb1c742f738975" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\public_suffix.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile40edbad81f073d02b0de27ac9da7540d" Guid="{40edbad8-1f07-3d02-b0de-27ac9da7540d}">
+        <File Id="file40edbad81f073d02b0de27ac9da7540d" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-synch-l1-2-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilea465918cf0533db8a4519ac9b7d1c50b" Guid="{a465918c-f053-3db8-a451-9ac9b7d1c50b}">
+        <File Id="filea465918cf0533db8a4519ac9b7d1c50b" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-libraryloader-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile5e9220803c043447902450d71ea0912f" Guid="{5e922080-3c04-3447-9024-50d71ea0912f}">
+        <File Id="file5e9220803c043447902450d71ea0912f" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-process-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile5f8cfce945ad3aad8858b422e2ba4d24" Guid="{5f8cfce9-45ad-3aad-8858-b422e2ba4d24}">
+        <File Id="file5f8cfce945ad3aad8858b422e2ba4d24" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\prism_sw.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfile69b7c6bd78ba366e81adfa136c715587" Guid="{69b7c6bd-78ba-366e-81ad-fa136c715587}">
+        <File Id="file69b7c6bd78ba366e81adfa136c715587" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\LICENSE"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile931bce33e20c3d7aba37e4e15d92f99a" Guid="{931bce33-e20c-3d7a-ba37-e4e15d92f99a}">
+        <File Id="file931bce33e20c3d7aba37e4e15d92f99a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-synch-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile6e25e42e145c342c9c2537107d03a10f" Guid="{6e25e42e-145c-342c-9c25-37107d03a10f}">
+        <File Id="file6e25e42e145c342c9c2537107d03a10f" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\java.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilef216a6944cb03a2bba6959707baa5ff1" Guid="{f216a694-4cb0-3a2b-ba69-59707baa5ff1}">
+        <File Id="filef216a6944cb03a2bba6959707baa5ff1" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-time-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirbb362e5246873511867209e9c853d033">
+      <Component Win64="yes" Id="cfile0566e653e9ae32ad84481ac3f202a898" Guid="{0566e653-e9ae-32ad-8448-1ac3f202a898}">
+        <File Id="file0566e653e9ae32ad84481ac3f202a898" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\server\jvm.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir2603662ba796333eb8233539121dfaa7">
+      <Component Win64="yes" Id="cfileab799eb7f72c3e8e9e301dfdc98be0c7" Guid="{ab799eb7-f72c-3e8e-9e30-1dfdc98be0c7}">
+        <File Id="fileab799eb7f72c3e8e9e301dfdc98be0c7" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\security\blocked.certs"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir162e27f67daa35a5967791019ecd6775">
+      <Component Win64="yes" Id="cfile4e975aba8f563264877f7aa3ac710384" Guid="{4e975aba-8f56-3264-877f-7aa3ac710384}">
+        <File Id="file4e975aba8f563264877f7aa3ac710384" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\security\policy\limited\default_local.policy"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfile9c961237cb7b31feb185d0a70c7f6e5f" Guid="{9c961237-cb7b-31fe-b185-d0a70c7f6e5f}">
+        <File Id="file9c961237cb7b31feb185d0a70c7f6e5f" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\c-libutl.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile83ebe75928a03414b0be6a43b19f9f1a" Guid="{83ebe759-28a0-3414-b0be-6a43b19f9f1a}">
+        <File Id="file83ebe75928a03414b0be6a43b19f9f1a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-datetime-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfile0dbcf5ef797832be87680b581d8e56a2" Guid="{0dbcf5ef-7978-32be-8768-0b581d8e56a2}">
+        <File Id="file0dbcf5ef797832be87680b581d8e56a2" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\ASSEMBLY_EXCEPTION"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfiled78727bf16eb3b60a5337074e6c1866e" Guid="{d78727bf-16eb-3b60-a533-7074e6c1866e}">
+        <File Id="filed78727bf16eb3b60a5337074e6c1866e" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-process-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilee9dca98c5bc43b40ab8f1f5d80729dbf" Guid="{e9dca98c-5bc4-3b40-ab8f-1f5d80729dbf}">
+        <File Id="filee9dca98c5bc43b40ab8f1f5d80729dbf" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\net.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir94085e31dd8f390caf4ea84a1d57e751">
+      <Component Win64="yes" Id="cfile49a79519aa333a2fb11ac38aadde51a0" Guid="{49a79519-aa33-3a2f-b11a-c38aadde51a0}">
+        <File Id="file49a79519aa333a2fb11ac38aadde51a0" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\security\java.policy"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfileb7f25dfef9c0389fb25d5bf599deae2a" Guid="{b7f25dfe-f9c0-389f-b25d-5bf599deae2a}">
+        <File Id="fileb7f25dfef9c0389fb25d5bf599deae2a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\jimage.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile5c065a93dd333c8aaff5cbe71f4c32f1" Guid="{5c065a93-dd33-3c8a-aff5-cbe71f4c32f1}">
+        <File Id="file5c065a93dd333c8aaff5cbe71f4c32f1" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\javafx-swt.jar"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile6d9ce4cb6bdf3f6f9b24ebfc65bac782" Guid="{6d9ce4cb-6bdf-3f6f-9b24-ebfc65bac782}">
+        <File Id="file6d9ce4cb6bdf3f6f9b24ebfc65bac782" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\zip.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir07cceda2a5823606be3944fe1c579e9d">
+      <Component Win64="yes" Id="cfilea9cbbca208013de8be9d1b99c277bb7a" Guid="{a9cbbca2-0801-3de8-be9d-1b99c277bb7a}">
+        <File Id="filea9cbbca208013de8be9d1b99c277bb7a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.graphics\LICENSE"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile6813f9ddc50d3d2ab4d55e4fa476e5b6" Guid="{6813f9dd-c50d-3d2a-b4d5-5e4fa476e5b6}">
+        <File Id="file6813f9ddc50d3d2ab4d55e4fa476e5b6" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-string-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilefc106ae245143c8894d3f16e51ff8805" Guid="{fc106ae2-4514-3c88-94d3-f16e51ff8805}">
+        <File Id="filefc106ae245143c8894d3f16e51ff8805" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-environment-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir0342b33c5b743d4eba6894e12fd344a2">
+      <Component Win64="yes" Id="cfile54b270cf18ec3cb78258d3acc1c8fb7e" Guid="{54b270cf-18ec-3cb7-8258-d3acc1c8fb7e}">
+        <File Id="file54b270cf18ec3cb78258d3acc1c8fb7e" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.base\ASSEMBLY_EXCEPTION"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir397c92055a9137aeb8b4873a2901dc79">
+      <Component Win64="yes" Id="cfile10b7566b08743cd396d393b587f71605" Guid="{10b7566b-0874-3cd3-96d3-93b587f71605}">
+        <File Id="file10b7566b08743cd396d393b587f71605" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\jdk.unsupported\LICENSE"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfile73732fc1b32e357880239e94b3c7485c" Guid="{73732fc1-b32e-3578-8023-9e94b3c7485c}">
+        <File Id="file73732fc1b32e357880239e94b3c7485c" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\zlib.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile04a8f862de0d3915a1afb25a95ff4bb1" Guid="{04a8f862-de0d-3915-a1af-b25a95ff4bb1}">
+        <File Id="file04a8f862de0d3915a1afb25a95ff4bb1" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\jvm.lib"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1e08c79b7c55361b81b1a887233c601b">
+      <Component Win64="yes" Id="cfile5e290de5135b3b8499cc829dc8143504" Guid="{5e290de5-135b-3b84-99cc-829dc8143504}">
+        <File Id="file5e290de5135b3b8499cc829dc8143504" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.datatransfer\LICENSE"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir40f84b56068d341da01a768174eb5e59">
+      <Component Win64="yes" Id="cfiled4b06b31fb623c598059562884b108f1" Guid="{d4b06b31-fb62-3c59-8059-562884b108f1}">
+        <File Id="filed4b06b31fb623c598059562884b108f1" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\app\.package"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfile977a960d186f37a4aa8f9786b457745a" Guid="{977a960d-186f-37a4-aa8f-9786b457745a}">
+        <File Id="file977a960d186f37a4aa8f9786b457745a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\harfbuzz.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile968edb2f3e283400922e2a9c7d3860cc" Guid="{968edb2f-3e28-3400-922e-2a9c7d3860cc}">
+        <File Id="file968edb2f3e283400922e2a9c7d3860cc" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\fontconfig.bfc"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir231e6a506fe7391ea7fa4f2559307f5e">
+      <Component Win64="yes" Id="cfilec3805c869162372a90477e2b352f8e6d" Guid="{c3805c86-9162-372a-9047-7e2b352f8e6d}">
+        <File Id="filec3805c869162372a90477e2b352f8e6d" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\jaxp.properties"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir9865718a90953e83aa74b102fc132487">
+      <Component Win64="yes" Id="cfile4a2243fa961b348eb4144bfc37e0215d" Guid="{4a2243fa-961b-348e-b414-4bfc37e0215d}">
+        <File Id="file4a2243fa961b348eb4144bfc37e0215d" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\jdk.jfr\LICENSE"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile43b8a7edec3b3abd8b45cba46a6dd8ce" Guid="{43b8a7ed-ec3b-3abd-8b45-cba46a6dd8ce}">
+        <File Id="file43b8a7edec3b3abd8b45cba46a6dd8ce" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-memory-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir07cceda2a5823606be3944fe1c579e9d">
+      <Component Win64="yes" Id="cfile2dd098c322e33fd48c74c98cca2b87af" Guid="{2dd098c3-22e3-3fd4-8c74-c98cca2b87af}">
+        <File Id="file2dd098c322e33fd48c74c98cca2b87af" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.graphics\mesa3d.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilea89abedbae77350582cab6b930bcd024" Guid="{a89abedb-ae77-3505-82ca-b6b930bcd024}">
+        <File Id="filea89abedbae77350582cab6b930bcd024" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-processthreads-l1-1-1.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile5e1f8c8e9edc3d7c961c1020ee416957" Guid="{5e1f8c8e-9edc-3d7c-961c-1020ee416957}">
+        <File Id="file5e1f8c8e9edc3d7c961c1020ee416957" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-utility-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dire97c5b787ae13ca1a5f1d02aee383b04">
+      <Component Win64="yes" Id="cfiledfd5850410b332af90d5a75a418141f8" Guid="{dfd58504-10b3-32af-90d5-a75a418141f8}">
+        <File Id="filedfd5850410b332af90d5a75a418141f8" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.xml\LICENSE"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile02c5a2f5512b3fa294c7a9067709b19a" Guid="{02c5a2f5-512b-3fa2-94c7-a9067709b19a}">
+        <File Id="file02c5a2f5512b3fa294c7a9067709b19a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\javafx_iio.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilea3b21980a218327e9f589c5bec86036b" Guid="{a3b21980-a218-327e-9f58-9c5bec86036b}">
+        <File Id="filea3b21980a218327e9f589c5bec86036b" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-runtime-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilef362b8aabc5438b5a610d0580a663b87" Guid="{f362b8aa-bc54-38b5-a610-d0580a663b87}">
+        <File Id="filef362b8aabc5438b5a610d0580a663b87" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-processthreads-l1-1-1.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir231e6a506fe7391ea7fa4f2559307f5e">
+      <Component Win64="yes" Id="cfile7927518abdc036ed8538c48f2108947f" Guid="{7927518a-bdc0-36ed-8538-c48f2108947f}">
+        <File Id="file7927518abdc036ed8538c48f2108947f" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\sound.properties"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfile2ff3e3ebe7d43ca99ae3624aba9bece1" Guid="{2ff3e3eb-e7d4-3ca9-9ae3-624aba9bece1}">
+        <File Id="file2ff3e3ebe7d43ca99ae3624aba9bece1" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\icu.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dird18d6cdbda8d32808cbd0aee1d693703">
+      <Component Win64="yes" Id="cfile0188de61f24e319ea4970741e3069a0a" Guid="{0188de61-f24e-319e-a497-0741e3069a0a}">
+        <File Id="file0188de61f24e319ea4970741e3069a0a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\jfr\default.jfc"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile436b1ab2557b3f14be5881e23ae99aab" Guid="{436b1ab2-557b-3f14-be58-81e23ae99aab}">
+        <File Id="file436b1ab2557b3f14be5881e23ae99aab" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-errorhandling-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfilea43f830c209933f6b04eb3c2284e0eff" Guid="{a43f830c-2099-33f6-b04e-b3c2284e0eff}">
+        <File Id="filea43f830c209933f6b04eb3c2284e0eff" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\colorimaging.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile57f1e4a01ad83188ad0c39fda43752ed" Guid="{57f1e4a0-1ad8-3188-ad0c-39fda43752ed}">
+        <File Id="file57f1e4a01ad83188ad0c39fda43752ed" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\jawt.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile741fe330cc6a3e1fb2e9b69312f577ac" Guid="{741fe330-cc6a-3e1f-b2e9-b69312f577ac}">
+        <File Id="file741fe330cc6a3e1fb2e9b69312f577ac" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\freetype.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile8e1c572076c23e64babd0c9ef5e69ce8" Guid="{8e1c5720-76c2-3e64-babd-0c9ef5e69ce8}">
+        <File Id="file8e1c572076c23e64babd0c9ef5e69ce8" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\nio.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile5bf74ba060443eadaf88032f03ff5280" Guid="{5bf74ba0-6044-3ead-af88-032f03ff5280}">
+        <File Id="file5bf74ba060443eadaf88032f03ff5280" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\tzmappings"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile76ece0551e69392e8ac888708b6fa689" Guid="{76ece055-1e69-392e-8ac8-88708b6fa689}">
+        <File Id="file76ece0551e69392e8ac888708b6fa689" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-filesystem-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfile20610d62842a3983af561cd4ad1966dd" Guid="{20610d62-842a-3983-af56-1cd4ad1966dd}">
+        <File Id="file20610d62842a3983af561cd4ad1966dd" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\wepoll.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dira488a7ef630c38cc884d2a905102ee0a">
+      <Component Win64="yes" Id="cfile4967c2df6d753f0097e098f32b5e2f94" Guid="{4967c2df-6d75-3f00-97e0-98f32b5e2f94}">
+        <File Id="file4967c2df6d753f0097e098f32b5e2f94" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\app\classes\module-info.class"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfileb9a524b2861e3fd3b0818018ae5e1b94" Guid="{b9a524b2-861e-3fd3-b081-8018ae5e1b94}">
+        <File Id="fileb9a524b2861e3fd3b0818018ae5e1b94" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-interlocked-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile9dd2d44aba95318c8f0a9dac581610d6" Guid="{9dd2d44a-ba95-318c-8f0a-9dac581610d6}">
+        <File Id="file9dd2d44aba95318c8f0a9dac581610d6" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-heap-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile4b0fb6b4ed89362599d028b2e6110ad7" Guid="{4b0fb6b4-ed89-3625-99d0-28b2e6110ad7}">
+        <File Id="file4b0fb6b4ed89362599d028b2e6110ad7" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-handle-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfile42cd07cfa71e37f6a58a0794bb262503" Guid="{42cd07cf-a71e-37f6-a58a-0794bb262503}">
+        <File Id="file42cd07cfa71e37f6a58a0794bb262503" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\unicode.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilefc1e9cd669b43db5a44d1c239154bc79" Guid="{fc1e9cd6-69b4-3db5-a44d-1c239154bc79}">
+        <File Id="filefc1e9cd669b43db5a44d1c239154bc79" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-string-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50d05d3ffbcf3aab85b835b0d3ae198c">
+      <Component Win64="yes" Id="cfilecd6377c941023cf29ea35eac2d78d93f" Guid="{cd6377c9-4102-3cf2-9ea3-5eac2d78d93f}">
+        <File Id="filecd6377c941023cf29ea35eac2d78d93f" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\app\maven-status\maven-compiler-plugin\compile\default-compile\inputFiles.lst"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile96ab140b66c237588f0e762bd982bec5" Guid="{96ab140b-66c2-3758-8f0e-762bd982bec5}">
+        <File Id="file96ab140b66c237588f0e762bd982bec5" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-file-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile92ac11dbaaaa38048efeb986ad63a6e0" Guid="{92ac11db-aaaa-3804-8efe-b986ad63a6e0}">
+        <File Id="file92ac11dbaaaa38048efeb986ad63a6e0" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\vcruntime140.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilefe3b781367673b2f8cc1f3cf95240473" Guid="{fe3b7813-6767-3b2f-8cc1-f3cf95240473}">
+        <File Id="filefe3b781367673b2f8cc1f3cf95240473" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\msvcp140.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilebd5077779b6a3ed2aa5ef8b1a859ac9a" Guid="{bd507777-9b6a-3ed2-aa5e-f8b1a859ac9a}">
+        <File Id="filebd5077779b6a3ed2aa5ef8b1a859ac9a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javajpeg.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile7ba917fefca03dea960aaa56152e406b" Guid="{7ba917fe-fca0-3dea-960a-aa56152e406b}">
+        <File Id="file7ba917fefca03dea960aaa56152e406b" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\modules"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirce7aca387fb736b8948cd9637cfad566">
+      <Component Win64="yes" Id="cfile8dd4e98782863c9a917e41ccde9f3599" Guid="{8dd4e987-8286-3c9a-917e-41ccde9f3599}">
+        <File Id="file8dd4e98782863c9a917e41ccde9f3599" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\app\classes\com\andrewhun\finance\Launcher.class"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile47d57676c1db364788febaaf4ed18569" Guid="{47d57676-c1db-3647-88fe-baaf4ed18569}">
+        <File Id="file47d57676c1db364788febaaf4ed18569" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\fontconfig.properties.src"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile92005861b6c63e318442f946199376f9" Guid="{92005861-b6c6-3e31-8442-f946199376f9}">
+        <File Id="file92005861b6c63e318442f946199376f9" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-datetime-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile800505d54d373b9eb717040dad918c54" Guid="{800505d5-4d37-3b9e-b717-040dad918c54}">
+        <File Id="file800505d54d373b9eb717040dad918c54" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\jrt-fs.jar"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile5fc6ecd327453a9bba71aac35d21e6c2" Guid="{5fc6ecd3-2745-3a9b-ba71-aac35d21e6c2}">
+        <File Id="file5fc6ecd327453a9bba71aac35d21e6c2" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-math-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dira9e78cd020b5309fb855f933e6728748">
+      <Component Win64="yes" Id="cfile01a6ab463d463c3895dd75d83535b8d0" Guid="{01a6ab46-3d46-3c38-95dd-75d83535b8d0}">
+        <File Id="file01a6ab463d463c3895dd75d83535b8d0" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.controls\ASSEMBLY_EXCEPTION"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfile045d8ee653bb30069cefdf65e63aadfc" Guid="{045d8ee6-53bb-3006-9cef-df65e63aadfc}">
+        <File Id="file045d8ee653bb30069cefdf65e63aadfc" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\mesa3d.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dira9e78cd020b5309fb855f933e6728748">
+      <Component Win64="yes" Id="cfileef33b46e5ac433ebbbc21b6717e12b69" Guid="{ef33b46e-5ac4-33eb-bbc2-1b6717e12b69}">
+        <File Id="fileef33b46e5ac433ebbbc21b6717e12b69" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.controls\LICENSE"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilea7dd5107132a300995240f15d5ad8285" Guid="{a7dd5107-132a-3009-9524-0f15d5ad8285}">
+        <File Id="filea7dd5107132a300995240f15d5ad8285" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\prefs.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfile14368850e73f3c8fbeb2d132b44a4808" Guid="{14368850-e73f-3c8f-beb2-d132b44a4808}">
+        <File Id="file14368850e73f3c8fbeb2d132b44a4808" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\ADDITIONAL_LICENSE_INFO"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfiledd66bcb1c5723659aa525cf915ab9bb6" Guid="{dd66bcb1-c572-3659-aa52-5cf915ab9bb6}">
+        <File Id="filedd66bcb1c5723659aa525cf915ab9bb6" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\psfont.properties.ja"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile57d26e568cd13e3db4f894c473d4d684" Guid="{57d26e56-8cd1-3e3d-b4f8-94c473d4d684}">
+        <File Id="file57d26e568cd13e3db4f894c473d4d684" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\msvcp140.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfilef642e100daf93a71bdbf649246efb735" Guid="{f642e100-daf9-3a71-bdbf-649246efb735}">
+        <File Id="filef642e100daf93a71bdbf649246efb735" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\cldr.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile0cddad8c04f13f0db6e11a1d240c77a4" Guid="{0cddad8c-04f1-3f0d-b6e1-1a1d240c77a4}">
+        <File Id="file0cddad8c04f13f0db6e11a1d240c77a4" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-convert-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50d05d3ffbcf3aab85b835b0d3ae198c">
+      <Component Win64="yes" Id="cfilefe40a613a4c13dbb9676cc8ff2318ff0" Guid="{fe40a613-a4c1-3dbb-9676-cc8ff2318ff0}">
+        <File Id="filefe40a613a4c13dbb9676cc8ff2318ff0" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\app\maven-status\maven-compiler-plugin\compile\default-compile\createdFiles.lst"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile6ba894d434c6390bbcea2e4ba94e02ad" Guid="{6ba894d4-34c6-390b-bcea-2e4ba94e02ad}">
+        <File Id="file6ba894d434c6390bbcea2e4ba94e02ad" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-processthreads-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1e08c79b7c55361b81b1a887233c601b">
+      <Component Win64="yes" Id="cfile1222d9ee96123796b4268002d435135a" Guid="{1222d9ee-9612-3796-b426-8002d435135a}">
+        <File Id="file1222d9ee96123796b4268002d435135a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.datatransfer\ASSEMBLY_EXCEPTION"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfileeb140c6cc49c30cfb587d0c49e93f655" Guid="{eb140c6c-c49c-30cf-b587-d0c49e93f655}">
+        <File Id="fileeb140c6cc49c30cfb587d0c49e93f655" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\fontmanager.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilec5d8bff5942d3765b38247ab4ba286e6" Guid="{c5d8bff5-942d-3765-b382-47ab4ba286e6}">
+        <File Id="filec5d8bff5942d3765b38247ab4ba286e6" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-libraryloader-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfileb30094b26e503dc997d6b641d7a9f486" Guid="{b30094b2-6e50-3dc9-97d6-b641d7a9f486}">
+        <File Id="fileb30094b26e503dc997d6b641d7a9f486" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-file-l1-2-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir58ad176b945f3860a8b9d7b1deb963d3">
+      <Component Win64="yes" Id="cfile920e0f8b040c3cba99b4e05e9c7b3cc0" Guid="{920e0f8b-040c-3cba-99b4-e05e9c7b3cc0}">
+        <File Id="file920e0f8b040c3cba99b4e05e9c7b3cc0" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\security\policy\README.txt"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfileea93ac6aa1763cd0847af7fef0d1dceb" Guid="{ea93ac6a-a176-3cd0-847a-f7fef0d1dceb}">
+        <File Id="fileea93ac6aa1763cd0847af7fef0d1dceb" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-namedpipe-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile2dd6bbb3a639382a8b5c3f218f7da385" Guid="{2dd6bbb3-a639-382a-8b5c-3f218f7da385}">
+        <File Id="file2dd6bbb3a639382a8b5c3f218f7da385" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-convert-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile9ab4ff616636300daf29d11202ac9667" Guid="{9ab4ff61-6636-300d-af29-d11202ac9667}">
+        <File Id="file9ab4ff616636300daf29d11202ac9667" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-runtime-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1b74edbf234730278bbbbb2f2f883473">
+      <Component Win64="yes" Id="cfile4903e11c9d803525b88b35ff06f85bc5" Guid="{4903e11c-9d80-3525-b88b-35ff06f85bc5}">
+        <File Id="file4903e11c9d803525b88b35ff06f85bc5" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.prefs\ASSEMBLY_EXCEPTION"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir40f84b56068d341da01a768174eb5e59">
+      <Component Win64="yes" Id="cfile61f711ae1cda3d3d908f325c3bbad56e" Guid="{61f711ae-1cda-3d3d-908f-325c3bbad56e}">
+        <File Id="file61f711ae1cda3d3d908f325c3bbad56e" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\app\desktop-finance-jar-with-dependencies.jar"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir2603662ba796333eb8233539121dfaa7">
+      <Component Win64="yes" Id="cfilebc935acd2fc338329259312b6e42bca4" Guid="{bc935acd-2fc3-3832-9259-312b6e42bca4}">
+        <File Id="filebc935acd2fc338329259312b6e42bca4" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\security\default.policy"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile17b2f7d61926387a9485e6d2557b000d" Guid="{17b2f7d6-1926-387a-9485-e6d2557b000d}">
+        <File Id="file17b2f7d61926387a9485e6d2557b000d" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\ucrtbase.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1e08c79b7c55361b81b1a887233c601b">
+      <Component Win64="yes" Id="cfile1fdeac3444953088bb814123683b4e1a" Guid="{1fdeac34-4495-3088-bb81-4123683b4e1a}">
+        <File Id="file1fdeac3444953088bb814123683b4e1a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.datatransfer\ADDITIONAL_LICENSE_INFO"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dire97c5b787ae13ca1a5f1d02aee383b04">
+      <Component Win64="yes" Id="cfile8613b7b39609354cbbe894624e87210d" Guid="{8613b7b3-9609-354c-bbe8-94624e87210d}">
+        <File Id="file8613b7b39609354cbbe894624e87210d" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.xml\bcel.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilebb4ed3c9b9ca376f8e58f6b21c434d28" Guid="{bb4ed3c9-b9ca-376f-8e58-f6b21c434d28}">
+        <File Id="filebb4ed3c9b9ca376f8e58f6b21c434d28" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\glass.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfileca1a3fbb312334128c01c1c2c8a3d984" Guid="{ca1a3fbb-3123-3412-8c01-c1c2c8a3d984}">
+        <File Id="fileca1a3fbb312334128c01c1c2c8a3d984" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-localization-l1-2-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir07cceda2a5823606be3944fe1c579e9d">
+      <Component Win64="yes" Id="cfilef8e2160ea04f3c67b2b315a799290f7b" Guid="{f8e2160e-a04f-3c67-b2b3-15a799290f7b}">
+        <File Id="filef8e2160ea04f3c67b2b315a799290f7b" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.graphics\jpeg_fx.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilead0af2d240463a809a95546d3622e189" Guid="{ad0af2d2-4046-3a80-9a95-546d3622e189}">
+        <File Id="filead0af2d240463a809a95546d3622e189" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-private-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile6fc62b25eb333d5486105ebd7f83f10d" Guid="{6fc62b25-eb33-3d54-8610-5ebd7f83f10d}">
+        <File Id="file6fc62b25eb333d5486105ebd7f83f10d" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-locale-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile096f85d5f5de3179a5133d68ee0fb01b" Guid="{096f85d5-f5de-3179-a513-3d68ee0fb01b}">
+        <File Id="file096f85d5f5de3179a5133d68ee0fb01b" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-handle-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfileccc5c484362f3fc89af4fe8a46303381" Guid="{ccc5c484-362f-3fc8-9af4-fe8a46303381}">
+        <File Id="fileccc5c484362f3fc89af4fe8a46303381" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\jawt.lib"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfileccd24b5af5d63918a17fdc9a7bbc9394" Guid="{ccd24b5a-f5d6-3918-a17f-dc9a7bbc9394}">
+        <File Id="fileccd24b5af5d63918a17fdc9a7bbc9394" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\syslookup.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile2fdb8d1b765634969f2e5e6c21529452" Guid="{2fdb8d1b-7656-3496-9f2e-5e6c21529452}">
+        <File Id="file2fdb8d1b765634969f2e5e6c21529452" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-math-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile3511e878169c3aa7a02c22683edf8416" Guid="{3511e878-169c-3aa7-a02c-22683edf8416}">
+        <File Id="file3511e878169c3aa7a02c22683edf8416" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-util-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile136c387f532e3ad7b7251cffdb1ea5ac" Guid="{136c387f-532e-3ad7-b725-1cffdb1ea5ac}">
+        <File Id="file136c387f532e3ad7b7251cffdb1ea5ac" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-utility-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilee1defca843e8314d9343eba3e634a5f9" Guid="{e1defca8-43e8-314d-9343-eba3e634a5f9}">
+        <File Id="filee1defca843e8314d9343eba3e634a5f9" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-sysinfo-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile5ad2c841972a3789a81a830ff17e5967" Guid="{5ad2c841-972a-3789-a81a-830ff17e5967}">
+        <File Id="file5ad2c841972a3789a81a830ff17e5967" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-filesystem-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir9865718a90953e83aa74b102fc132487">
+      <Component Win64="yes" Id="cfile5b06f274671e3991a3ecd46cb12bb53a" Guid="{5b06f274-671e-3991-a3ec-d46cb12bb53a}">
+        <File Id="file5b06f274671e3991a3ecd46cb12bb53a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\jdk.jfr\ASSEMBLY_EXCEPTION"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dird18d6cdbda8d32808cbd0aee1d693703">
+      <Component Win64="yes" Id="cfile0401112b26143293b45a1a439aab2fae" Guid="{0401112b-2614-3293-b45a-1a439aab2fae}">
+        <File Id="file0401112b26143293b45a1a439aab2fae" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\jfr\profile.jfc"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile7a5c125d70d13e0e826fdd99a4d484b2" Guid="{7a5c125d-70d1-3e0e-826f-dd99a4d484b2}">
+        <File Id="file7a5c125d70d13e0e826fdd99a4d484b2" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-environment-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile890ff3bc67c135b39a538483cd362e4a" Guid="{890ff3bc-67c1-35b3-9a53-8483cd362e4a}">
+        <File Id="file890ff3bc67c135b39a538483cd362e4a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\psfontj2d.properties"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfileb240d0b2ba613621be71ab46beb48628" Guid="{b240d0b2-ba61-3621-be71-ab46beb48628}">
+        <File Id="fileb240d0b2ba613621be71ab46beb48628" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\ASSEMBLY_EXCEPTION"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfilede8b32f80a213cdb965ed9e673af7b9e" Guid="{de8b32f8-0a21-3cdb-965e-d9e673af7b9e}">
+        <File Id="filede8b32f80a213cdb965ed9e673af7b9e" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\lcms.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilef1de69a788643da8bc8052251795c0e2" Guid="{f1de69a7-8864-3da8-bc80-52251795c0e2}">
+        <File Id="filef1de69a788643da8bc8052251795c0e2" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-processenvironment-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile14e7cf1867b8344f93e8a2a98a764cd7" Guid="{14e7cf18-67b8-344f-93e8-a2a98a764cd7}">
+        <File Id="file14e7cf1867b8344f93e8a2a98a764cd7" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\vcruntime140.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir800e59f893cf30bfb9bb9a3f6e92b681">
+      <Component Win64="yes" Id="cfile9cf282d0fb2e379a9128b3b4c373e428" Guid="{9cf282d0-fb2e-379a-9128-b3b4c373e428}">
+        <File Id="file9cf282d0fb2e379a9128b3b4c373e428" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\security\policy\unlimited\default_local.policy"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilea6e3fe2cb9af318e983c5c9d33eaab3a" Guid="{a6e3fe2c-b9af-318e-983c-5c9d33eaab3a}">
+        <File Id="filea6e3fe2cb9af318e983c5c9d33eaab3a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-profile-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile47c5eaecf85b355db0f4b2cc28e6de16" Guid="{47c5eaec-f85b-355d-b0f4-b2cc28e6de16}">
+        <File Id="file47c5eaecf85b355db0f4b2cc28e6de16" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-timezone-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilea6f5d65b65613c78a5a90b564be227f9" Guid="{a6f5d65b-6561-3c78-a5a9-0b564be227f9}">
+        <File Id="filea6f5d65b65613c78a5a90b564be227f9" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-conio-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile009274bdbd073e9291974143836f6413" Guid="{009274bd-bd07-3e92-9197-4143836f6413}">
+        <File Id="file009274bdbd073e9291974143836f6413" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\msvcp140_1.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile7901f84adcf33cb6b42f68077f876feb" Guid="{7901f84a-dcf3-3cb6-b42f-68077f876feb}">
+        <File Id="file7901f84adcf33cb6b42f68077f876feb" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\ucrtbase.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile035a07c4d963304887d5d42c099eadd7" Guid="{035a07c4-d963-3048-87d5-d42c099eadd7}">
+        <File Id="file035a07c4d963304887d5d42c099eadd7" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\classlist"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir07cceda2a5823606be3944fe1c579e9d">
+      <Component Win64="yes" Id="cfilef0ed74b0fab732a78ab13e2592dab3bb" Guid="{f0ed74b0-fab7-32a7-8ab1-3e2592dab3bb}">
+        <File Id="filef0ed74b0fab732a78ab13e2592dab3bb" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.graphics\ASSEMBLY_EXCEPTION"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile45d11923814f3b16873b1d88f2bbfe9c" Guid="{45d11923-814f-3b16-873b-1d88f2bbfe9c}">
+        <File Id="file45d11923814f3b16873b1d88f2bbfe9c" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-file-l2-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilee7fe97df1fef334caa822bd7732c5812" Guid="{e7fe97df-1fef-334c-aa82-2bd7732c5812}">
+        <File Id="filee7fe97df1fef334caa822bd7732c5812" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\splashscreen.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfileacb0029ae09b3b3b85018ae2e3cf95d7" Guid="{acb0029a-e09b-3b3b-8501-8ae2e3cf95d7}">
+        <File Id="fileacb0029ae09b3b3b85018ae2e3cf95d7" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-string-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile82207aab4be534b1926be8df36bcbc44" Guid="{82207aab-4be5-34b1-926b-e8df36bcbc44}">
+        <File Id="file82207aab4be534b1926be8df36bcbc44" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-util-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilebabbebcd7c993cc999d4231d3bb26e83" Guid="{babbebcd-7c99-3cc9-99d4-231d3bb26e83}">
+        <File Id="filebabbebcd7c993cc999d4231d3bb26e83" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-debug-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dira9e78cd020b5309fb855f933e6728748">
+      <Component Win64="yes" Id="cfile33d2230981fd315aa7183e95487033fc" Guid="{33d22309-81fd-315a-a718-3e95487033fc}">
+        <File Id="file33d2230981fd315aa7183e95487033fc" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.controls\ADDITIONAL_LICENSE_INFO"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirce7aca387fb736b8948cd9637cfad566">
+      <Component Win64="yes" Id="cfile27af119ad3df35caa91311308856354a" Guid="{27af119a-d3df-35ca-a913-11308856354a}">
+        <File Id="file27af119ad3df35caa91311308856354a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\app\classes\com\andrewhun\finance\App.class"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile11a5eadaab5a384eb685241b5e69e253" Guid="{11a5eada-ab5a-384e-b685-241b5e69e253}">
+        <File Id="file11a5eadaab5a384eb685241b5e69e253" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-string-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile36f487fed9dd38c48340ad1d3770000f" Guid="{36f487fe-d9dd-38c4-8340-ad1d3770000f}">
+        <File Id="file36f487fed9dd38c48340ad1d3770000f" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\lcms.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfileb54f801d4ef831aea870dee318d3e651" Guid="{b54f801d-4ef8-31ae-a870-dee318d3e651}">
+        <File Id="fileb54f801d4ef831aea870dee318d3e651" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-rtlsupport-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir94085e31dd8f390caf4ea84a1d57e751">
+      <Component Win64="yes" Id="cfile7d9a506d46373ebc9edb5a25dfcefc33" Guid="{7d9a506d-4637-3ebc-9edb-5a25dfcefc33}">
+        <File Id="file7d9a506d46373ebc9edb5a25dfcefc33" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\security\java.security"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile16157727f8d8327ca2ebf61a616993d4" Guid="{16157727-f8d8-327c-a2eb-f61a616993d4}">
+        <File Id="file16157727f8d8327ca2ebf61a616993d4" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-memory-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfiledb4ea206621e394aac4756e9617ce79d" Guid="{db4ea206-621e-394a-ac47-56e9617ce79d}">
+        <File Id="filedb4ea206621e394aac4756e9617ce79d" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-errorhandling-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile73a80102b73237b7a3e0d9dc1cfc62e2" Guid="{73a80102-b732-37b7-a3e0-d9dc1cfc62e2}">
+        <File Id="file73a80102b73237b7a3e0d9dc1cfc62e2" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\javafx.properties"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile0d06f59004153e7596c7dc1174363cdc" Guid="{0d06f590-0415-3e75-96c7-dc1174363cdc}">
+        <File Id="file0d06f59004153e7596c7dc1174363cdc" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-heap-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir40f84b56068d341da01a768174eb5e59">
+      <Component Win64="yes" Id="cfileba75b97158a439498d939e35d6773808" Guid="{ba75b971-58a4-3949-8d93-9e35d6773808}">
+        <File Id="fileba75b97158a439498d939e35d6773808" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\app\desktop-finance.jar"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile358f4cfe5b563484aeb28b7aecbd91c6" Guid="{358f4cfe-5b56-3484-aeb2-8b7aecbd91c6}">
+        <File Id="file358f4cfe5b563484aeb28b7aecbd91c6" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-time-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfilefceb3845b44c3e8487f4958e83561f80" Guid="{fceb3845-b44c-3e84-87f4-958e83561f80}">
+        <File Id="filefceb3845b44c3e8487f4958e83561f80" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\asm.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir397c92055a9137aeb8b4873a2901dc79">
+      <Component Win64="yes" Id="cfile5af03526a0a639e3af85beb12e34d9a9" Guid="{5af03526-a0a6-39e3-af85-beb12e34d9a9}">
+        <File Id="file5af03526a0a639e3af85beb12e34d9a9" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\jdk.unsupported\ASSEMBLY_EXCEPTION"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile52e9d179f517341fb4e64432e9e055ee" Guid="{52e9d179-f517-341f-b4e6-4432e9e055ee}">
+        <File Id="file52e9d179f517341fb4e64432e9e055ee" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-namedpipe-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile0ef2432eec753ab6a2f4ecaabf9259d6" Guid="{0ef2432e-ec75-3ab6-a2f4-ecaabf9259d6}">
+        <File Id="file0ef2432eec753ab6a2f4ecaabf9259d6" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-locale-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile86eb86d7fca535e4b5e478d82a5c2c7d" Guid="{86eb86d7-fca5-35e4-b5e4-78d82a5c2c7d}">
+        <File Id="file86eb86d7fca535e4b5e478d82a5c2c7d" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\jvm.cfg"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir2603662ba796333eb8233539121dfaa7">
+      <Component Win64="yes" Id="cfile6cdffda1809c37c084ea8864cfda5ad3" Guid="{6cdffda1-809c-37c0-84ea-8864cfda5ad3}">
+        <File Id="file6cdffda1809c37c084ea8864cfda5ad3" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\security\public_suffix_list.dat"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile1d252731852a3cd79a427c6b087220f2" Guid="{1d252731-852a-3cd7-9a42-7c6b087220f2}">
+        <File Id="file1d252731852a3cd79a427c6b087220f2" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-private-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir0342b33c5b743d4eba6894e12fd344a2">
+      <Component Win64="yes" Id="cfile126f5651f5563058ab98955ceacc2301" Guid="{126f5651-f556-3058-ab98-955ceacc2301}">
+        <File Id="file126f5651f5563058ab98955ceacc2301" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.base\ADDITIONAL_LICENSE_INFO"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile492f685cb455387eb408a5d1d05c375d" Guid="{492f685c-b455-387e-b408-a5d1d05c375d}">
+        <File Id="file492f685cb455387eb408a5d1d05c375d" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\prism_common.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilebbef28601bf43a0fab7a0a27252e0a08" Guid="{bbef2860-1bf4-3a0f-ab7a-0a27252e0a08}">
+        <File Id="filebbef28601bf43a0fab7a0a27252e0a08" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-console-l1-2-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile40dbb4f55cb83b0cb609ede743d7f351" Guid="{40dbb4f5-5cb8-3b0c-b609-ede743d7f351}">
+        <File Id="file40dbb4f55cb83b0cb609ede743d7f351" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-file-l1-2-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilea00d1c8e9cf43226950a03042d6ad409" Guid="{a00d1c8e-9cf4-3226-950a-03042d6ad409}">
+        <File Id="filea00d1c8e9cf43226950a03042d6ad409" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\jsound.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dire97c5b787ae13ca1a5f1d02aee383b04">
+      <Component Win64="yes" Id="cfileef18fbff6c233858beb19712296531e3" Guid="{ef18fbff-6c23-3858-beb1-9712296531e3}">
+        <File Id="fileef18fbff6c233858beb19712296531e3" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.xml\jcup.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile2bee21ad8f5b32c899333416c52a7222" Guid="{2bee21ad-8f5b-32c8-9933-3416c52a7222}">
+        <File Id="file2bee21ad8f5b32c899333416c52a7222" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-multibyte-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile6ed3398d6e723e5fbf07ce7043f35028" Guid="{6ed3398d-6e72-3e5f-bf07-ce7043f35028}">
+        <File Id="file6ed3398d6e723e5fbf07ce7043f35028" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-rtlsupport-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile62d7b0fa975c373aa3fe3d51723d0c98" Guid="{62d7b0fa-975c-373a-a3fe-3d51723d0c98}">
+        <File Id="file62d7b0fa975c373aa3fe3d51723d0c98" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-file-l2-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfileef91bb691dd735ceac2288acae49c363" Guid="{ef91bb69-1dd7-35ce-ac22-88acae49c363}">
+        <File Id="fileef91bb691dd735ceac2288acae49c363" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\libpng.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfilea9afc0450c3f3778ad893db2f8ec482f" Guid="{a9afc045-0c3f-3778-ad89-3db2f8ec482f}">
+        <File Id="filea9afc0450c3f3778ad893db2f8ec482f" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\aes.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfileb72ce9b56ca83a2f9b407e126e83a945" Guid="{b72ce9b5-6ca8-3a2f-9b40-7e126e83a945}">
+        <File Id="fileb72ce9b56ca83a2f9b407e126e83a945" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\msvcp140_2.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile3db2e51192dc3b5f98b7a647d5111537" Guid="{3db2e511-92dc-3b5f-98b7-a647d5111537}">
+        <File Id="file3db2e51192dc3b5f98b7a647d5111537" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-multibyte-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir162e27f67daa35a5967791019ecd6775">
+      <Component Win64="yes" Id="cfile6449fbc15eb7360a85b36231790d7742" Guid="{6449fbc1-5eb7-360a-85b3-6231790d7742}">
+        <File Id="file6449fbc15eb7360a85b36231790d7742" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\security\policy\limited\exempt_local.policy"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilefd7f5f4086ef35129470b8fe26a820ef" Guid="{fd7f5f40-86ef-3512-9470-b8fe26a820ef}">
+        <File Id="filefd7f5f4086ef35129470b8fe26a820ef" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-processenvironment-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile87f18bf08e2f32e2bca3788dd19845bd" Guid="{87f18bf0-8e2f-32e2-bca3-788dd19845bd}">
+        <File Id="file87f18bf08e2f32e2bca3788dd19845bd" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\prism_d3d.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile66d1d259d6b9366087fc5022a6543c88" Guid="{66d1d259-d6b9-3660-87fc-5022a6543c88}">
+        <File Id="file66d1d259d6b9366087fc5022a6543c88" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-localization-l1-2-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfile544d7b96f30b30c4a775694f7abacc10" Guid="{544d7b96-f30b-30c4-a775-694f7abacc10}">
+        <File Id="file544d7b96f30b30c4a775694f7abacc10" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\giflib.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1b74edbf234730278bbbbb2f2f883473">
+      <Component Win64="yes" Id="cfile2b71777a7ad638a8a4b2976bfb2541d7" Guid="{2b71777a-7ad6-38a8-a4b2-976bfb2541d7}">
+        <File Id="file2b71777a7ad638a8a4b2976bfb2541d7" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.prefs\ADDITIONAL_LICENSE_INFO"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1b74edbf234730278bbbbb2f2f883473">
+      <Component Win64="yes" Id="cfile5f5b6ccfa7a73378967992c108a36cd8" Guid="{5f5b6ccf-a7a7-3378-9679-92c108a36cd8}">
+        <File Id="file5f5b6ccfa7a73378967992c108a36cd8" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.prefs\LICENSE"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile208055db563d3c18b3b09f490b03c0b1" Guid="{208055db-563d-3c18-b3b0-9f490b03c0b1}">
+        <File Id="file208055db563d3c18b3b09f490b03c0b1" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\vcruntime140_1.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf640b19630f362c9ff2093915614c74">
+      <Component Win64="yes" Id="cfile69721213e9e53d81aa407c9ae4fca894" Guid="{69721213-e9e5-3d81-aa40-7c9ae4fca894}">
+        <File Id="file69721213e9e53d81aa407c9ae4fca894" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.desktop\jpeg.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Component Win64="yes" Id="cfile4eea489136293baa915c65ad256e04dd" Guid="{4eea4891-3629-3baa-915c-65ad256e04dd}">
+        <File Id="file4eea489136293baa915c65ad256e04dd" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\tzdb.dat"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile07acafa7c7393cb08e5e6c864d661a56" Guid="{07acafa7-c739-3cb0-8e5e-6c864d661a56}">
+        <File Id="file07acafa7c7393cb08e5e6c864d661a56" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\decora_sse.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir231e6a506fe7391ea7fa4f2559307f5e">
+      <Component Win64="yes" Id="cfilef590100e993f3f718b326dedf646ce4c" Guid="{f590100e-993f-3f71-8b32-6dedf646ce4c}">
+        <File Id="filef590100e993f3f718b326dedf646ce4c" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\net.properties"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile6b63c3e837a73939b4c254c7e61d5240" Guid="{6b63c3e8-37a7-3939-b4c2-54c7e61d5240}">
+        <File Id="file6b63c3e837a73939b4c254c7e61d5240" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-synch-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirce7aca387fb736b8948cd9637cfad566">
+      <Component Win64="yes" Id="cfilecafd523a1bf5374db8b461029871693a" Guid="{cafd523a-1bf5-374d-b8b4-61029871693a}">
+        <File Id="filecafd523a1bf5374db8b461029871693a" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\app\classes\com\andrewhun\finance\App$$1.class"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilec060d506679a3903b1ff75ca06aee1a8" Guid="{c060d506-679a-3903-b1ff-75ca06aee1a8}">
+        <File Id="filec060d506679a3903b1ff75ca06aee1a8" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-heap-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile755d44e60ad23125a6a6aaf57a79984c" Guid="{755d44e6-0ad2-3125-a6a6-aaf57a79984c}">
+        <File Id="file755d44e60ad23125a6a6aaf57a79984c" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-console-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilebb55d11fdf2b3e279192863e8a712516" Guid="{bb55d11f-df2b-3e27-9192-863e8a712516}">
+        <File Id="filebb55d11fdf2b3e279192863e8a712516" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-debug-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfilefa556ed1f3953f4d96b5186a472f1eda" Guid="{fa556ed1-f395-3f4d-96b5-186a472f1eda}">
+        <File Id="filefa556ed1f3953f4d96b5186a472f1eda" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-interlocked-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile589506d5333336218bc4b6b3fc60be76" Guid="{589506d5-3333-3621-8bc4-b6b3fc60be76}">
+        <File Id="file589506d5333336218bc4b6b3fc60be76" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\jli.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dire97c5b787ae13ca1a5f1d02aee383b04">
+      <Component Win64="yes" Id="cfileb1766a3d11ae3036b055a4a850f5da4d" Guid="{b1766a3d-11ae-3036-b055-a4a850f5da4d}">
+        <File Id="fileb1766a3d11ae3036b055a4a850f5da4d" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.xml\ASSEMBLY_EXCEPTION"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir50fed7ddbb9d3171bb64b4d58957ad5c">
+      <Component Win64="yes" Id="cfile4e6810dc2d4433ecb44e2e5a2fae04fd" Guid="{4e6810dc-2d44-33ec-b44e-2e5a2fae04fd}">
+        <File Id="file4e6810dc2d4433ecb44e2e5a2fae04fd" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.base\ADDITIONAL_LICENSE_INFO"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfileeb95acfbd3d731b7b31d7042b289b3fe" Guid="{eb95acfb-d3d7-31b7-b31d-7042b289b3fe}">
+        <File Id="fileeb95acfbd3d731b7b31d7042b289b3fe" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-crt-conio-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dire97c5b787ae13ca1a5f1d02aee383b04">
+      <Component Win64="yes" Id="cfile4b4ca80665dc395f9e2218a903abf4d1" Guid="{4b4ca806-65dc-395f-9e22-18a903abf4d1}">
+        <File Id="file4b4ca80665dc395f9e2218a903abf4d1" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.xml\xalan.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir397c92055a9137aeb8b4873a2901dc79">
+      <Component Win64="yes" Id="cfilee45c4147a1313ecd89e3eedb2ea0fd75" Guid="{e45c4147-a131-3ecd-89e3-eedb2ea0fd75}">
+        <File Id="filee45c4147a1313ecd89e3eedb2ea0fd75" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\jdk.unsupported\ADDITIONAL_LICENSE_INFO"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dire87a7d2cab5f35e0bf0a9181e38d0c09">
+      <Component Win64="yes" Id="cfile0575f23782fc3c8088352bd75869c42c" Guid="{0575f237-82fc-3c80-8835-2bd75869c42c}">
+        <File Id="file0575f23782fc3c8088352bd75869c42c" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\release"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir07cceda2a5823606be3944fe1c579e9d">
+      <Component Win64="yes" Id="cfile811770e4b4ed361f9dfa5fbb99447966" Guid="{811770e4-b4ed-361f-9dfa-5fbb99447966}">
+        <File Id="file811770e4b4ed361f9dfa5fbb99447966" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.graphics\ADDITIONAL_LICENSE_INFO"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir40f84b56068d341da01a768174eb5e59">
+      <Component Win64="yes" Id="cfilea2986c071ef33406933ab2465658ade7" Guid="{a2986c07-1ef3-3406-933a-b2465658ade7}">
+        <File Id="filea2986c071ef33406933ab2465658ade7" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\app\Desktop Finance.cfg"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile941eef19e35b38cb8e84a3edefd9ad68" Guid="{941eef19-e35b-38cb-8e84-a3edefd9ad68}">
+        <File Id="file941eef19e35b38cb8e84a3edefd9ad68" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\vcruntime140_1.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile8c446f9e554b3b54ac0f2dd0599d5c75" Guid="{8c446f9e-554b-3b54-ac0f-2dd0599d5c75}">
+        <File Id="file8c446f9e554b3b54ac0f2dd0599d5c75" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\verify.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfilef6ee9e3b75723e7487324d3dc00b5633" Guid="{f6ee9e3b-7572-3e74-8732-4d3dc00b5633}">
+        <File Id="filef6ee9e3b75723e7487324d3dc00b5633" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-console-l1-2-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile6f7c7d5343c83a2ca20a2c7c143169f7" Guid="{6f7c7d53-43c8-3a2c-a20a-2c7c143169f7}">
+        <File Id="file6f7c7d5343c83a2ca20a2c7c143169f7" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-synch-l1-2-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="INSTALLDIR">
+      <Component Win64="yes" Id="cfilec675faf4a3423acfb1f42db00e9a3397" Guid="{c675faf4-a342-3acf-b1f4-2db00e9a3397}">
+        <File Id="filec675faf4a3423acfb1f42db00e9a3397" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\Desktop Finance.exe"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile02334f58e6283648a2db98f7deeeac0f" Guid="{02334f58-e628-3648-a2db-98f7deeeac0f}">
+        <File Id="file02334f58e6283648a2db98f7deeeac0f" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-core-file-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir2603662ba796333eb8233539121dfaa7">
+      <Component Win64="yes" Id="cfile13acf131414a356db4900fd4f431a6f4" Guid="{13acf131-414a-356d-b490-0fd4f431a6f4}">
+        <File Id="file13acf131414a356db4900fd4f431a6f4" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\lib\security\cacerts"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile91d1a6b4c55c3932aed7e85b138ebb91" Guid="{91d1a6b4-c55c-3932-aed7-e85b138ebb91}">
+        <File Id="file91d1a6b4c55c3932aed7e85b138ebb91" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-console-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfileb4e86b673930347d9732d2f0ea4c2676" Guid="{b4e86b67-3930-347d-9732-d2f0ea4c2676}">
+        <File Id="fileb4e86b673930347d9732d2f0ea4c2676" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\javafx_font.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dire97c5b787ae13ca1a5f1d02aee383b04">
+      <Component Win64="yes" Id="cfilea209e42791ff3112b7fa706e072314f2" Guid="{a209e427-91ff-3112-b7fa-706e072314f2}">
+        <File Id="filea209e42791ff3112b7fa706e072314f2" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\java.xml\dom.md"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir1df3da8484f93901b3efec60a3a4e49b">
+      <Component Win64="yes" Id="cfile701f2c2f5b4a33ffbe59ccb4bdd87983" Guid="{701f2c2f-5b4a-33ff-be59-ccb4bdd87983}">
+        <File Id="file701f2c2f5b4a33ffbe59ccb4bdd87983" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\javafx\api-ms-win-crt-stdio-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir800e59f893cf30bfb9bb9a3f6e92b681">
+      <Component Win64="yes" Id="cfile987393bfbef13fc8bef210a8c99482b1" Guid="{987393bf-bef1-3fc8-bef2-10a8c99482b1}">
+        <File Id="file987393bfbef13fc8bef210a8c99482b1" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\conf\security\policy\unlimited\default_US_export.policy"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile7928fa2d45ce3375bbe9b62e245ff9d7" Guid="{7928fa2d-45ce-3375-bbe9-b62e245ff9d7}">
+        <File Id="file7928fa2d45ce3375bbe9b62e245ff9d7" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\api-ms-win-core-profile-l1-1-0.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Component Win64="yes" Id="cfile5f8b27e96d1a394a93c12f03080d9d6c" Guid="{5f8b27e9-6d1a-394a-93c1-2f03080d9d6c}">
+        <File Id="file5f8b27e96d1a394a93c12f03080d9d6c" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\bin\mlib_image.dll"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir0342b33c5b743d4eba6894e12fd344a2">
+      <Component Win64="yes" Id="cfilee21e064f2cd63ac1bd0e09945f817d82" Guid="{e21e064f-2cd6-3ac1-bd0e-09945f817d82}">
+        <File Id="filee21e064f2cd63ac1bd0e09945f817d82" KeyPath="yes" Source="C:\Users\andre\IdeaProjects\desktop-finance\WiX-temp\images\win-msi.image\Desktop Finance\runtime\legal\javafx.base\LICENSE"></File>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5db16df828983d3fb3e22cb54f8e1b36">
+      <Component Win64="yes" Id="cmkdirc4fe15fbc35c3abcadb746fc09580ca0" Guid="{c4fe15fb-c35c-3abc-adb7-46fc09580ca0}">
+        <RegistryKey Root="HKLM" Key="Software\Unknown\Desktop Finance\1.0">
+          <RegistryValue Type="string" KeyPath="yes" Name="ProductCode" Value="[ProductCode]"></RegistryValue>
+        </RegistryKey>
+        <CreateFolder></CreateFolder>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir32102d431c97309999901dd95aaeec15">
+      <Component Win64="yes" Id="cmkdirbe397c7a2f3137f48788b4a0af6e7d52" Guid="{be397c7a-2f31-37f4-8788-b4a0af6e7d52}">
+        <RegistryKey Root="HKLM" Key="Software\Unknown\Desktop Finance\1.0">
+          <RegistryValue Type="string" KeyPath="yes" Name="ProductCode" Value="[ProductCode]"></RegistryValue>
+        </RegistryKey>
+        <CreateFolder></CreateFolder>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir94085e31dd8f390caf4ea84a1d57e751">
+      <Directory Id="dir58ad176b945f3860a8b9d7b1deb963d3" Name="policy"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dire87a7d2cab5f35e0bf0a9181e38d0c09">
+      <Directory Id="dir231e6a506fe7391ea7fa4f2559307f5e" Name="conf"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5391ccbfa2c03538b949e3f55c8f5005">
+      <Directory Id="dir50fed7ddbb9d3171bb64b4d58957ad5c" Name="java.base"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Directory Id="dir2603662ba796333eb8233539121dfaa7" Name="security"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir40f84b56068d341da01a768174eb5e59">
+      <Directory Id="dir3061b58e41bf38e6b7e3d916e6815339" Name="generated-sources"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir21dda3b4d7e933658d8eb4c129cfb74a">
+      <Directory Id="dir50d05d3ffbcf3aab85b835b0d3ae198c" Name="default-compile"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5391ccbfa2c03538b949e3f55c8f5005">
+      <Directory Id="dir1b74edbf234730278bbbbb2f2f883473" Name="java.prefs"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir3061b58e41bf38e6b7e3d916e6815339">
+      <Directory Id="dir5db16df828983d3fb3e22cb54f8e1b36" Name="annotations"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir231e6a506fe7391ea7fa4f2559307f5e">
+      <Directory Id="dir94085e31dd8f390caf4ea84a1d57e751" Name="security"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir40f84b56068d341da01a768174eb5e59">
+      <Directory Id="dir32102d431c97309999901dd95aaeec15" Name="archive-tmp"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5391ccbfa2c03538b949e3f55c8f5005">
+      <Directory Id="dir9865718a90953e83aa74b102fc132487" Name="jdk.jfr"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir40f84b56068d341da01a768174eb5e59">
+      <Directory Id="dira488a7ef630c38cc884d2a905102ee0a" Name="classes"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5391ccbfa2c03538b949e3f55c8f5005">
+      <Directory Id="dircf640b19630f362c9ff2093915614c74" Name="java.desktop"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5391ccbfa2c03538b949e3f55c8f5005">
+      <Directory Id="dire97c5b787ae13ca1a5f1d02aee383b04" Name="java.xml"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5391ccbfa2c03538b949e3f55c8f5005">
+      <Directory Id="dir1e08c79b7c55361b81b1a887233c601b" Name="java.datatransfer"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir386fccacf2123232baeb3a6d4fb167c5">
+      <Directory Id="dirce7aca387fb736b8948cd9637cfad566" Name="finance"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Directory Id="dirbb362e5246873511867209e9c853d033" Name="server"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dire87a7d2cab5f35e0bf0a9181e38d0c09">
+      <Directory Id="dirb314e9c4f1703a21bfb0e30d794de601" Name="bin"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dirb314e9c4f1703a21bfb0e30d794de601">
+      <Directory Id="dir1df3da8484f93901b3efec60a3a4e49b" Name="javafx"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dircf9a22dc840b3cff9bb0e789148cd11f">
+      <Directory Id="dird18d6cdbda8d32808cbd0aee1d693703" Name="jfr"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir3efbbb2db70839f18509fe4e3335c341">
+      <Directory Id="dir21dda3b4d7e933658d8eb4c129cfb74a" Name="compile"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir58ad176b945f3860a8b9d7b1deb963d3">
+      <Directory Id="dir800e59f893cf30bfb9bb9a3f6e92b681" Name="unlimited"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dire87a7d2cab5f35e0bf0a9181e38d0c09">
+      <Directory Id="dircf9a22dc840b3cff9bb0e789148cd11f" Name="lib"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5391ccbfa2c03538b949e3f55c8f5005">
+      <Directory Id="dira9e78cd020b5309fb855f933e6728748" Name="javafx.controls"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5391ccbfa2c03538b949e3f55c8f5005">
+      <Directory Id="dir397c92055a9137aeb8b4873a2901dc79" Name="jdk.unsupported"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dira488a7ef630c38cc884d2a905102ee0a">
+      <Directory Id="dir3d0eb5800d403dd9b691e59b9ec7f003" Name="com"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5c6e6a331f8b340caec2e366f18d1ec3">
+      <Directory Id="dir3efbbb2db70839f18509fe4e3335c341" Name="maven-compiler-plugin"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="INSTALLDIR">
+      <Directory Id="dir40f84b56068d341da01a768174eb5e59" Name="app"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="INSTALLDIR">
+      <Directory Id="dire87a7d2cab5f35e0bf0a9181e38d0c09" Name="runtime"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir3d0eb5800d403dd9b691e59b9ec7f003">
+      <Directory Id="dir386fccacf2123232baeb3a6d4fb167c5" Name="andrewhun"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dire87a7d2cab5f35e0bf0a9181e38d0c09">
+      <Directory Id="dir5391ccbfa2c03538b949e3f55c8f5005" Name="legal"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5391ccbfa2c03538b949e3f55c8f5005">
+      <Directory Id="dir07cceda2a5823606be3944fe1c579e9d" Name="javafx.graphics"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir40f84b56068d341da01a768174eb5e59">
+      <Directory Id="dir5c6e6a331f8b340caec2e366f18d1ec3" Name="maven-status"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir5391ccbfa2c03538b949e3f55c8f5005">
+      <Directory Id="dir0342b33c5b743d4eba6894e12fd344a2" Name="javafx.base"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="dir58ad176b945f3860a8b9d7b1deb963d3">
+      <Directory Id="dir162e27f67daa35a5967791019ecd6775" Name="limited"></Directory>
+    </DirectoryRef>
+    <DirectoryRef Id="TARGETDIR">
+      <Directory Id="ProgramFiles64Folder">
+        <Directory Id="INSTALLDIR" Name="Desktop Finance"></Directory>
+      </Directory>
+    </DirectoryRef>
+    <Property Id="RM_RF48431AECBD69377EA800D62616352F20">
+      <RegistrySearch Id="regsearch44413c41962833c69ffb8268f3119343" Root="HKLM" Key="Software\Unknown\Desktop Finance\1.0" Type="raw" Name="RM_RF48431AECBD69377EA800D62616352F20"></RegistrySearch>
+    </Property>
+    <DirectoryRef Id="INSTALLDIR">
+      <Component Win64="yes" Id="crm_rf48431aecbd69377ea800d62616352f20" Guid="*">
+        <RegistryKey Root="HKLM" Key="Software\Unknown\Desktop Finance\1.0">
+          <RegistryValue Type="string" KeyPath="yes" Name="RM_RF48431AECBD69377EA800D62616352F20" Value="[INSTALLDIR]"></RegistryValue>
+        </RegistryKey>
+        <util:RemoveFolderEx On="uninstall" Property="RM_RF48431AECBD69377EA800D62616352F20"></util:RemoveFolderEx>
+      </Component>
+    </DirectoryRef>
+    <ComponentGroup Id="Files">
+      <ComponentRef Id="cfilee709cd237ea738c99355efab22c3ce55"></ComponentRef>
+      <ComponentRef Id="cfilee3e0fa642a7f318db4e675275da8a5c3"></ComponentRef>
+      <ComponentRef Id="cfilea94e201d20ef3812a27ba4b48ee3f31f"></ComponentRef>
+      <ComponentRef Id="cfile7ee9ad88bf4033658b6cced645142a01"></ComponentRef>
+      <ComponentRef Id="cfile3e9b44e681943344b82b209ee8ad73f7"></ComponentRef>
+      <ComponentRef Id="cfilea5c4078e9a943a1bb636e0f699735369"></ComponentRef>
+      <ComponentRef Id="cfilee7956724e65a3018a487947ff29096d5"></ComponentRef>
+      <ComponentRef Id="cfilea4dfe168ad5239e6965caa1f825a4e1e"></ComponentRef>
+      <ComponentRef Id="cfile5414037756733977bf977b917e94b165"></ComponentRef>
+      <ComponentRef Id="cfile2a6a8a52ed0736d489bfc71b16feb2c3"></ComponentRef>
+      <ComponentRef Id="cfile72c28c1bc90039819fd4dd73ae670aca"></ComponentRef>
+      <ComponentRef Id="cfilef4417da55e3633ffbd6c7c2ea7b520f1"></ComponentRef>
+      <ComponentRef Id="cfile6beef31dd71d30f0b4fb1c742f738975"></ComponentRef>
+      <ComponentRef Id="cfile40edbad81f073d02b0de27ac9da7540d"></ComponentRef>
+      <ComponentRef Id="cfilea465918cf0533db8a4519ac9b7d1c50b"></ComponentRef>
+      <ComponentRef Id="cfile5e9220803c043447902450d71ea0912f"></ComponentRef>
+      <ComponentRef Id="cfile5f8cfce945ad3aad8858b422e2ba4d24"></ComponentRef>
+      <ComponentRef Id="cfile69b7c6bd78ba366e81adfa136c715587"></ComponentRef>
+      <ComponentRef Id="cfile931bce33e20c3d7aba37e4e15d92f99a"></ComponentRef>
+      <ComponentRef Id="cfile6e25e42e145c342c9c2537107d03a10f"></ComponentRef>
+      <ComponentRef Id="cfilef216a6944cb03a2bba6959707baa5ff1"></ComponentRef>
+      <ComponentRef Id="cfile0566e653e9ae32ad84481ac3f202a898"></ComponentRef>
+      <ComponentRef Id="cfileab799eb7f72c3e8e9e301dfdc98be0c7"></ComponentRef>
+      <ComponentRef Id="cfile4e975aba8f563264877f7aa3ac710384"></ComponentRef>
+      <ComponentRef Id="cfile9c961237cb7b31feb185d0a70c7f6e5f"></ComponentRef>
+      <ComponentRef Id="cfile83ebe75928a03414b0be6a43b19f9f1a"></ComponentRef>
+      <ComponentRef Id="cfile0dbcf5ef797832be87680b581d8e56a2"></ComponentRef>
+      <ComponentRef Id="cfiled78727bf16eb3b60a5337074e6c1866e"></ComponentRef>
+      <ComponentRef Id="cfilee9dca98c5bc43b40ab8f1f5d80729dbf"></ComponentRef>
+      <ComponentRef Id="cfile49a79519aa333a2fb11ac38aadde51a0"></ComponentRef>
+      <ComponentRef Id="cfileb7f25dfef9c0389fb25d5bf599deae2a"></ComponentRef>
+      <ComponentRef Id="cfile5c065a93dd333c8aaff5cbe71f4c32f1"></ComponentRef>
+      <ComponentRef Id="cfile6d9ce4cb6bdf3f6f9b24ebfc65bac782"></ComponentRef>
+      <ComponentRef Id="cfilea9cbbca208013de8be9d1b99c277bb7a"></ComponentRef>
+      <ComponentRef Id="cfile6813f9ddc50d3d2ab4d55e4fa476e5b6"></ComponentRef>
+      <ComponentRef Id="cfilefc106ae245143c8894d3f16e51ff8805"></ComponentRef>
+      <ComponentRef Id="cfile54b270cf18ec3cb78258d3acc1c8fb7e"></ComponentRef>
+      <ComponentRef Id="cfile10b7566b08743cd396d393b587f71605"></ComponentRef>
+      <ComponentRef Id="cfile73732fc1b32e357880239e94b3c7485c"></ComponentRef>
+      <ComponentRef Id="cfile04a8f862de0d3915a1afb25a95ff4bb1"></ComponentRef>
+      <ComponentRef Id="cfile5e290de5135b3b8499cc829dc8143504"></ComponentRef>
+      <ComponentRef Id="cfiled4b06b31fb623c598059562884b108f1"></ComponentRef>
+      <ComponentRef Id="cfile977a960d186f37a4aa8f9786b457745a"></ComponentRef>
+      <ComponentRef Id="cfile968edb2f3e283400922e2a9c7d3860cc"></ComponentRef>
+      <ComponentRef Id="cfilec3805c869162372a90477e2b352f8e6d"></ComponentRef>
+      <ComponentRef Id="cfile4a2243fa961b348eb4144bfc37e0215d"></ComponentRef>
+      <ComponentRef Id="cfile43b8a7edec3b3abd8b45cba46a6dd8ce"></ComponentRef>
+      <ComponentRef Id="cfile2dd098c322e33fd48c74c98cca2b87af"></ComponentRef>
+      <ComponentRef Id="cfilea89abedbae77350582cab6b930bcd024"></ComponentRef>
+      <ComponentRef Id="cfile5e1f8c8e9edc3d7c961c1020ee416957"></ComponentRef>
+      <ComponentRef Id="cfiledfd5850410b332af90d5a75a418141f8"></ComponentRef>
+      <ComponentRef Id="cfile02c5a2f5512b3fa294c7a9067709b19a"></ComponentRef>
+      <ComponentRef Id="cfilea3b21980a218327e9f589c5bec86036b"></ComponentRef>
+      <ComponentRef Id="cfilef362b8aabc5438b5a610d0580a663b87"></ComponentRef>
+      <ComponentRef Id="cfile7927518abdc036ed8538c48f2108947f"></ComponentRef>
+      <ComponentRef Id="cfile2ff3e3ebe7d43ca99ae3624aba9bece1"></ComponentRef>
+      <ComponentRef Id="cfile0188de61f24e319ea4970741e3069a0a"></ComponentRef>
+      <ComponentRef Id="cfile436b1ab2557b3f14be5881e23ae99aab"></ComponentRef>
+      <ComponentRef Id="cfilea43f830c209933f6b04eb3c2284e0eff"></ComponentRef>
+      <ComponentRef Id="cfile57f1e4a01ad83188ad0c39fda43752ed"></ComponentRef>
+      <ComponentRef Id="cfile741fe330cc6a3e1fb2e9b69312f577ac"></ComponentRef>
+      <ComponentRef Id="cfile8e1c572076c23e64babd0c9ef5e69ce8"></ComponentRef>
+      <ComponentRef Id="cfile5bf74ba060443eadaf88032f03ff5280"></ComponentRef>
+      <ComponentRef Id="cfile76ece0551e69392e8ac888708b6fa689"></ComponentRef>
+      <ComponentRef Id="cfile20610d62842a3983af561cd4ad1966dd"></ComponentRef>
+      <ComponentRef Id="cfile4967c2df6d753f0097e098f32b5e2f94"></ComponentRef>
+      <ComponentRef Id="cfileb9a524b2861e3fd3b0818018ae5e1b94"></ComponentRef>
+      <ComponentRef Id="cfile9dd2d44aba95318c8f0a9dac581610d6"></ComponentRef>
+      <ComponentRef Id="cfile4b0fb6b4ed89362599d028b2e6110ad7"></ComponentRef>
+      <ComponentRef Id="cfile42cd07cfa71e37f6a58a0794bb262503"></ComponentRef>
+      <ComponentRef Id="cfilefc1e9cd669b43db5a44d1c239154bc79"></ComponentRef>
+      <ComponentRef Id="cfilecd6377c941023cf29ea35eac2d78d93f"></ComponentRef>
+      <ComponentRef Id="cfile96ab140b66c237588f0e762bd982bec5"></ComponentRef>
+      <ComponentRef Id="cfile92ac11dbaaaa38048efeb986ad63a6e0"></ComponentRef>
+      <ComponentRef Id="cfilefe3b781367673b2f8cc1f3cf95240473"></ComponentRef>
+      <ComponentRef Id="cfilebd5077779b6a3ed2aa5ef8b1a859ac9a"></ComponentRef>
+      <ComponentRef Id="cfile7ba917fefca03dea960aaa56152e406b"></ComponentRef>
+      <ComponentRef Id="cfile8dd4e98782863c9a917e41ccde9f3599"></ComponentRef>
+      <ComponentRef Id="cfile47d57676c1db364788febaaf4ed18569"></ComponentRef>
+      <ComponentRef Id="cfile92005861b6c63e318442f946199376f9"></ComponentRef>
+      <ComponentRef Id="cfile800505d54d373b9eb717040dad918c54"></ComponentRef>
+      <ComponentRef Id="cfile5fc6ecd327453a9bba71aac35d21e6c2"></ComponentRef>
+      <ComponentRef Id="cfile01a6ab463d463c3895dd75d83535b8d0"></ComponentRef>
+      <ComponentRef Id="cfile045d8ee653bb30069cefdf65e63aadfc"></ComponentRef>
+      <ComponentRef Id="cfileef33b46e5ac433ebbbc21b6717e12b69"></ComponentRef>
+      <ComponentRef Id="cfilea7dd5107132a300995240f15d5ad8285"></ComponentRef>
+      <ComponentRef Id="cfile14368850e73f3c8fbeb2d132b44a4808"></ComponentRef>
+      <ComponentRef Id="cfiledd66bcb1c5723659aa525cf915ab9bb6"></ComponentRef>
+      <ComponentRef Id="cfile57d26e568cd13e3db4f894c473d4d684"></ComponentRef>
+      <ComponentRef Id="cfilef642e100daf93a71bdbf649246efb735"></ComponentRef>
+      <ComponentRef Id="cfile0cddad8c04f13f0db6e11a1d240c77a4"></ComponentRef>
+      <ComponentRef Id="cfilefe40a613a4c13dbb9676cc8ff2318ff0"></ComponentRef>
+      <ComponentRef Id="cfile6ba894d434c6390bbcea2e4ba94e02ad"></ComponentRef>
+      <ComponentRef Id="cfile1222d9ee96123796b4268002d435135a"></ComponentRef>
+      <ComponentRef Id="cfileeb140c6cc49c30cfb587d0c49e93f655"></ComponentRef>
+      <ComponentRef Id="cfilec5d8bff5942d3765b38247ab4ba286e6"></ComponentRef>
+      <ComponentRef Id="cfileb30094b26e503dc997d6b641d7a9f486"></ComponentRef>
+      <ComponentRef Id="cfile920e0f8b040c3cba99b4e05e9c7b3cc0"></ComponentRef>
+      <ComponentRef Id="cfileea93ac6aa1763cd0847af7fef0d1dceb"></ComponentRef>
+      <ComponentRef Id="cfile2dd6bbb3a639382a8b5c3f218f7da385"></ComponentRef>
+      <ComponentRef Id="cfile9ab4ff616636300daf29d11202ac9667"></ComponentRef>
+      <ComponentRef Id="cfile4903e11c9d803525b88b35ff06f85bc5"></ComponentRef>
+      <ComponentRef Id="cfile61f711ae1cda3d3d908f325c3bbad56e"></ComponentRef>
+      <ComponentRef Id="cfilebc935acd2fc338329259312b6e42bca4"></ComponentRef>
+      <ComponentRef Id="cfile17b2f7d61926387a9485e6d2557b000d"></ComponentRef>
+      <ComponentRef Id="cfile1fdeac3444953088bb814123683b4e1a"></ComponentRef>
+      <ComponentRef Id="cfile8613b7b39609354cbbe894624e87210d"></ComponentRef>
+      <ComponentRef Id="cfilebb4ed3c9b9ca376f8e58f6b21c434d28"></ComponentRef>
+      <ComponentRef Id="cfileca1a3fbb312334128c01c1c2c8a3d984"></ComponentRef>
+      <ComponentRef Id="cfilef8e2160ea04f3c67b2b315a799290f7b"></ComponentRef>
+      <ComponentRef Id="cfilead0af2d240463a809a95546d3622e189"></ComponentRef>
+      <ComponentRef Id="cfile6fc62b25eb333d5486105ebd7f83f10d"></ComponentRef>
+      <ComponentRef Id="cfile096f85d5f5de3179a5133d68ee0fb01b"></ComponentRef>
+      <ComponentRef Id="cfileccc5c484362f3fc89af4fe8a46303381"></ComponentRef>
+      <ComponentRef Id="cfileccd24b5af5d63918a17fdc9a7bbc9394"></ComponentRef>
+      <ComponentRef Id="cfile2fdb8d1b765634969f2e5e6c21529452"></ComponentRef>
+      <ComponentRef Id="cfile3511e878169c3aa7a02c22683edf8416"></ComponentRef>
+      <ComponentRef Id="cfile136c387f532e3ad7b7251cffdb1ea5ac"></ComponentRef>
+      <ComponentRef Id="cfilee1defca843e8314d9343eba3e634a5f9"></ComponentRef>
+      <ComponentRef Id="cfile5ad2c841972a3789a81a830ff17e5967"></ComponentRef>
+      <ComponentRef Id="cfile5b06f274671e3991a3ecd46cb12bb53a"></ComponentRef>
+      <ComponentRef Id="cfile0401112b26143293b45a1a439aab2fae"></ComponentRef>
+      <ComponentRef Id="cfile7a5c125d70d13e0e826fdd99a4d484b2"></ComponentRef>
+      <ComponentRef Id="cfile890ff3bc67c135b39a538483cd362e4a"></ComponentRef>
+      <ComponentRef Id="cfileb240d0b2ba613621be71ab46beb48628"></ComponentRef>
+      <ComponentRef Id="cfilede8b32f80a213cdb965ed9e673af7b9e"></ComponentRef>
+      <ComponentRef Id="cfilef1de69a788643da8bc8052251795c0e2"></ComponentRef>
+      <ComponentRef Id="cfile14e7cf1867b8344f93e8a2a98a764cd7"></ComponentRef>
+      <ComponentRef Id="cfile9cf282d0fb2e379a9128b3b4c373e428"></ComponentRef>
+      <ComponentRef Id="cfilea6e3fe2cb9af318e983c5c9d33eaab3a"></ComponentRef>
+      <ComponentRef Id="cfile47c5eaecf85b355db0f4b2cc28e6de16"></ComponentRef>
+      <ComponentRef Id="cfilea6f5d65b65613c78a5a90b564be227f9"></ComponentRef>
+      <ComponentRef Id="cfile009274bdbd073e9291974143836f6413"></ComponentRef>
+      <ComponentRef Id="cfile7901f84adcf33cb6b42f68077f876feb"></ComponentRef>
+      <ComponentRef Id="cfile035a07c4d963304887d5d42c099eadd7"></ComponentRef>
+      <ComponentRef Id="cfilef0ed74b0fab732a78ab13e2592dab3bb"></ComponentRef>
+      <ComponentRef Id="cfile45d11923814f3b16873b1d88f2bbfe9c"></ComponentRef>
+      <ComponentRef Id="cfilee7fe97df1fef334caa822bd7732c5812"></ComponentRef>
+      <ComponentRef Id="cfileacb0029ae09b3b3b85018ae2e3cf95d7"></ComponentRef>
+      <ComponentRef Id="cfile82207aab4be534b1926be8df36bcbc44"></ComponentRef>
+      <ComponentRef Id="cfilebabbebcd7c993cc999d4231d3bb26e83"></ComponentRef>
+      <ComponentRef Id="cfile33d2230981fd315aa7183e95487033fc"></ComponentRef>
+      <ComponentRef Id="cfile27af119ad3df35caa91311308856354a"></ComponentRef>
+      <ComponentRef Id="cfile11a5eadaab5a384eb685241b5e69e253"></ComponentRef>
+      <ComponentRef Id="cfile36f487fed9dd38c48340ad1d3770000f"></ComponentRef>
+      <ComponentRef Id="cfileb54f801d4ef831aea870dee318d3e651"></ComponentRef>
+      <ComponentRef Id="cfile7d9a506d46373ebc9edb5a25dfcefc33"></ComponentRef>
+      <ComponentRef Id="cfile16157727f8d8327ca2ebf61a616993d4"></ComponentRef>
+      <ComponentRef Id="cfiledb4ea206621e394aac4756e9617ce79d"></ComponentRef>
+      <ComponentRef Id="cfile73a80102b73237b7a3e0d9dc1cfc62e2"></ComponentRef>
+      <ComponentRef Id="cfile0d06f59004153e7596c7dc1174363cdc"></ComponentRef>
+      <ComponentRef Id="cfileba75b97158a439498d939e35d6773808"></ComponentRef>
+      <ComponentRef Id="cfile358f4cfe5b563484aeb28b7aecbd91c6"></ComponentRef>
+      <ComponentRef Id="cfilefceb3845b44c3e8487f4958e83561f80"></ComponentRef>
+      <ComponentRef Id="cfile5af03526a0a639e3af85beb12e34d9a9"></ComponentRef>
+      <ComponentRef Id="cfile52e9d179f517341fb4e64432e9e055ee"></ComponentRef>
+      <ComponentRef Id="cfile0ef2432eec753ab6a2f4ecaabf9259d6"></ComponentRef>
+      <ComponentRef Id="cfile86eb86d7fca535e4b5e478d82a5c2c7d"></ComponentRef>
+      <ComponentRef Id="cfile6cdffda1809c37c084ea8864cfda5ad3"></ComponentRef>
+      <ComponentRef Id="cfile1d252731852a3cd79a427c6b087220f2"></ComponentRef>
+      <ComponentRef Id="cfile126f5651f5563058ab98955ceacc2301"></ComponentRef>
+      <ComponentRef Id="cfile492f685cb455387eb408a5d1d05c375d"></ComponentRef>
+      <ComponentRef Id="cfilebbef28601bf43a0fab7a0a27252e0a08"></ComponentRef>
+      <ComponentRef Id="cfile40dbb4f55cb83b0cb609ede743d7f351"></ComponentRef>
+      <ComponentRef Id="cfilea00d1c8e9cf43226950a03042d6ad409"></ComponentRef>
+      <ComponentRef Id="cfileef18fbff6c233858beb19712296531e3"></ComponentRef>
+      <ComponentRef Id="cfile2bee21ad8f5b32c899333416c52a7222"></ComponentRef>
+      <ComponentRef Id="cfile6ed3398d6e723e5fbf07ce7043f35028"></ComponentRef>
+      <ComponentRef Id="cfile62d7b0fa975c373aa3fe3d51723d0c98"></ComponentRef>
+      <ComponentRef Id="cfileef91bb691dd735ceac2288acae49c363"></ComponentRef>
+      <ComponentRef Id="cfilea9afc0450c3f3778ad893db2f8ec482f"></ComponentRef>
+      <ComponentRef Id="cfileb72ce9b56ca83a2f9b407e126e83a945"></ComponentRef>
+      <ComponentRef Id="cfile3db2e51192dc3b5f98b7a647d5111537"></ComponentRef>
+      <ComponentRef Id="cfile6449fbc15eb7360a85b36231790d7742"></ComponentRef>
+      <ComponentRef Id="cfilefd7f5f4086ef35129470b8fe26a820ef"></ComponentRef>
+      <ComponentRef Id="cfile87f18bf08e2f32e2bca3788dd19845bd"></ComponentRef>
+      <ComponentRef Id="cfile66d1d259d6b9366087fc5022a6543c88"></ComponentRef>
+      <ComponentRef Id="cfile544d7b96f30b30c4a775694f7abacc10"></ComponentRef>
+      <ComponentRef Id="cfile2b71777a7ad638a8a4b2976bfb2541d7"></ComponentRef>
+      <ComponentRef Id="cfile5f5b6ccfa7a73378967992c108a36cd8"></ComponentRef>
+      <ComponentRef Id="cfile208055db563d3c18b3b09f490b03c0b1"></ComponentRef>
+      <ComponentRef Id="cfile69721213e9e53d81aa407c9ae4fca894"></ComponentRef>
+      <ComponentRef Id="cfile4eea489136293baa915c65ad256e04dd"></ComponentRef>
+      <ComponentRef Id="cfile07acafa7c7393cb08e5e6c864d661a56"></ComponentRef>
+      <ComponentRef Id="cfilef590100e993f3f718b326dedf646ce4c"></ComponentRef>
+      <ComponentRef Id="cfile6b63c3e837a73939b4c254c7e61d5240"></ComponentRef>
+      <ComponentRef Id="cfilecafd523a1bf5374db8b461029871693a"></ComponentRef>
+      <ComponentRef Id="cfilec060d506679a3903b1ff75ca06aee1a8"></ComponentRef>
+      <ComponentRef Id="cfile755d44e60ad23125a6a6aaf57a79984c"></ComponentRef>
+      <ComponentRef Id="cfilebb55d11fdf2b3e279192863e8a712516"></ComponentRef>
+      <ComponentRef Id="cfilefa556ed1f3953f4d96b5186a472f1eda"></ComponentRef>
+      <ComponentRef Id="cfile589506d5333336218bc4b6b3fc60be76"></ComponentRef>
+      <ComponentRef Id="cfileb1766a3d11ae3036b055a4a850f5da4d"></ComponentRef>
+      <ComponentRef Id="cfile4e6810dc2d4433ecb44e2e5a2fae04fd"></ComponentRef>
+      <ComponentRef Id="cfileeb95acfbd3d731b7b31d7042b289b3fe"></ComponentRef>
+      <ComponentRef Id="cfile4b4ca80665dc395f9e2218a903abf4d1"></ComponentRef>
+      <ComponentRef Id="cfilee45c4147a1313ecd89e3eedb2ea0fd75"></ComponentRef>
+      <ComponentRef Id="cfile0575f23782fc3c8088352bd75869c42c"></ComponentRef>
+      <ComponentRef Id="cfile811770e4b4ed361f9dfa5fbb99447966"></ComponentRef>
+      <ComponentRef Id="cfilea2986c071ef33406933ab2465658ade7"></ComponentRef>
+      <ComponentRef Id="cfile941eef19e35b38cb8e84a3edefd9ad68"></ComponentRef>
+      <ComponentRef Id="cfile8c446f9e554b3b54ac0f2dd0599d5c75"></ComponentRef>
+      <ComponentRef Id="cfilef6ee9e3b75723e7487324d3dc00b5633"></ComponentRef>
+      <ComponentRef Id="cfile6f7c7d5343c83a2ca20a2c7c143169f7"></ComponentRef>
+      <ComponentRef Id="cfilec675faf4a3423acfb1f42db00e9a3397"></ComponentRef>
+      <ComponentRef Id="cfile02334f58e6283648a2db98f7deeeac0f"></ComponentRef>
+      <ComponentRef Id="cfile13acf131414a356db4900fd4f431a6f4"></ComponentRef>
+      <ComponentRef Id="cfile91d1a6b4c55c3932aed7e85b138ebb91"></ComponentRef>
+      <ComponentRef Id="cfileb4e86b673930347d9732d2f0ea4c2676"></ComponentRef>
+      <ComponentRef Id="cfilea209e42791ff3112b7fa706e072314f2"></ComponentRef>
+      <ComponentRef Id="cfile701f2c2f5b4a33ffbe59ccb4bdd87983"></ComponentRef>
+      <ComponentRef Id="cfile987393bfbef13fc8bef210a8c99482b1"></ComponentRef>
+      <ComponentRef Id="cfile7928fa2d45ce3375bbe9b62e245ff9d7"></ComponentRef>
+      <ComponentRef Id="cfile5f8b27e96d1a394a93c12f03080d9d6c"></ComponentRef>
+      <ComponentRef Id="cfilee21e064f2cd63ac1bd0e09945f817d82"></ComponentRef>
+      <ComponentRef Id="cmkdirc4fe15fbc35c3abcadb746fc09580ca0"></ComponentRef>
+      <ComponentRef Id="cmkdirbe397c7a2f3137f48788b4a0af6e7d52"></ComponentRef>
+      <ComponentRef Id="crm_rf48431aecbd69377ea800d62616352f20"></ComponentRef>
+    </ComponentGroup>
+    <Property Id="JP_INSTALL_STARTMENU_SHORTCUT" Value="1"></Property>
+  </Fragment>
+  <Fragment></Fragment>
+</Wix>

@@ -58,8 +58,8 @@ jobs:
       tag: "21.0.0-node"
     steps:
       - maven_package
-      - install_wix
-      - create_msi
+      # - install_wix
+      # - create_msi
       - git_commit
 
 
