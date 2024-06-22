@@ -38,6 +38,12 @@ commands:
           command: |-
             jpackage --input ./target --dest ./installer --name "Desktop Finance" --main-jar desktop-finance.jar --main-class com.andrewhun.finance.App --type "msi" --verbose
           name: Create MSI
+  generate_executable:
+    steps:
+      - run:
+          command: |-
+            ls
+          name: Generate Executable Using Launch4j
   git_commit:
     steps:
       - run:
@@ -60,6 +66,7 @@ jobs:
       - maven_package
       # - install_wix
       # - create_msi
+      - generate_executable
       - git_commit
 
 
