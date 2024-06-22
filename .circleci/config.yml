@@ -42,6 +42,13 @@ commands:
     steps:
       - run:
           command: |-
+            cd installer
+            mktemp -d launch4j-temp
+            cd launch4j-temp
+            wget https://sourceforge.net/projects/launch4j/files/launch4j-3/3.50/launch4j-3.50-linux-x64.tgz
+            tar -xf launch4j-3.50-linux-x64.tgz
+            cd launch4j
+            cd $HOME/installer
             ls
           name: Generate Executable Using Launch4j
   git_commit:
