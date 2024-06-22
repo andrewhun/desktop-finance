@@ -1,11 +1,20 @@
+!include "MUI.nsh"
+
+Name "Desktop Finance"
+# define installation directory
+InstallDir "$PROGRAMFILES\Desktop Finance"
 # define name of installer
 OutFile "desktop-finance-installer.exe"
+
+!insertmacro MUI_PAGE_WELCOME
+!insertmacro MUI_PAGE_DIRECTORY
+!insertmacro MUI_PAGE_INSTFILES
+!insertmacro MUI_PAGE_FINISH
+
+!insertmacro MUI_LANGUAGE "English"
  
-# define installation directory
-InstallDir $DESKTOP
- 
-# For removing Start Menu shortcut in Windows 7
-RequestExecutionLevel user
+# Admin rights are required for both install and uninstall operations
+RequestExecutionLevel admin
  
 # start default section
 Section
@@ -13,22 +22,29 @@ Section
     # set the installation directory as the destination for the following actions
     SetOutPath $INSTDIR
  
+    File /r "jre"
+    File "desktop-finance-nsis.exe"
+    
     # create the uninstaller
     WriteUninstaller "$INSTDIR\uninstall.exe"
  
-    # create a shortcut named "new shortcut" in the start menu programs directory
+    # create a shortcut named "Desktop Finance Uninstall" in the start menu programs directory
     # point the new shortcut at the program uninstaller
-    CreateShortcut "$SMPROGRAMS\new shortcut.lnk" "$INSTDIR\uninstall.exe"
+    CreateShortcut "$SMPROGRAMS\Desktop Finance Uninstall" "$INSTDIR\uninstall.exe"
 SectionEnd
  
 # uninstaller section start
 Section "uninstall"
  
     # Remove the link from the start menu
-    Delete "$SMPROGRAMS\new shortcut.lnk"
+    Delete "$SMPROGRAMS\Desktop Finance Uninstall.lnk"
  
+    Delete $INSTDIR\desktop-finance-nsis.exe
+
+    RMDir /r $INSTDIR\jre
+    
     # Delete the uninstaller
-    Delete $INSTDIR\uninstaller.exe
+    Delete $INSTDIR\uninstall.exe
  
     RMDir $INSTDIR
 # uninstaller section end
