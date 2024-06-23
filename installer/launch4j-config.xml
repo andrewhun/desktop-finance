@@ -2,7 +2,7 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>..\..\..\target\desktop-finance-jar-with-dependencies.jar</jar>
+  <jar>desktop-finance-jar-with-dependencies.jar</jar>
   <outfile>..\..\desktop-finance-nsis.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>

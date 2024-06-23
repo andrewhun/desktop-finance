@@ -48,6 +48,7 @@ commands:
             wget https://sourceforge.net/projects/launch4j/files/launch4j-3/3.50/launch4j-3.50-linux.tgz
             tar -xf launch4j-3.50-linux.tgz
             cd launch4j
+            cp ../../../target/desktop-finance-jar-with-dependencies.jar ./
             cp ../../launch4j-config.xml ./
             sed -i -e 's/\r$//' ./launch4j
             ./launch4j launch4j-config.xml
