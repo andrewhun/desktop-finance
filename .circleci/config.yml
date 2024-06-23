@@ -45,7 +45,7 @@ commands:
             cd installer
             mkdir launch4j-temp
             cd launch4j-temp
-            wget https://sourceforge.net/projects/launch4j/files/launch4j-3/3.50/launch4j-3.50-linux-x64.tgz
+            wget https://sourceforge.net/projects/launch4j/files/launch4j-3/3.50/launch4j-3.50-linux.tgz
             tar -xf launch4j-3.50-linux-x64.tgz
             cd launch4j
             cp ../../launch4j-config.xml ./
