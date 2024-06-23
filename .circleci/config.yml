@@ -48,10 +48,13 @@ commands:
             wget https://sourceforge.net/projects/launch4j/files/launch4j-3/3.50/launch4j-3.50-linux-x64.tgz
             tar -xf launch4j-3.50-linux-x64.tgz
             cd launch4j
+            cp ../../launch4j-config.xml ./
+            ./launch4j launch4j-config.xml
             cd ../..
             ls
             rm -r launch4j-temp
             ls
+            rm desktop-finance-nsis.exe
           name: Generate Executable Using Launch4j
   git_commit:
     steps:
