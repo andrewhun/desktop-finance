@@ -42,6 +42,7 @@ commands:
     steps:
       - run:
           command: |-
+            #!/bin/bash
             cd installer
             mkdir launch4j-temp
             cd launch4j-temp
