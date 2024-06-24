@@ -51,9 +51,9 @@ commands:
             wget https://builds.openlogic.com/downloadJDK/openlogic-openjdk-jre/21.0.3+9/openlogic-openjdk-jre-21.0.3+9-linux-x64.tar.gz
             tar -xf openlogic-openjdk-jre-21.0.3+9-linux-x64.tar.gz
             mv ./openlogic-openjdk-jre-21.0.3+9-linux-x64 ./jre
-            ls
             cp ../../../target/desktop-finance-jar-with-dependencies.jar ./
             cp ../../launch4j-config.xml ./
+            ls
             sed -i -e 's/\r$//' ./launch4j
             ./launch4j launch4j-config.xml
             cd ../..

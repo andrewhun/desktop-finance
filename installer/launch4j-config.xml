@@ -27,6 +27,6 @@
     <requiresJdk>true</requiresJdk>
     <requires64Bit>false</requires64Bit>
     <minVersion>21.0.1</minVersion>
-    <maxVersion></maxVersion>
+    <maxVersion>21.0.3</maxVersion>
   </jre>
 </launch4jConfig>
