@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>desktop-finance-jar-with-dependencies.jar</jar>
-  <outfile>..\..\desktop-finance-nsis.exe</outfile>
+  <outfile>desktop-finance-nsis.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -27,6 +27,6 @@
     <requiresJdk>true</requiresJdk>
     <requires64Bit>false</requires64Bit>
     <minVersion>21.0.1</minVersion>
-    <maxVersion>21.0.3</maxVersion>
+    <maxVersion></maxVersion>
   </jre>
 </launch4jConfig>
