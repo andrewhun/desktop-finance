@@ -58,7 +58,7 @@ commands:
             ./launch4j launch4j-config.xml
             cd ../..
             ls
-            rm -r launch4j-temp
+            rm -rf launch4j-temp
             ls
             rm desktop-finance-nsis.exe
           name: Generate Executable Using Launch4j
