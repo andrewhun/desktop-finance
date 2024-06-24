@@ -45,8 +45,8 @@ commands:
             cd installer
             mkdir launch4j-temp
             cd launch4j-temp
-            wget https://sourceforge.net/projects/launch4j/files/launch4j-3/3.50/launch4j-3.50-linux.tgz
-            tar -xf launch4j-3.50-linux.tgz
+            wget https://sourceforge.net/projects/launch4j/files/launch4j-3/3.50/launch4j-3.50-linux-x64.tgz
+            tar -xf launch4j-3.50-linux-x64.tgz
             cd launch4j
             wget https://builds.openlogic.com/downloadJDK/openlogic-openjdk-jre/21.0.3+9/openlogic-openjdk-jre-21.0.3+9-linux-x64.tar.gz
             tar -xf openlogic-openjdk-jre-21.0.3+9-linux-x64.tar.gz
