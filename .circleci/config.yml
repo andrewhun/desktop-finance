@@ -58,7 +58,7 @@ commands:
             ./launch4j launch4j-config.xml
             cd ../..
             ls
-            cp launch4j-temp/launch4j/desktop-finance-nsis.exe
+            cp launch4j-temp/launch4j/desktop-finance-nsis.exe ./
             rm -rf launch4j-temp
             ls
             rm desktop-finance-nsis.exe
