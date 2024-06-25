@@ -53,16 +53,19 @@ commands:
             mv ./openlogic-openjdk-jre-21.0.3+9-linux-x64 ./jre
             cp ../../../target/desktop-finance-jar-with-dependencies.jar ./
             cp ../../launch4j-config.xml ./
-            ls
             sed -i -e 's/\r$//' ./launch4j
             ./launch4j launch4j-config.xml
             cd ../..
-            ls
             cp launch4j-temp/launch4j/desktop-finance-nsis.exe ./
             rm -rf launch4j-temp
-            ls
             rm desktop-finance-nsis.exe
           name: Generate Executable Using Launch4j
+  generate_installer:
+    steps:
+      - run:
+          command: |-
+            ls
+          name: Generate Installer Using NSIS
   git_commit:
     steps:
       - run:
