@@ -89,6 +89,7 @@ jobs:
       # - install_wix
       # - create_msi
       - generate_executable
+      - generate_installer
       - git_commit
 
 
