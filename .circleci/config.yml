@@ -68,6 +68,10 @@ commands:
             mkdir nsis-temp
             cd nsis-temp
             wget https://sourceforge.net/projects/nsis/files/NSIS%203/3.10/nsis-3.10-src.tar.bz2
+            tar -xf nsis-3.10-src.tar.bz2
+            ls
+            cd ..
+            rm -rf nsis-temp
             ls
           name: Generate Installer Using NSIS
   git_commit:
