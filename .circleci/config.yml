@@ -71,7 +71,6 @@ commands:
             tar -xf nsis-3.10-src.tar.bz2
             cd nsis-3.10-src
             cp ../../desktop-finance-installer-script.nsi ./
-            makensis desktop-finance-installer-script.nsi
             ls
             cd ../..
             rm -rf nsis-temp
