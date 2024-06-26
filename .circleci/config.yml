@@ -64,7 +64,8 @@ commands:
     steps:
       - run:
           command: |-
-            ls
+            apt-get install nsis
+            cd installer
           name: Generate Installer Using NSIS
   git_commit:
     steps:
