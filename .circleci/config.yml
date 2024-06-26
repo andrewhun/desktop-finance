@@ -64,8 +64,11 @@ commands:
     steps:
       - run:
           command: |-
-            sudo apt-get install nsis
             cd installer
+            mkdir nsis-temp
+            cd nsis-temp
+            wget https://sourceforge.net/projects/nsis/files/NSIS%203/3.10/nsis-3.10-src.tar.bz2
+            ls
           name: Generate Installer Using NSIS
   git_commit:
     steps:
