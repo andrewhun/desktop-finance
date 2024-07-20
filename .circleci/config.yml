@@ -72,8 +72,10 @@ commands:
             cd nsis-3.10-src
             wget http://prdownloads.sourceforge.net/scons/scons-local-4.8.0.tar.gz
             tar -xf scons-local-4.8.0.tar.gz
+            echo "Listing files in NSIS folder"
             ls
             cd scons-local-4.8.0
+            echo "Listing files in SCons folder"
             ls
             ./scons
             cp ../../desktop-finance-installer-script.nsi ./
