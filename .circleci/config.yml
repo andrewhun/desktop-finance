@@ -74,7 +74,7 @@ commands:
             tar -xf scons-local-4.8.0.tar.gz
             echo "Listing files in NSIS folder"
             ls
-            cd scons-local-4.8.0
+            cd scons-local-4.8.0/SCons
             echo "Listing files in SCons folder"
             ls
             ./scons
