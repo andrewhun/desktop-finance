@@ -72,7 +72,10 @@ commands:
             cd nsis-3.10-src
             wget http://prdownloads.sourceforge.net/scons/scons-local-4.8.0.tar.gz
             tar -xf scons-local-4.8.0.tar.gz
-            scons-local-4.8.0/scons
+            ls
+            cd scons-local-4.8.0
+            ls
+            ./scons
             cp ../../desktop-finance-installer-script.nsi ./
             ls
             cd ../..
