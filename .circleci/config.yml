@@ -70,9 +70,9 @@ commands:
             wget https://sourceforge.net/projects/nsis/files/NSIS%203/3.10/nsis-3.10-src.tar.bz2
             tar -xf nsis-3.10-src.tar.bz2
             cd nsis-3.10-src
-            echo "Listing files in NSIS folder"
-            ls
-            ./scons.py
+            wget http://prdownloads.sourceforge.net/scons/scons-local-4.8.0.tar.gz
+            tar -xf scons-local-4.8.0.tar.gz
+            ./scons.py NSIS_MAX_STRLEN=8192 NSIS_CONFIG_CONST_DATA_PATH=no SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all PREFIX=/nsis/nsis-$NSIS_VERSION install-compiler
             cp ../../desktop-finance-installer-script.nsi ./
             ls
             cd ../..
