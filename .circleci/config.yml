@@ -72,7 +72,7 @@ commands:
             cd nsis-3.10-src
             wget http://prdownloads.sourceforge.net/scons/scons-local-4.8.0.tar.gz
             tar -xf scons-local-4.8.0.tar.gz
-            python scons.py NSIS_MAX_STRLEN=8192 NSIS_CONFIG_CONST_DATA_PATH=no SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all install-compiler
+            python scons.py NSIS_MAX_STRLEN=8192 NSIS_CONFIG_CONST_DATA_PATH=no SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all debug-explain install-compiler
             cp ../../desktop-finance-installer-script.nsi ./
             ls
             cd ../..
