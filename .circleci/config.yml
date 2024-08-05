@@ -71,7 +71,7 @@ commands:
             tar -xf nsis-3.10-src.tar.bz2
             cd nsis-3.10-src
             python -m pip install scons
-            scons --help
+            scons --help 
             cp ../../desktop-finance-installer-script.nsi ./
             ls
             cd ../..
