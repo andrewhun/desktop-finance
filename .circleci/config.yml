@@ -70,7 +70,7 @@ commands:
             wget https://sourceforge.net/projects/nsis/files/NSIS%203/3.10/nsis-3.10-src.tar.bz2
             tar -xf nsis-3.10-src.tar.bz2
             cd nsis-3.10-src
-            python -m pip install scons
+            python -m pip install scons 
             scons --help 
             cp ../../desktop-finance-installer-script.nsi ./
             ls
