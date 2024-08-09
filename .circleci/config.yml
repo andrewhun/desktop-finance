@@ -67,11 +67,12 @@ commands:
             cd installer
             mkdir nsis-temp
             cd nsis-temp
-            wget https://sourceforge.net/projects/nsis/files/NSIS%203/3.10/nsis-3.10-src.tar.bz2
-            tar -xf nsis-3.10-src.tar.bz2
-            cd nsis-3.10-src
-            python -m pip install scons 
-            scons --help 
+            wget https://sourceforge.net/projects/nsis/files/NSIS%203/3.03/nsis-3.03-src.tar.bz2
+            tar -xf nsis-3.03-src.tar.bz2
+            cd nsis-3.03-src
+            wget http://prdownloads.sourceforge.net/scons/scons-local-3.0.1.tar.gz
+            tar -xf scons-local-3.0.1.tar.gz
+            python scons.py NSIS_MAX_STRLEN=8192 NSIS_CONFIG_CONST_DATA_PATH=no SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all install-compiler
             cp ../../desktop-finance-installer-script.nsi ./
             ls
             cd ../..
