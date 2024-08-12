@@ -1,6 +1,4 @@
 version: '2.1'
-orbs:
-  maven: circleci/maven@1.1
 
 commands:
   maven_package:
@@ -181,9 +179,8 @@ commands:
 
 jobs:
   package_and_commit:
-    executor:
-      name: maven/default
-      tag: "21.0.0-node"
+    docker:
+      - image: cimg/openjdk:21.0.0-node
     steps:
       - maven_package
       # - install_wix
