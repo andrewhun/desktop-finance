@@ -6,7 +6,7 @@ commands:
   maven_package:
     steps:
       - checkout
-      - maven/with_cache:
+      - with_cache:
           steps:
             - run:
                 command: |-
@@ -48,6 +48,77 @@ commands:
             export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
             dotnet tool install --global wix
           name: Install WiX
+
+  with_cache:
+    description: |
+      Run a set of steps with Maven dependencies cached.
+      
+      This command will first restore a cache of maven dependencies, if one was
+      saved by a previous build. The provided `steps` parameter will then be executed, and
+      if successful, then a fresh cache will be saved, if required.
+      
+      The contents of the `~/.m2/repository` directory is cached, which will substantially
+      improve build times for projects with many dependencies.
+      
+      The cache-key is generated from any files named `pom.xml` that are
+      present in the `working_directory`.
+    parameters:
+      app_src_directory:
+        default: ""
+        description: Useful when the source of your maven project is nott in the root directory of your git repo. Supply the name of the directory or relative path of the directory containing your source code.
+        type: string
+      dependency_plugin_version:
+        default: 3.1.2
+        description: Specify the Maven Dependency Plugin
+        type: string
+      maven_command:
+        default: mvn
+        description: Specify a custom path for invoking maven
+        type: string
+      settings_file:
+        default: ""
+        description: Specify a custom settings file to use (optional)
+        type: string
+      steps:
+        type: steps
+      verify_dependencies:
+        default: true
+        description: Verify dependencies are valid and available from public sources
+        type: boolean
+    steps:
+      - run:
+          command: |-
+            #!/bin/bash
+            find . -name 'pom.xml' | sort | xargs cat > /tmp/maven_cache_seed
+          name: Generate Cache Checksum
+          working_directory: << parameters.app_src_directory >>
+      - restore_cache:
+          key: maven-{{ checksum "/tmp/maven_cache_seed" }}
+      - when:
+          condition: << parameters.verify_dependencies >>
+          steps:
+            - run:
+                command: |
+                  #!/bin/bash
+                  if [ -n "$PARAM_SETTINGS_FILE" ]; then
+                      set -- "$@" --settings "$PARAM_SETTINGS_FILE"
+                  fi
+                  
+                  set -x
+                  $PARAM_MVN_COMMAND org.apache.maven.plugins:maven-dependency-plugin:"$PARAM_DEP_PLUGIN_VER":go-offline "$@"
+                  set +x
+                environment:
+                  PARAM_DEP_PLUGIN_VER: << parameters.dependency_plugin_version >>
+                  PARAM_MVN_COMMAND: << parameters.maven_command >>
+                  PARAM_SETTINGS_FILE: << parameters.settings_file >>
+                name: Verify dependencies
+                working_directory: << parameters.app_src_directory >>
+      - steps: << parameters.steps >>
+      - save_cache:
+          key: maven-{{ checksum "/tmp/maven_cache_seed" }}
+          paths:
+            - ~/.m2/repository
+
   create_msi:
     steps:
       - run:
