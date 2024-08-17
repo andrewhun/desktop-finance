@@ -180,7 +180,7 @@ commands:
 jobs:
   package_and_commit:
     docker:
-      - image: cimg/openjdk:21.0.0-node
+      - image: andrewhun/desktop-finance-cci:nsis
     steps:
       - maven_package
       # - install_wix
