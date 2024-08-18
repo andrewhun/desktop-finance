@@ -129,6 +129,10 @@ commands:
           command: |-
             echo "Checking root folder contents"
             ls
+            echo "Checking out folder containing root"
+            cd ..
+            ls
+            cd desktop-finance
             cd installer
             mkdir launch4j-temp
             cd launch4j-temp
