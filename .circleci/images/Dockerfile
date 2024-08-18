@@ -26,7 +26,7 @@ COPY --from=builder /nsis/nsis/ /nsis/
 
 WORKDIR /installer
 
-LABEL com.circleci.preserve-entrypoint=true
+# LABEL com.circleci.preserve-entrypoint=true
 
-ENTRYPOINT [ "/nsis/Bin/makensis", "-V4" ]
+# ENTRYPOINT [ "/nsis/Bin/makensis", "-V4" ]
 USER 1001
