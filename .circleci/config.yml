@@ -132,7 +132,9 @@ commands:
             echo "Checking out folder containing root"
             cd ..
             ls
-            cd desktop-finance
+            echo "Checking out bin folder"
+            cd bin
+            ls
             cd installer
             mkdir launch4j-temp
             cd launch4j-temp

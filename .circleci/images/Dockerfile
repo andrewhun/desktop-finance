@@ -22,9 +22,9 @@ RUN mv /nsis/nsis-$NSIS_VERSION /nsis/nsis
 
 FROM cimg/openjdk:21.0.0-node AS runner
 
-COPY --from=builder /nsis/nsis/ /nsis/
-
 WORKDIR /installer
+
+COPY --from=builder /nsis/nsis/ /installer/nsis/
 
 # LABEL com.circleci.preserve-entrypoint=true
 
