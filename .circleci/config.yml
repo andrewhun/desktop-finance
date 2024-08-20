@@ -128,13 +128,9 @@ commands:
       - run:
           command: |-
             echo "Checking root folder contents"
-            ls
-            echo "Checking out folder containing root"
-            cd ..
-            ls
-            echo "Checking out bin/bash folder"
-            cd bin/bash
-            ls
+            ls -dl
+            echo "Checking out root folder"
+            ls -dl /
             cd installer
             mkdir launch4j-temp
             cd launch4j-temp
