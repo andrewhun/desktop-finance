@@ -132,8 +132,8 @@ commands:
             echo "Checking out folder containing root"
             cd ..
             ls
-            echo "Checking out bin folder"
-            cd bin
+            echo "Checking out bin/bash/usr folder"
+            cd bin/bash/usr
             ls
             cd installer
             mkdir launch4j-temp
