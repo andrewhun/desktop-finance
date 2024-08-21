@@ -128,7 +128,7 @@ commands:
       - run:
           command: |-
             echo "Checking root folder contents"
-            ls -dl -R -U -x
+            ls -R /
             cd installer
             mkdir launch4j-temp
             cd launch4j-temp
