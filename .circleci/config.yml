@@ -32,20 +32,6 @@ commands:
     steps:
       - store_test_results:
           path: << parameters.test_results_path >>
-  install_wix:
-    steps:
-      - run:
-          command: |-
-            cd ..
-            mkdir dotnet
-            cd dotnet
-            wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
-            chmod +x ./dotnet-install.sh
-            ./dotnet-install.sh --version latest
-            export DOTNET_ROOT=$HOME/.dotnet
-            export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
-            dotnet tool install --global wix
-          name: Install WiX
 
   with_cache:
     description: |
@@ -117,18 +103,10 @@ commands:
           paths:
             - ~/.m2/repository
 
-  create_msi:
-    steps:
-      - run:
-          command: |-
-            jpackage --input ./target --dest ./installer --name "Desktop Finance" --main-jar desktop-finance.jar --main-class com.andrewhun.finance.App --type "msi" --verbose
-          name: Create MSI
   generate_executable:
     steps:
       - run:
           command: |-
-            echo "Checking root folder contents"
-            ls -R /
             cd installer
             mkdir launch4j-temp
             cd launch4j-temp
@@ -147,6 +125,7 @@ commands:
             rm -rf launch4j-temp
             rm desktop-finance-nsis.exe
           name: Generate Executable Using Launch4j
+
   generate_installer:
     steps:
       - run:
@@ -154,18 +133,15 @@ commands:
             cd installer
             mkdir nsis-temp
             cd nsis-temp
-            wget https://sourceforge.net/projects/nsis/files/NSIS%203/3.03/nsis-3.03-src.tar.bz2
-            tar -xf nsis-3.03-src.tar.bz2
-            cd nsis-3.03-src
-            wget http://prdownloads.sourceforge.net/scons/scons-local-3.0.1.tar.gz
-            tar -xf scons-local-3.0.1.tar.gz
-            python scons.py NSIS_MAX_STRLEN=8192 NSIS_CONFIG_CONST_DATA_PATH=no SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all install-compiler
+            mv /installer/nsis ./nsis
+            ls -R
             cp ../../desktop-finance-installer-script.nsi ./
             ls
             cd ../..
             rm -rf nsis-temp
             ls
           name: Generate Installer Using NSIS
+
   git_commit:
     steps:
       - run:
@@ -185,8 +161,6 @@ jobs:
       - image: andrewhun/desktop-finance-cci:nsis
     steps:
       - maven_package
-      # - install_wix
-      # - create_msi
       - generate_executable
       - generate_installer
       - git_commit
