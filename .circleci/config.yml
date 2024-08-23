@@ -124,7 +124,6 @@ commands:
             cd ../..
             cp launch4j-temp/launch4j/desktop-finance-nsis.exe ./
             rm -rf launch4j-temp
-            rm desktop-finance-nsis.exe
           name: Generate Executable Using Launch4j
 
   generate_installer:
@@ -137,6 +136,7 @@ commands:
             ls -R
             cp ../desktop-finance-installer-script.nsi ./
             mv /home/circleci/project/installer/jre ./jre
+            mv /home/circleci/project/installer/desktop-finance-nsis.exe ./desktop-finance-nsis.exe
             /installer/nsis/Bin/makensis desktop-finance-installer-script.nsi
             ls
             cd ../
