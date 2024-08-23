@@ -120,6 +120,7 @@ commands:
             cp ../../launch4j-config.xml ./
             sed -i -e 's/\r$//' ./launch4j
             ./launch4j launch4j-config.xml
+            mv ./jre /home/circleci/project/installer/jre
             cd ../..
             cp launch4j-temp/launch4j/desktop-finance-nsis.exe ./
             rm -rf launch4j-temp
@@ -135,6 +136,7 @@ commands:
             cd nsis-temp
             ls -R
             cp ../desktop-finance-installer-script.nsi ./
+            mv /home/circleci/project/installer/jre ./jre
             /installer/nsis/Bin/makensis desktop-finance-installer-script.nsi
             ls
             cd ../
