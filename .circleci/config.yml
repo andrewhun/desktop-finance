@@ -134,8 +134,11 @@ commands:
             mkdir nsis-temp
             cd nsis-temp
             mv /installer/nsis ./nsis
+            chmod +x /installer/nsis/bin/makensis
+            ln -s /installer/nsis/bin/makensis /usr/local/bin/makensis
             ls -R
             cp ../../desktop-finance-installer-script.nsi ./
+            makensis desktop-finance-installer-script.nsi
             ls
             cd ../..
             rm -rf nsis-temp
