@@ -134,10 +134,10 @@ commands:
             mkdir nsis-temp
             cd nsis-temp
             ls -R
-            cp ../../desktop-finance-installer-script.nsi ./
+            cp ../desktop-finance-installer-script.nsi ./
             /installer/nsis/Bin/makensis desktop-finance-installer-script.nsi
             ls
-            cd ../..
+            cd ../
             rm -rf nsis-temp
             ls
           name: Generate Installer Using NSIS
