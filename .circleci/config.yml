@@ -139,7 +139,8 @@ commands:
             mv /home/circleci/project/installer/desktop-finance-nsis.exe ./desktop-finance-nsis.exe
             /installer/nsis/Bin/makensis desktop-finance-installer-script.nsi
             ls
-            zip -v
+            zip nsis-installer.zip jre desktop-finance-nsis.exe desktop-finance-installer.exe
+            mv ./nsis-installer.zip /home/circleci/project/installer/nsis-installer.zip
             cd ../
             rm -rf nsis-temp
             ls
