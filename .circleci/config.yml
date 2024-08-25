@@ -110,19 +110,15 @@ commands:
             cd installer
             mkdir launch4j-temp
             cd launch4j-temp
-            wget https://sourceforge.net/projects/launch4j/files/launch4j-3/3.50/launch4j-3.50-linux-x64.tgz
-            tar -xf launch4j-3.50-linux-x64.tgz
-            cd launch4j
             wget https://builds.openlogic.com/downloadJDK/openlogic-openjdk-jre/21.0.3+9/openlogic-openjdk-jre-21.0.3+9-linux-x64.tar.gz
             tar -xf openlogic-openjdk-jre-21.0.3+9-linux-x64.tar.gz
             mv ./openlogic-openjdk-jre-21.0.3+9-linux-x64 ./jre
-            cp ../../../target/desktop-finance-jar-with-dependencies.jar ./
-            cp ../../launch4j-config.xml ./
-            sed -i -e 's/\r$//' ./launch4j
-            ./launch4j launch4j-config.xml
+            cp /home/circleci/project/target/desktop-finance-jar-with-dependencies.jar ./
+            cp /home/circleci/project/installer/launch4j-config.xml ./
+            /installer/launch4j/launch4j launch4j-config.xml
             mv ./jre /home/circleci/project/installer/jre
-            cd ../..
-            cp launch4j-temp/launch4j/desktop-finance-nsis.exe ./
+            mv ./desktop-finance-nsis.exe /home/circleci/project/installer/desktop-finance-nsis.exe
+            cd /home/circleci/project/installer
             rm -rf launch4j-temp
           name: Generate Executable Using Launch4j
 
@@ -133,17 +129,14 @@ commands:
             cd installer
             mkdir nsis-temp
             cd nsis-temp
-            ls -R
-            cp ../desktop-finance-installer-script.nsi ./
+            cp /home/circleci/project/installer/desktop-finance-installer-script.nsi ./
             mv /home/circleci/project/installer/jre ./jre
             mv /home/circleci/project/installer/desktop-finance-nsis.exe ./desktop-finance-nsis.exe
             /installer/nsis/Bin/makensis desktop-finance-installer-script.nsi
-            ls
             zip nsis-installer.zip jre desktop-finance-nsis.exe desktop-finance-installer.exe
             mv ./nsis-installer.zip /home/circleci/project/installer/nsis-installer.zip
-            cd ../
+            cd /home/circleci/project/installer
             rm -rf nsis-temp
-            ls
           name: Generate Installer Using NSIS
 
   git_commit:

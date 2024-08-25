@@ -1,8 +1,8 @@
 FROM cimg/openjdk:21.0.0-node AS builder
 
 USER root
-RUN apt-get update -y && apt-get install --no-install-recommends -y \
-      scons
+RUN apt-get update -y && apt-get install --no-install-recommends -y scons && \
+    apt-get install -y dos2unix
 
 ENV NSIS_VERSION=3.10
 
@@ -20,13 +20,24 @@ RUN scons NSIS_MAX_STRLEN=8192 NSIS_CONFIG_CONST_DATA_PATH=no SKIPSTUBS=all SKIP
 
 RUN mv /nsis/nsis-$NSIS_VERSION /nsis/nsis
 
+ENV LAUNCH4J_VERSION=3.50
+
+WORKDIR /launch4j
+
+RUN wget "https://sourceforge.net/projects/launch4j/files/launch4j-3/${LAUNCH4J_VERSION}/launch4j-${LAUNCH4J_VERSION}-linux-x64.tgz" && \
+    tar -xf "launch4j-${LAUNCH4J_VERSION}-linux-x64.tgz"
+
+WORKDIR ./launch4j
+
+RUN dos2unix ./launch4j && \
+    apt-get remove --purge -y dos2unix
+
 FROM cimg/openjdk:21.0.0-node AS runner
 
 WORKDIR /installer
 
 COPY --from=builder /nsis/nsis/ /installer/nsis/
 
-# LABEL com.circleci.preserve-entrypoint=true
+COPY --from=builder /launch4j/launch4j /installer/launch4j
 
-# ENTRYPOINT [ "/nsis/Bin/makensis", "-V4" ]
 USER 1001
