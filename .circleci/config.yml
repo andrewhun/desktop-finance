@@ -116,7 +116,6 @@ commands:
             cp /home/circleci/project/target/desktop-finance-jar-with-dependencies.jar ./
             cp /home/circleci/project/installer/launch4j-config.xml ./
             /installer/launch4j/launch4j launch4j-config.xml
-            mv ./jre /home/circleci/project/installer/jre
             mv ./desktop-finance-nsis.exe /home/circleci/project/installer/desktop-finance-nsis.exe
             cd /home/circleci/project/installer
             rm -rf launch4j-temp
@@ -129,13 +128,15 @@ commands:
             cd installer
             mkdir nsis-temp
             cd nsis-temp
+            wget https://builds.openlogic.com/downloadJDK/openlogic-openjdk-jre/21.0.3+9/openlogic-openjdk-jre-21.0.3+9-windows-x64.zip
+            unzip openlogic-openjdk-jre-21.0.3+9-windows-x64.zip
+            mv ./openlogic-openjdk-jre-21.0.3+9-windows-x64 ./jre
             cp /home/circleci/project/installer/desktop-finance-installer-script.nsi ./
-            mv /home/circleci/project/installer/jre ./jre
             mv /home/circleci/project/installer/desktop-finance-nsis.exe ./desktop-finance-nsis.exe
             /installer/nsis/Bin/makensis desktop-finance-installer-script.nsi
             zip nsis-installer.zip jre desktop-finance-nsis.exe desktop-finance-installer.exe
             mv ./nsis-installer.zip /home/circleci/project/installer/nsis-installer.zip
-            cd /home/circleci/project/installer
+            cd /home/circleci/project/installer 
             rm -rf nsis-temp
           name: Generate Installer Using NSIS
 
