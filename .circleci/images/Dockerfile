@@ -39,5 +39,5 @@ WORKDIR /installer
 COPY --from=builder /nsis/nsis/ /installer/nsis/
 
 COPY --from=builder /launch4j/launch4j /installer/launch4j
-
+# Source: https://stackoverflow.com/questions/56579468/list-directory-var-lib-apt-lists-partial-is-missing-acquire-20-not-a-direc
 USER 1001
