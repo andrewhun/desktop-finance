@@ -22,9 +22,14 @@ Var Desktop_Shortcut_Checkbox_State
 !insertmacro MUI_PAGE_DIRECTORY
 !define MUI_ABORTWARNING
 Page custom CustomShortcuts CustomShortcutsLeave
-
 !insertmacro MUI_PAGE_INSTFILES
 !insertmacro MUI_PAGE_FINISH
+
+!insertmacro MUI_UNPAGE_WELCOME
+!insertmacro MUI_UNPAGE_CONFIRM
+!define MUI_UNABORTWARNING
+!insertmacro MUI_UNPAGE_INSTFILES
+!insertmacro MUI_UNPAGE_FINISH
 
 !insertmacro MUI_LANGUAGE "English"
 
