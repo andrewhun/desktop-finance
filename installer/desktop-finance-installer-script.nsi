@@ -18,6 +18,8 @@ Var Desktop_Shortcut_Checkbox
 Var Desktop_Shortcut_Checkbox_State
 
 !insertmacro MUI_PAGE_WELCOME
+!define MUI_LICENSEPAGE_CHECKBOX
+!define MUI_LICENSEPAGE_CHECKBOX_TEXT "I accept the terms in the License Agreement"
 !insertmacro MUI_PAGE_LICENSE "LICENSE"
 !insertmacro MUI_PAGE_DIRECTORY
 !define MUI_ABORTWARNING
