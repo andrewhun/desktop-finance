@@ -31,6 +31,7 @@ Page custom CustomShortcuts CustomShortcutsLeave
 !insertmacro MUI_UNPAGE_CONFIRM
 !define MUI_UNABORTWARNING
 !insertmacro MUI_UNPAGE_INSTFILES
+!define MUI_FINISHPAGE_RUN ${ExecutableFileName}.exe
 !insertmacro MUI_UNPAGE_FINISH
 
 !insertmacro MUI_LANGUAGE "English"
