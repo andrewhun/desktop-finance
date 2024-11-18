@@ -1,0 +1,1 @@
+Check out the GitHub repo for more information: https://github.com/andrewhun/desktop-finance/tree/reset

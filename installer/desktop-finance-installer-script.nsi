@@ -25,13 +25,14 @@ Var Desktop_Shortcut_Checkbox_State
 !define MUI_ABORTWARNING
 Page custom CustomShortcuts CustomShortcutsLeave
 !insertmacro MUI_PAGE_INSTFILES
+!define MUI_FINISHPAGE_RUN ${ExecutableFileName}.exe
+!define MUI_FINISHPAGE_SHOWREADME README.txt
 !insertmacro MUI_PAGE_FINISH
 
 !insertmacro MUI_UNPAGE_WELCOME
 !insertmacro MUI_UNPAGE_CONFIRM
 !define MUI_UNABORTWARNING
 !insertmacro MUI_UNPAGE_INSTFILES
-!define MUI_FINISHPAGE_RUN ${ExecutableFileName}.exe
 !insertmacro MUI_UNPAGE_FINISH
 
 !insertmacro MUI_LANGUAGE "English"
@@ -76,6 +77,7 @@ Section
 
     File /r "jre"
     File "${ExecutableFileName}.exe"
+    File "README.txt"
 
     # Create a desktop shortcut if the user selected the option
     ${If} $Desktop_Shortcut_Checkbox_State == ${BST_CHECKED}
