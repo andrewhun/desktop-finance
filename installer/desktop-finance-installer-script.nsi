@@ -17,6 +17,8 @@ Var Start_Menu_Shortcut_Checkbox_State
 Var Desktop_Shortcut_Checkbox
 Var Desktop_Shortcut_Checkbox_State
 
+Var Install_Confirmation_Label
+
 !insertmacro MUI_PAGE_WELCOME
 !define MUI_LICENSEPAGE_CHECKBOX
 !define MUI_LICENSEPAGE_CHECKBOX_TEXT "I accept the terms in the License Agreement"
@@ -24,6 +26,7 @@ Var Desktop_Shortcut_Checkbox_State
 !insertmacro MUI_PAGE_DIRECTORY
 !define MUI_ABORTWARNING
 Page custom CustomShortcuts CustomShortcutsLeave
+Page custom FinalInstallConfirmation
 !insertmacro MUI_PAGE_INSTFILES
 !define MUI_FINISHPAGE_RUN ${ExecutableFileName}.exe
 !define MUI_FINISHPAGE_SHOWREADME README.txt
@@ -70,6 +73,23 @@ Function CustomShortcutsLeave
     ${NSD_GetState} $Start_Menu_Shortcut_Checkbox $Start_Menu_Shortcut_Checkbox_State
 FunctionEnd
 
+Function FinalInstallConfirmation
+
+    !insertmacro MUI_HEADER_TEXT "Ready to install Desktop Finance" ""
+
+    nsDialogs::Create 1018
+	Pop $Dialog
+
+	${If} $Dialog == error
+		Abort
+	${EndIf}
+
+    ${NSD_CreateLabel} 0 12u 100% 24u "Click Install to begin the installation. Click Back to review or change any of your installation settings. Click Cancel to exit the wizard."
+	Pop $Install_Confirmation_Label
+
+    nsDialogs::Show
+FunctionEnd
+
 Section
 
     # Set the installation directory as the destination for the following actions
@@ -114,7 +134,7 @@ Section "uninstall"
     Delete $INSTDIR\desktop-finance-nsis.exe
     RMDir /r $INSTDIR\jre
 
-    # Delete Unistall Registry Entries
+    # Delete Uninstall Registry Entries
     DeleteRegKey HKEY_LOCAL_MACHINE "SOFTWARE\${ProductName}"
     DeleteRegKey HKEY_LOCAL_MACHINE "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\${ProductName}"
 
