@@ -19,12 +19,7 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+    <!-- Production -->
     <!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
     <dependency>
       <groupId>org.openjfx</groupId>
@@ -32,11 +27,76 @@
       <version>21.0.1</version>
       <type>pom</type>
     </dependency>
+
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
       <version>21.0.1</version>
       <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-graphics</artifactId>
+      <version>21.0.1</version>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-media</artifactId>
+      <version>21.0.1</version>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-fxml</artifactId>
+      <version>21.0.1</version>
+      <type>pom</type>
+    </dependency>
+
+    <!-- Test -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.testfx</groupId>
+      <artifactId>testfx-core</artifactId>
+      <version>4.0.18</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.testfx</groupId>
+      <artifactId>testfx-junit5</artifactId>
+      <version>4.0.18</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.testfx</groupId>
+      <artifactId>openjfx-monocle</artifactId>
+      <version>21.0.2</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -46,62 +106,79 @@
     <outputDirectory>target/classes</outputDirectory>
     <finalName>${project.artifactId}</finalName>
     <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+    <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
 
-    <plugins>
-      <plugin>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-maven-plugin</artifactId>
-        <version>0.0.8</version>
-      </plugin>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-maven-plugin</artifactId>
+          <version>0.0.8</version>
+        </plugin>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
-      </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.11.0</version>
+        </plugin>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.3.0</version>
-        <configuration>
-          <archive>
-            <addMavenDescriptor>false</addMavenDescriptor>
-            <manifestEntries>
-              <Main-Class>${main.class}</Main-Class>
-              <Application-Name>Desktop-Finance</Application-Name>
-            </manifestEntries>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <mainClass>${main.class}</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.7.1</version>
-        <configuration>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <mainClass>${main.class}</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-        <executions>
-          <execution>
-            <id>make-assembly</id> <!-- this is used for inheritance merges -->
-            <phase>package</phase> <!-- bind to the packaging phase -->
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.3.0</version>
+          <configuration>
+            <archive>
+              <addMavenDescriptor>false</addMavenDescriptor>
+              <manifestEntries>
+                <Main-Class>${main.class}</Main-Class>
+                <Application-Name>Desktop-Finance</Application-Name>
+              </manifestEntries>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <mainClass>${main.class}</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>3.7.1</version>
+          <configuration>
+            <descriptorRefs>
+              <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <mainClass>${main.class}</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+          <executions>
+            <execution>
+              <id>make-assembly</id> <!-- this is used for inheritance merges -->
+              <phase>package</phase> <!-- bind to the packaging phase -->
+              <goals>
+                <goal>single</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!-- Test only -->
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.1.2</version>
+          <configuration>
+            <!-- This configuration element is vital to make TestFX work in modular Java apps -->
+            <argLine>
+              --add-exports javafx.graphics/com.sun.javafx.application=ALL-UNNAMED
+              --add-exports javafx.graphics/com.sun.glass.ui=ALL-UNNAMED
+            </argLine>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>
