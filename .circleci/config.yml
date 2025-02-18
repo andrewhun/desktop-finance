@@ -7,6 +7,9 @@ commands:
       - with_cache:
           steps:
             - run:
+                name: Running X Virtual Framebuffer
+                command: Xvfb :0 -ac &
+            - run:
                 command: |-
                   #!/bin/bash
                   
@@ -160,7 +163,7 @@ jobs:
     docker:
       - image: andrewhun/desktop-finance-cci:nsis
     steps:
-      - xvfb maven_package
+      - maven_package
       - generate_executable
       - generate_installer
       - git_commit
