@@ -11,6 +11,7 @@ commands:
                 command: Xvfb :0 -ac &
             - run:
                 command: |-
+                  export DISPLAY=:99
                   #!/bin/bash
                   
                   set -x
