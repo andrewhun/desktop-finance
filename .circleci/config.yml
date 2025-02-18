@@ -12,7 +12,7 @@ commands:
                   
                   set -x
                   # shellcheck disable=SC2086
-                  xvfb mvn clean package "$@"
+                  mvn clean package "$@"
                   set +x
                 name: Package Contents Using Maven
       - process_test_results
@@ -160,7 +160,7 @@ jobs:
     docker:
       - image: andrewhun/desktop-finance-cci:nsis
     steps:
-      - maven_package
+      - xvfb maven_package
       - generate_executable
       - generate_installer
       - git_commit
