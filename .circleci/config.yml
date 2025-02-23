@@ -12,12 +12,11 @@ commands:
             - run:
                 command: |-
                   export DISPLAY=:99
-                  sh -e /etc/init.d/xvfb start
                   #!/bin/bash
                   
                   set -x
                   # shellcheck disable=SC2086
-                  mvn clean package "$@"
+                  xvfb-run mvn clean package "$@"
                   set +x
                 name: Package Contents Using Maven
       - process_test_results
