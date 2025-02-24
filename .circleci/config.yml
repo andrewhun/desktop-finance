@@ -7,16 +7,12 @@ commands:
       - with_cache:
           steps:
             - run:
-                name: Running X Virtual Framebuffer
-                command: Xvfb :0 -ac &
-            - run:
                 command: |-
-                  export DISPLAY=:99
                   #!/bin/bash
                   
                   set -x
                   # shellcheck disable=SC2086
-                  xvfb-run mvn clean package "$@"
+                  mvn clean package "$@"
                   set +x
                 name: Package Contents Using Maven
       - process_test_results
