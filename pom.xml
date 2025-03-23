@@ -25,7 +25,7 @@
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-base</artifactId>
       <version>21.0.1</version>
-      <classifier>linux-aarch64-monocle</classifier>
+      <classifier>linux</classifier>
       <type>jar</type>
     </dependency>
 
@@ -33,7 +33,7 @@
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
       <version>21.0.1</version>
-      <classifier>linux-aarch64-monocle</classifier>
+      <classifier>linux</classifier>
       <type>jar</type>
     </dependency>
 
@@ -41,7 +41,7 @@
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-graphics</artifactId>
       <version>21.0.1</version>
-      <classifier>linux-aarch64-monocle</classifier>
+      <classifier>linux</classifier>
       <type>jar</type>
     </dependency>
 
