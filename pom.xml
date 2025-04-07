@@ -15,7 +15,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>21</maven.compiler.release>
 
-    <main.class>com.andrewhun.finance.Launcher</main.class>
+    <main.class>com.andrewhun.finance.App</main.class>
   </properties>
 
   <dependencies>
@@ -28,6 +28,14 @@
       <classifier>linux</classifier>
       <type>jar</type>
     </dependency>
+
+    <!--<dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-base</artifactId>
+      <version>21.0.1</version>
+      <scope>system</scope>
+      <systemPath>C:/Users/andre/Downloads/zulu21.30.15-ca-fx-jdk21.0.1-win_x64/lib/javafx-swt.jar</systemPath>
+    </dependency>-->
 
     <dependency>
       <groupId>org.openjfx</groupId>
@@ -139,7 +147,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>${main.class}</mainClass>
+              <mainClass>com.andrewhun.finance.Launcher</mainClass>
             </manifest>
           </archive>
         </configuration>
