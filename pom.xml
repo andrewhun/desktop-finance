@@ -15,43 +15,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>21</maven.compiler.release>
 
-    <main.class>com.andrewhun.finance.App</main.class>
+    <main.class>com.andrewhun.finance.Launcher</main.class>
   </properties>
 
   <dependencies>
-    <!-- Production -->
-    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-base</artifactId>
-      <version>21.0.1</version>
-      <classifier>linux</classifier>
-      <type>jar</type>
-    </dependency>
-
-    <!--<dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-base</artifactId>
-      <version>21.0.1</version>
-      <scope>system</scope>
-      <systemPath>C:/Users/andre/Downloads/zulu21.30.15-ca-fx-jdk21.0.1-win_x64/lib/javafx-swt.jar</systemPath>
-    </dependency>-->
-
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-controls</artifactId>
-      <version>21.0.1</version>
-      <classifier>linux</classifier>
-      <type>jar</type>
-    </dependency>
-
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-graphics</artifactId>
-      <version>21.0.1</version>
-      <classifier>linux</classifier>
-      <type>jar</type>
-    </dependency>
 
     <!-- Test -->
     <dependency>
@@ -147,7 +114,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>com.andrewhun.finance.Launcher</mainClass>
+              <mainClass>${main.class}</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -158,31 +125,6 @@
             <goals>
               <goal>single</goal>
             </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.5.1</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <shadedArtifactAttached>true</shadedArtifactAttached>
-              <shadedClassifierName>project-classifier</shadedClassifierName>
-              <outputFile>shade\${project.artifactId}.jar</outputFile>
-              <transformers>
-                <transformer implementation=
-                                     "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>${main.class}</mainClass>
-                </transformer>
-              </transformers>
-            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -201,4 +143,65 @@
       </plugin>
     </plugins>
   </build>
+
+  <!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
+  <profiles>
+    <profile>
+      <id>javafx-global</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-base</artifactId>
+          <version>21.0.1</version>
+          <type>jar</type>
+        </dependency>
+
+        <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-controls</artifactId>
+          <version>21.0.1</version>
+          <type>jar</type>
+        </dependency>
+
+        <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-graphics</artifactId>
+          <version>21.0.1</version>
+          <type>jar</type>
+        </dependency>
+      </dependencies>
+    </profile>
+
+    <profile>
+      <id>javafx-local</id>
+      <dependencies>
+        <dependency>
+          <groupId>javafx-swt</groupId>
+          <artifactId>javafx-base</artifactId>
+          <version>21.0.1</version>
+          <scope>system</scope>
+          <systemPath>/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
+        </dependency>
+
+        <dependency>
+          <groupId>javafx-swt</groupId>
+          <artifactId>javafx-controls</artifactId>
+          <version>21.0.1</version>
+          <scope>system</scope>
+          <systemPath>/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
+        </dependency>
+
+        <dependency>
+          <groupId>javafx-swt</groupId>
+          <artifactId>javafx-graphics</artifactId>
+          <version>21.0.1</version>
+          <scope>system</scope>
+          <systemPath>/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
 </project>

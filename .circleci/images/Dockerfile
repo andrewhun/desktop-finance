@@ -32,6 +32,15 @@ WORKDIR ./launch4j
 RUN dos2unix ./launch4j && \
     apt-get remove --purge -y dos2unix
 
+ENV JDK_VERSION=21.0.1
+
+WORKDIR /full-jdk
+
+RUN wget "https://cdn.azul.com/zulu/bin/zulu21.30.15-ca-fx-jdk${JDK_VERSION}-linux_x64.tar.gz" && \
+    tar -xf "zulu21.30.15-ca-fx-jdk${JDK_VERSION}-linux_x64.tar.gz"
+
+RUN mv /full-jdk/zulu21.30.15-ca-fx-jdk${JDK_VERSION}-linux_x64 /full-jdk/zulu-jdk
+
 FROM cimg/openjdk:21.0.0-node AS runner
 
 WORKDIR /installer
@@ -39,5 +48,10 @@ WORKDIR /installer
 COPY --from=builder /nsis/nsis/ /installer/nsis/
 
 COPY --from=builder /launch4j/launch4j /installer/launch4j
+
+WORKDIR /build
+
+COPY --from=builder /full-jdk/zulu-jdk /build/zulu-jdk
+
 # Source: https://stackoverflow.com/questions/56579468/list-directory-var-lib-apt-lists-partial-is-missing-acquire-20-not-a-direc
 USER 1001
