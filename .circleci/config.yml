@@ -12,7 +12,7 @@ commands:
                   
                   set -x
                   # shellcheck disable=SC2086
-                  realpath /build/zulu-jdk/lib/javafx-swt.jar
+                  ls -R /
                   mvn clean package -P javafx-local "$@"
                   set +x
                 name: Package Contents Using Maven
