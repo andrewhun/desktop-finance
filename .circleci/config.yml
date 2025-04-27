@@ -12,7 +12,6 @@ commands:
                   
                   set -x
                   # shellcheck disable=SC2086
-                  ls -R /
                   mvn clean package -P javafx-local "$@"
                   set +x
                 name: Package Contents Using Maven
