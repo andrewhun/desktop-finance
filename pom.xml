@@ -183,7 +183,7 @@
           <artifactId>javafx-base</artifactId>
           <version>21.0.1</version>
           <scope>system</scope>
-          <systemPath>#!/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
+          <systemPath>~/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -191,7 +191,7 @@
           <artifactId>javafx-controls</artifactId>
           <version>21.0.1</version>
           <scope>system</scope>
-          <systemPath>#!/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
+          <systemPath>~/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -199,7 +199,7 @@
           <artifactId>javafx-graphics</artifactId>
           <version>21.0.1</version>
           <scope>system</scope>
-          <systemPath>#!/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
+          <systemPath>~/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
         </dependency>
       </dependencies>
     </profile>
