@@ -129,6 +129,12 @@
         </executions>
       </plugin>
 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>3.1.1</version>
+      </plugin>
+
       <!-- Test only -->
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -151,6 +157,7 @@
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
+
       <dependencies>
         <dependency>
           <groupId>org.openjfx</groupId>
@@ -179,27 +186,27 @@
       <id>javafx-local</id>
       <dependencies>
         <dependency>
-          <groupId>javafx-swt</groupId>
+          <groupId>org.openjfx.local</groupId>
           <artifactId>javafx-base</artifactId>
           <version>21.0.1</version>
-          <scope>system</scope>
-          <systemPath>~/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
+          <classifier>linux</classifier>
+          <type>jar</type>
         </dependency>
 
         <dependency>
-          <groupId>javafx-swt</groupId>
+          <groupId>org.openjfx.local</groupId>
           <artifactId>javafx-controls</artifactId>
           <version>21.0.1</version>
-          <scope>system</scope>
-          <systemPath>~/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
+          <classifier>linux</classifier>
+          <type>jar</type>
         </dependency>
 
         <dependency>
-          <groupId>javafx-swt</groupId>
+          <groupId>org.openjfx.local</groupId>
           <artifactId>javafx-graphics</artifactId>
           <version>21.0.1</version>
-          <scope>system</scope>
-          <systemPath>~/build/zulu-jdk/lib/javafx-swt.jar</systemPath>
+          <classifier>linux</classifier>
+          <type>jar</type>
         </dependency>
       </dependencies>
     </profile>
