@@ -11,7 +11,7 @@ commands:
                 command: |-
                   #!/bin/bash
                   
-                  ls -R /home/circleci/
+                  ls -aR /home/circleci/
                   set -x
                   # shellcheck disable=SC2086
                   mvn clean package -P javafx-local "$@"
