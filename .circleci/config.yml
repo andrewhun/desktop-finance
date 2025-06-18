@@ -11,7 +11,6 @@ commands:
                 command: |-
                   #!/bin/bash
                   
-                  xvfb :10
                   set -x
                   # shellcheck disable=SC2086
                   mvn clean package -P javafx-local "$@"

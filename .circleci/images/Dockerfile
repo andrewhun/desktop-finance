@@ -34,7 +34,11 @@ RUN dos2unix ./launch4j && \
 
 RUN sudo apt update && \
     sudo apt install xorg && \
-    sudo apt install xvfb
+    sudo spt install xvfb && \
+    Xvfb :99 &
+
+RUN export DISPLAY=:99.0
+
 
 FROM cimg/openjdk:21.0.0-node AS runner
 
