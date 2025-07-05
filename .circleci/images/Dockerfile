@@ -32,9 +32,11 @@ WORKDIR ./launch4j
 RUN dos2unix ./launch4j && \
     apt-get remove --purge -y dos2unix
 
-RUN sudo apt update && \
-    sudo apt install xorg && \
-    sudo apt install -y xvfb libx11-6 libx11-xcb1 libxext6 libxrender1 libxtst6 libxi6 libfreetype6 libgtk-3-0 libgtk-3-dev
+RUN apt update && \
+    apt install xorg && \
+    apt install -y xvfb libx11-6 libx11-xcb1 libxext6 libxrender1 libxtst6 libxi6 libfreetype6 libgtk-3-0 libgtk-3-dev
+
+RUN xvfb-run --help
 
 
 FROM cimg/openjdk:21.0.0-node AS runner
