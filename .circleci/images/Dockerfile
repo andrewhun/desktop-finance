@@ -32,11 +32,9 @@ WORKDIR ./launch4j
 RUN dos2unix ./launch4j && \
     apt-get remove --purge -y dos2unix
 
-#RUN apt-get update && \
-#    apt-get install xorg && \
-#    apt-get install -y xvfb libx11-6 libx11-xcb1 libxext6 libxrender1 libxtst6 libxi6 libfreetype6 libgtk-3-0 libgtk-3-dev
-
-# RUN xvfb-run --help
+RUN apt-get update && \
+    apt-get install xorg && \
+    apt-get install -y xvfb libx11-6 libx11-xcb1 libxext6 libxrender1 libxtst6 libxi6 libfreetype6 libgtk-3-0 libgtk-3-dev
 
 
 FROM cimg/openjdk:21.0.0-node AS runner
@@ -48,4 +46,4 @@ COPY --from=builder /nsis/nsis/ /installer/nsis/
 COPY --from=builder /launch4j/launch4j /installer/launch4j
 
 # Source: https://stackoverflow.com/questions/56579468/list-directory-var-lib-apt-lists-partial-is-missing-acquire-20-not-a-direc
-# USER 1001
+USER circleci
