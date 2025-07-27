@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.andrewhun.finance.AppTest" time="0.816" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="javafx.runtime.version" value="21.0.1+6"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/circleci/project/target/test-classes:/home/circleci/project/target/classes:/home/circleci/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/home/circleci/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/circleci/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/home/circleci/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/circleci/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/home/circleci/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/home/circleci/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/home/circleci/.m2/repository/org/testfx/testfx-core/4.0.18/testfx-core-4.0.18.jar:/home/circleci/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/home/circleci/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar:/home/circleci/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar:/home/circleci/.m2/repository/org/testfx/testfx-junit5/4.0.18/testfx-junit5-4.0.18.jar:/home/circleci/.m2/repository/org/testfx/openjfx-monocle/21.0.2/openjfx-monocle-21.0.2.jar:/home/circleci/.m2/repository/org/openjfx/local/javafx-base/21.0.1/javafx-base-21.0.1-linux.jar:/home/circleci/.m2/repository/org/openjfx/local/javafx-controls/21.0.1/javafx-controls-21.0.1-linux.jar:/home/circleci/.m2/repository/org/openjfx/local/javafx-graphics/21.0.1/javafx-graphics-21.0.1-linux.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="javafx.version" value="21.0.1"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/local/jdk-21/lib"/>
+    <property name="sun.java.command" value="/home/circleci/project/target/surefire/surefirebooter-20250727133529282_3.jar /home/circleci/project/target/surefire 2025-07-27T13-35-28_682-jvmRun1 surefire-20250727133529282_1tmp surefire_0-20250727133529282_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/circleci/project/target/test-classes:/home/circleci/project/target/classes:/home/circleci/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/home/circleci/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/circleci/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/home/circleci/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/circleci/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/home/circleci/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/home/circleci/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/home/circleci/.m2/repository/org/testfx/testfx-core/4.0.18/testfx-core-4.0.18.jar:/home/circleci/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/home/circleci/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar:/home/circleci/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar:/home/circleci/.m2/repository/org/testfx/testfx-junit5/4.0.18/testfx-junit5-4.0.18.jar:/home/circleci/.m2/repository/org/testfx/openjfx-monocle/21.0.2/openjfx-monocle-21.0.2.jar:/home/circleci/.m2/repository/org/openjfx/local/javafx-base/21.0.1/javafx-base-21.0.1-linux.jar:/home/circleci/.m2/repository/org/openjfx/local/javafx-controls/21.0.1/javafx-controls-21.0.1-linux.jar:/home/circleci/.m2/repository/org/openjfx/local/javafx-graphics/21.0.1/javafx-graphics-21.0.1-linux.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/circleci"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-09-19"/>
+    <property name="java.home" value="/usr/local/jdk-21"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/circleci/project"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/circleci/project/target/surefire/surefirebooter-20250727133529282_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21+35-LTS"/>
+    <property name="user.name" value="circleci"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-1031-aws"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21+35"/>
+    <property name="localRepository" value="/home/circleci/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21"/>
+    <property name="user.dir" value="/home/circleci/project"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21+35-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testDisplayingHelloWorldPage" classname="com.andrewhun.finance.AppTest" time="0.783">
+    <system-err><![CDATA[Jul 27, 2025 1:35:29 PM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @7a9273a8'
+]]></system-err>
+  </testcase>
+</testsuite>
