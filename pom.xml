@@ -20,6 +20,25 @@
 
   <dependencies>
 
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-base</artifactId>
+      <version>21.0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-controls</artifactId>
+      <version>21.0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-graphics</artifactId>
+      <version>21.0.1</version>
+    </dependency>
+
     <!-- Test -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -129,12 +148,6 @@
         </executions>
       </plugin>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-install-plugin</artifactId>
-        <version>3.1.1</version>
-      </plugin>
-
       <!-- Test only -->
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -149,66 +162,4 @@
       </plugin>
     </plugins>
   </build>
-
-  <!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
-  <profiles>
-    <profile>
-      <id>javafx-global</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-
-      <dependencies>
-        <dependency>
-          <groupId>org.openjfx</groupId>
-          <artifactId>javafx-base</artifactId>
-          <version>21.0.1</version>
-          <type>jar</type>
-        </dependency>
-
-        <dependency>
-          <groupId>org.openjfx</groupId>
-          <artifactId>javafx-controls</artifactId>
-          <version>21.0.1</version>
-          <type>jar</type>
-        </dependency>
-
-        <dependency>
-          <groupId>org.openjfx</groupId>
-          <artifactId>javafx-graphics</artifactId>
-          <version>21.0.1</version>
-          <type>jar</type>
-        </dependency>
-      </dependencies>
-    </profile>
-
-    <profile>
-      <id>javafx-local</id>
-      <dependencies>
-        <dependency>
-          <groupId>org.openjfx.local</groupId>
-          <artifactId>javafx-base</artifactId>
-          <version>21.0.1</version>
-          <classifier>linux</classifier>
-          <type>jar</type>
-        </dependency>
-
-        <dependency>
-          <groupId>org.openjfx.local</groupId>
-          <artifactId>javafx-controls</artifactId>
-          <version>21.0.1</version>
-          <classifier>linux</classifier>
-          <type>jar</type>
-        </dependency>
-
-        <dependency>
-          <groupId>org.openjfx.local</groupId>
-          <artifactId>javafx-graphics</artifactId>
-          <version>21.0.1</version>
-          <classifier>linux</classifier>
-          <type>jar</type>
-        </dependency>
-      </dependencies>
-    </profile>
-  </profiles>
 </project>

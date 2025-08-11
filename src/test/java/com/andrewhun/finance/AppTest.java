@@ -10,14 +10,14 @@ public class AppTest extends ApplicationTest {
     protected Stage stage;
 
 
-    /*@BeforeAll
+    @BeforeAll
     static void setUpHeadlessMode() {
 
         System.setProperty("testfx.robot", "glass");
         System.setProperty("testfx.headless", "true");
         System.setProperty("prism.order", "sw");
         System.setProperty("prism.text", "t2k");
-    }*/
+    }
 
     @Override
     public void start(Stage stage) throws Exception {
