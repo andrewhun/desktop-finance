@@ -1,6 +1,22 @@
 version: '2.1'
 
 commands:
+  maven_test:
+    steps:
+      - checkout
+      - with_cache:
+          steps:
+            - run:
+                command: |-
+                  #!/bin/bash
+
+                  set -x
+                  # shellcheck disable=SC2086
+                  xvfb-run mvn clean test "$@"
+                  set +x
+                name: Run Tests Using Maven
+      - process_test_results
+
   maven_package:
     steps:
       - checkout
@@ -142,31 +158,45 @@ commands:
             rm -rf nsis-temp
           name: Generate Installer Using NSIS
 
-  git_commit:
+  commit_to_staging:
     steps:
       - run:
           command: |-
             #!/bin/bash
             git config --global user.email "andrewhun995@gmail.com"
             git config --global user.name "Andras Tyichi"
-            git branch -u origin/reset
+            git branch -u origin/staging
             git add --all
             git commit -m "Pushing Packaged Content Via CircleCI [skip ci]"
             git push
-          name: Commit to Git
+          name: Commit to Staging
 
 jobs:
-  package_and_commit:
+  run_tests:
+    docker:
+      - image: andrewhun/desktop-finance-cci:nsis
+    steps:
+      - maven_test
+
+  package_and_commit_to_staging:
     docker:
       - image: andrewhun/desktop-finance-cci:nsis
     steps:
       - maven_package
       - generate_executable
       - generate_installer
-      - git_commit
+      - commit_to_staging
 
 
 workflows:
-  package_and_commit:
+  build:
     jobs:
-      - package_and_commit
+      - run_tests:
+          filters:
+            branches:
+              only: reset
+
+      - package_and_commit_to_staging:
+          filters:
+            branches:
+              only: staging
