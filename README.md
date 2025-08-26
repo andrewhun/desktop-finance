@@ -26,3 +26,6 @@ a good combination by the looks of it.
 little functionality to offer in return. Spring without Spring Boot takes a lot of configuration.
 Overall, I believe that the current design is simpler than the alternatives.
 - I should really start using Git. Removing redundant stuff on GitHub takes a lot of time and effort.
+
+# Update (27/08/2025)
+I just realised that I forgot to add a note on the master branch. I've been working on a "reboot" of this project on the "reset" branch for almost 2 years now. There is some interesting stuff in the documentation for any (unlikely) visitors to see.
