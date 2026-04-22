@@ -97,9 +97,11 @@ public class NumberTextFieldUnitTest {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(2);
 
-        assertValidTextValue(field, getDecimalAsText(123.45, 2));
-        assertValidTextValue(field, getDecimalAsText(0.99, 2));
-        assertValidTextValue(field, getDecimalAsText(1000.00, 2));
+        char decimalSeparator = getDecimalSeparator();
+
+        assertValidTextValue(field, "123" + decimalSeparator + "45");
+        assertValidTextValue(field, "0" + decimalSeparator + "99");
+        assertValidTextValue(field, "1000" + decimalSeparator + "00");
     }
 
     @Test
@@ -109,11 +111,13 @@ public class NumberTextFieldUnitTest {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(2);
 
-        assertValidTextValue(field, getDecimalAsText(10000.00, 2));
-        assertValidTextValue(field, getDecimalAsText(100000.00, 2));
-        assertValidTextValue(field, getDecimalAsText(1000000.00, 2));
-        assertValidTextValue(field, getDecimalAsText(1000000000.00, 2));
-        assertValidTextValue(field, getDecimalAsText(1000000000000.00, 2));
+        char decimalSeparator = getDecimalSeparator();
+
+        assertValidTextValue(field, "10000" + decimalSeparator + "00");
+        assertValidTextValue(field, "100000" + decimalSeparator + "00");
+        assertValidTextValue(field, "1000000" + decimalSeparator + "00");
+        assertValidTextValue(field, "1000000000" + decimalSeparator + "00");
+        assertValidTextValue(field, "1000000000000" + decimalSeparator + "00");
     }
 
     @Test
@@ -123,9 +127,11 @@ public class NumberTextFieldUnitTest {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(2);
 
-        assertInvalidTextValue(field, getDecimalAsText(123.456, 3));
-        assertInvalidTextValue(field, getDecimalAsText(0.999, 3));
-        assertInvalidTextValue(field, getDecimalAsText(10.123456, 6));
+        char decimalSeparator = getDecimalSeparator();
+
+        assertInvalidTextValue(field, "123" + decimalSeparator + "456");
+        assertInvalidTextValue(field, "0" + decimalSeparator + "999");
+        assertInvalidTextValue(field, "10" + decimalSeparator + "123456");
     }
 
     @Test
@@ -136,9 +142,11 @@ public class NumberTextFieldUnitTest {
         field.setAllowNegative(false);
         field.setDecimalPlaces(2);
 
-        assertInvalidTextValue(field, getDecimalAsText(-123.45, 2));
-        assertInvalidTextValue(field, getDecimalAsText(-50, 0));
-        assertInvalidTextValue(field, getDecimalAsText(-0.01, 2));
+        char decimalSeparator = getDecimalSeparator();
+
+        assertInvalidTextValue(field, "-123" + decimalSeparator + "45");
+        assertInvalidTextValue(field, "-50");
+        assertInvalidTextValue(field, "-0" + decimalSeparator + "01");
     }
 
     @Test
@@ -149,9 +157,11 @@ public class NumberTextFieldUnitTest {
         field.setAllowNegative(true);
         field.setDecimalPlaces(2);
 
-        assertValidTextValue(field, getDecimalAsText(-123.45, 2));
-        assertValidTextValue(field, getDecimalAsText(-50, 0));
-        assertValidTextValue(field, getDecimalAsText(-0.01, 2));
+        char decimalSeparator = getDecimalSeparator();
+
+        assertValidTextValue(field, "-123" + decimalSeparator + "45");
+        assertValidTextValue(field, "-50");
+        assertValidTextValue(field, "-0" + decimalSeparator + "01");
     }
 
     @Test
@@ -192,9 +202,9 @@ public class NumberTextFieldUnitTest {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(0);
 
-        assertValidTextValue(field, getDecimalAsText(123, 0));
-        assertValidTextValue(field, getDecimalAsText(0, 0));
-        assertInvalidTextValue(field, getDecimalAsText(123.45, 2));
+        assertValidTextValue(field, "123");
+        assertValidTextValue(field, "0");
+        assertInvalidTextValue(field, "123" + getDecimalSeparator() + "45");
     }
 
     @Test
@@ -247,6 +257,17 @@ public class NumberTextFieldUnitTest {
     }
 
     @Test
+    @DisplayName("Should reject minus sign followed by decimal")
+    void testValidatingInvalidMinusSignFollowedByDecimal() {
+
+        NumberTextField field = new NumberTextField();
+        field.setAllowNegative(true);
+        field.setDecimalPlaces(2);
+
+        assertInvalidTextValue(field, "-" + getDecimalSeparator());
+    }
+
+    @Test
     @DisplayName("Should reject multiple minus signs")
     void testValidatingInvalidMultipleMinusSigns() {
 
@@ -266,16 +287,18 @@ public class NumberTextFieldUnitTest {
         field.setDecimalPlaces(2);
         field.setAllowNegative(false);
 
-        assertValidTextValue(field, getDecimalAsText(123.45, 2));
-        assertInvalidTextValue(field, getDecimalAsText(-123.45, 2));
-        assertInvalidTextValue(field, getDecimalAsText(123.456, 3));
+        char decimalSeparator = getDecimalSeparator();
+
+        assertValidTextValue(field, "123" + decimalSeparator + "45");
+        assertInvalidTextValue(field, "-123" + decimalSeparator + "45");
+        assertInvalidTextValue(field, "123" + decimalSeparator + "456");
 
         field.setAllowNegative(true);
         field.setDecimalPlaces(3);
 
-        assertValidTextValue(field, getDecimalAsText(123.45, 2));
-        assertValidTextValue(field, getDecimalAsText(-123.45, 2));
-        assertValidTextValue(field, getDecimalAsText(123.456, 3));
+        assertValidTextValue(field, "123" + decimalSeparator + "45");
+        assertValidTextValue(field, "-123" + decimalSeparator + "45");
+        assertValidTextValue(field, "123" + decimalSeparator + "456");
     }
 
     private void assertValidTextValue(NumberTextField field, String textValue) {
@@ -288,14 +311,6 @@ public class NumberTextFieldUnitTest {
         field.setText("");
         field.setText(textValue);
         assertTrue(field.getText().isBlank());
-    }
-
-    private String getDecimalAsText(double decimal, Integer decimalPlaces) {
-
-        NumberFormat nf = NumberFormat.getInstance();
-        nf.setMinimumFractionDigits(decimalPlaces);
-        nf.setMaximumFractionDigits(decimalPlaces);
-        return nf.format(decimal);
     }
 
     // ==================== Parse Input Tests ====================

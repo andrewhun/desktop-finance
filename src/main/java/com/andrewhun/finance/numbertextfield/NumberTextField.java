@@ -181,7 +181,8 @@ public class NumberTextField extends VBox {
 
         String decimals = getDecimalPlaces() > 0 ? "(\\" + separator + "\\d{0," + getDecimalPlaces() + "})?" : "";
         // This pattern can handle "standard" decimals and European number formats (values above and below 1000)
-        return "^" + minusSign + "((\\d{0,3})|((\\d{1,3}){1}(\\h\\d{3})+))?" + decimals + "$";
+        //return "^" + minusSign + "((\\d{0,3})|((\\d{1,3}){1}(\\h\\d{3})+))?" + decimals + "$";
+        return "^(" + minusSign + ")|(" + minusSign + "\\d+" + decimals + ")$";
     }
 
     private char getDecimalSeparator() {
