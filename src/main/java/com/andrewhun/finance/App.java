@@ -8,6 +8,7 @@ package com.andrewhun.finance;
  * Hello world!
  *
  */
+import com.andrewhun.finance.numbertextfield.NumberTextField;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -24,17 +25,19 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Hello World!");
+        NumberTextField field = new NumberTextField();
         Button btn = new Button();
-        btn.setText("Say 'Hello World'");
+        btn.setText("Validate Number");
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+                System.out.println(field.numberProperty());
             }
         });
 
         StackPane root = new StackPane();
+        root.getChildren().add(field);
         root.getChildren().add(btn);
         primaryStage.setScene(new Scene(root, 300, 250));
         primaryStage.show();

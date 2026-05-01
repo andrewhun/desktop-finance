@@ -20,6 +20,8 @@
     <cp>javafx-controls-21.0.1-win.jar</cp>
     <cp>javafx-graphics-21.0.1.jar</cp>
     <cp>javafx-graphics-21.0.1-win.jar</cp>
+    <cp>javafx-fxml-21.0.1.jar</cp>
+    <cp>javafx-fxml-21.0.1-win.jar</cp>
     <cp>javafx-base-21.0.1.jar</cp>
   </classPath>
   <jre>
