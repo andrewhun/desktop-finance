@@ -1,1 +1,3 @@
+/home/circleci/project/src/test/java/com/andrewhun/finance/numbertextfield/NumberTextFieldUnitTest.java
 /home/circleci/project/src/test/java/com/andrewhun/finance/AppTest.java
+/home/circleci/project/src/test/java/com/andrewhun/finance/numbertextfield/NumberTextFieldIntegrationTest.java

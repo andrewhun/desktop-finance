@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="VBox" xmlns="http://javafx.com/javafx/17"
+         xmlns:fx="http://javafx.com/fxml/1"
+         spacing="5">
+
+    <!-- Label -->
+    <Label fx:id="fieldLabel" text="Field Label"
+           style="-fx-font-weight: bold; -fx-text-fill: #555555;"/>
+
+    <!-- Number Text Field -->
+    <TextField fx:id="numberField" layoutX="168.0" layoutY="78.0" />
+
+    <!-- Error Label -->
+    <Label fx:id="errorLabel" textFill="red"
+           style="-fx-font-size: 11px;"
+           visible="false"
+           managed="false"
+           wrapText="true"/>
+
+</fx:root>
