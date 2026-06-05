@@ -1,10 +1,13 @@
 package com.andrewhun.finance;
 
+import com.andrewhun.finance.database.DatabaseExtension;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.framework.junit5.ApplicationTest;
 import org.testfx.api.FxToolkit;
 
+@ExtendWith(DatabaseExtension.class)
 public class AppTest extends ApplicationTest {
 
     protected Stage stage;
