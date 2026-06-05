@@ -7,8 +7,6 @@ import org.junit.jupiter.api.*;
 import org.testfx.framework.junit5.ApplicationTest;
 
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -52,7 +50,7 @@ public class NumberTextFieldIntegrationTest extends ApplicationTest {
 
         field.setDecimalPlaces(2);
         clickOn("#field");
-        String validText = "123" + getDecimalSeparator() + "01";
+        String validText = "123" + NumberTextField.getDecimalSeparator() + "01";
         String fullText = "abc" + validText + "@;#";
         write(fullText);
         assertEquals(validText, field.getText());
@@ -64,7 +62,7 @@ public class NumberTextFieldIntegrationTest extends ApplicationTest {
     @DisplayName("Should parse a valid positive number without any errors")
     void testParsingValidPositiveNumber() {
         field.setDecimalPlaces(2);
-        verifyParsingValidValue("123" + getDecimalSeparator() + "45", BigDecimal.valueOf(123.45));
+        verifyParsingValidValue("123" + NumberTextField.getDecimalSeparator() + "45", BigDecimal.valueOf(123.45));
     }
 
     @Test
@@ -72,7 +70,7 @@ public class NumberTextFieldIntegrationTest extends ApplicationTest {
     void testParsingValidNegativeNumber() {
         field.setDecimalPlaces(2);
         field.setAllowNegative(true);
-        verifyParsingValidValue("-123" + getDecimalSeparator() + "45", BigDecimal.valueOf(-123.45));
+        verifyParsingValidValue("-123" + NumberTextField.getDecimalSeparator() + "45", BigDecimal.valueOf(-123.45));
     }
 
     @Test
@@ -85,7 +83,7 @@ public class NumberTextFieldIntegrationTest extends ApplicationTest {
     @DisplayName("Should parse an incomplete decimal without any errors")
     void testParsingValidIncompleteDecimal() {
         field.setDecimalPlaces(2);
-        verifyParsingValidValue("123" + getDecimalSeparator(), BigDecimal.valueOf(123));
+        verifyParsingValidValue("123" + NumberTextField.getDecimalSeparator(), BigDecimal.valueOf(123));
     }
 
     private void verifyParsingValidValue(String input, BigDecimal expectedValue) {
@@ -117,7 +115,7 @@ public class NumberTextFieldIntegrationTest extends ApplicationTest {
 
         field.setDecimalPlaces(2);
         field.setMinValue(1);
-        verifyParsingInvalidValue("0" + getDecimalSeparator() + "99",
+        verifyParsingInvalidValue("0" + NumberTextField.getDecimalSeparator() + "99",
                 "The value can't be lower than " + field.getMinValue());
     }
 
@@ -127,7 +125,7 @@ public class NumberTextFieldIntegrationTest extends ApplicationTest {
 
         field.setDecimalPlaces(2);
         field.setMaxValue(1);
-        verifyParsingInvalidValue("1" + getDecimalSeparator() + "01",
+        verifyParsingInvalidValue("1" + NumberTextField.getDecimalSeparator() + "01",
                 "The value can't be greater than " + field.getMaxValue());
     }
 
@@ -145,11 +143,5 @@ public class NumberTextFieldIntegrationTest extends ApplicationTest {
         assertTrue(field.hasError());
         assertEquals(expectedErrorMessage, field.getErrorMessage());
         assertTrue(field.getNumberFieldStyleClass().contains("error"));
-    }
-
-    private char getDecimalSeparator() {
-        DecimalFormat format = (DecimalFormat) DecimalFormat.getInstance();
-        DecimalFormatSymbols symbols = format.getDecimalFormatSymbols();
-        return symbols.getDecimalSeparator();
     }
 }

@@ -12,7 +12,6 @@ import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -56,7 +55,8 @@ public class NumberTextField extends VBox {
 
         try {
             loader.load();
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             throw new RuntimeException("Failed to load NumberTextField FXML", e);
         }
     }
@@ -180,15 +180,11 @@ public class NumberTextField extends VBox {
         char separator = getDecimalSeparator();
 
         String decimals = getDecimalPlaces() > 0 ? "(\\" + separator + "\\d{0," + getDecimalPlaces() + "})?" : "";
-        // This pattern can handle "standard" decimals and European number formats (values above and below 1000)
-        //return "^" + minusSign + "((\\d{0,3})|((\\d{1,3}){1}(\\h\\d{3})+))?" + decimals + "$";
         return "^(" + minusSign + ")|(" + minusSign + "\\d+" + decimals + ")$";
     }
 
-    private char getDecimalSeparator() {
-        DecimalFormat format = (DecimalFormat) DecimalFormat.getInstance();
-        DecimalFormatSymbols symbols = format.getDecimalFormatSymbols();
-        return symbols.getDecimalSeparator();
+    static char getDecimalSeparator() {
+        return DecimalFormatSymbols.getInstance().getDecimalSeparator();
     }
 
     private void setupParsing() {
