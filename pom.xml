@@ -194,7 +194,7 @@
       <id>local</id>
       <activation>
         <property>
-          <name>!CI</name>
+          <name>!env.CI</name>
         </property>
       </activation>
       <build>
