@@ -8,6 +8,7 @@ package com.andrewhun.finance;
  * Hello world!
  *
  */
+import com.andrewhun.finance.database.DatabaseInitializer;
 import com.andrewhun.finance.numbertextfield.NumberTextField;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -23,7 +24,8 @@ public class App extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws Exception {
+        new DatabaseInitializer().initialize();
         primaryStage.setTitle("Hello World!");
         NumberTextField field = new NumberTextField();
         Button btn = new Button();
