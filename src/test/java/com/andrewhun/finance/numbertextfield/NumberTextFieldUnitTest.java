@@ -6,8 +6,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -97,7 +95,7 @@ public class NumberTextFieldUnitTest {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(2);
 
-        char decimalSeparator = getDecimalSeparator();
+        char decimalSeparator = NumberTextField.getDecimalSeparator();
 
         assertValidTextValue(field, "123" + decimalSeparator + "45");
         assertValidTextValue(field, "0" + decimalSeparator + "99");
@@ -111,7 +109,7 @@ public class NumberTextFieldUnitTest {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(2);
 
-        char decimalSeparator = getDecimalSeparator();
+        char decimalSeparator = NumberTextField.getDecimalSeparator();
 
         assertValidTextValue(field, "10000" + decimalSeparator + "00");
         assertValidTextValue(field, "100000" + decimalSeparator + "00");
@@ -127,7 +125,7 @@ public class NumberTextFieldUnitTest {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(2);
 
-        char decimalSeparator = getDecimalSeparator();
+        char decimalSeparator = NumberTextField.getDecimalSeparator();
 
         assertInvalidTextValue(field, "123" + decimalSeparator + "456");
         assertInvalidTextValue(field, "0" + decimalSeparator + "999");
@@ -142,7 +140,7 @@ public class NumberTextFieldUnitTest {
         field.setAllowNegative(false);
         field.setDecimalPlaces(2);
 
-        char decimalSeparator = getDecimalSeparator();
+        char decimalSeparator = NumberTextField.getDecimalSeparator();
 
         assertInvalidTextValue(field, "-123" + decimalSeparator + "45");
         assertInvalidTextValue(field, "-50");
@@ -157,7 +155,7 @@ public class NumberTextFieldUnitTest {
         field.setAllowNegative(true);
         field.setDecimalPlaces(2);
 
-        char decimalSeparator = getDecimalSeparator();
+        char decimalSeparator = NumberTextField.getDecimalSeparator();
 
         assertValidTextValue(field, "-123" + decimalSeparator + "45");
         assertValidTextValue(field, "-50");
@@ -170,7 +168,7 @@ public class NumberTextFieldUnitTest {
 
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(2);
-        char decimalSeparator = getDecimalSeparator();
+        char decimalSeparator = NumberTextField.getDecimalSeparator();
 
         assertInvalidTextValue(field, "12" + decimalSeparator + "34" + decimalSeparator + "56");
         assertInvalidTextValue(field, "12" + decimalSeparator + "34" + decimalSeparator + "56");
@@ -192,7 +190,7 @@ public class NumberTextFieldUnitTest {
         NumberTextField field = new NumberTextField();
         assertInvalidTextValue(field, "abc");
         assertInvalidTextValue(field, "123abc");
-        assertInvalidTextValue(field, "12" + getDecimalSeparator() + "3a4");
+        assertInvalidTextValue(field, "12" + NumberTextField.getDecimalSeparator() + "3a4");
     }
 
     @Test
@@ -204,7 +202,7 @@ public class NumberTextFieldUnitTest {
 
         assertValidTextValue(field, "123");
         assertValidTextValue(field, "0");
-        assertInvalidTextValue(field, "123" + getDecimalSeparator() + "45");
+        assertInvalidTextValue(field, "123" + NumberTextField.getDecimalSeparator() + "45");
     }
 
     @Test
@@ -212,7 +210,7 @@ public class NumberTextFieldUnitTest {
     void testValidatingInvalidDecimalSeparator() {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(0);
-        assertInvalidTextValue(field, "123" + getDecimalSeparator());
+        assertInvalidTextValue(field, "123" + NumberTextField.getDecimalSeparator());
     }
 
     @Test
@@ -222,7 +220,7 @@ public class NumberTextFieldUnitTest {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(2);
 
-        char decimalSeparator = getDecimalSeparator();
+        char decimalSeparator = NumberTextField.getDecimalSeparator();
 
         // Simulating progressive typing
         assertValidTextValue(field, "1");
@@ -243,7 +241,7 @@ public class NumberTextFieldUnitTest {
         field.setAllowNegative(true);
         field.setDecimalPlaces(2);
 
-        char decimalSeparator = getDecimalSeparator();
+        char decimalSeparator = NumberTextField.getDecimalSeparator();
 
         // Simulating progressive typing
         assertValidTextValue(field, "-");
@@ -264,7 +262,7 @@ public class NumberTextFieldUnitTest {
         field.setAllowNegative(true);
         field.setDecimalPlaces(2);
 
-        assertInvalidTextValue(field, "-" + getDecimalSeparator());
+        assertInvalidTextValue(field, "-" + NumberTextField.getDecimalSeparator());
     }
 
     @Test
@@ -287,7 +285,7 @@ public class NumberTextFieldUnitTest {
         field.setDecimalPlaces(2);
         field.setAllowNegative(false);
 
-        char decimalSeparator = getDecimalSeparator();
+        char decimalSeparator = NumberTextField.getDecimalSeparator();
 
         assertValidTextValue(field, "123" + decimalSeparator + "45");
         assertInvalidTextValue(field, "-123" + decimalSeparator + "45");
@@ -320,7 +318,7 @@ public class NumberTextFieldUnitTest {
     void testParsingValidDecimalWithMaxPlaces() {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(2);
-        verifyParsingValidInput(field, "123" + getDecimalSeparator() + "45", BigDecimal.valueOf(123.45));
+        verifyParsingValidInput(field, "123" + NumberTextField.getDecimalSeparator() + "45", BigDecimal.valueOf(123.45));
     }
 
     /*
@@ -333,7 +331,7 @@ public class NumberTextFieldUnitTest {
     void testParsingValidIncompleteDecimal() {
         NumberTextField field = new NumberTextField();
         field.setDecimalPlaces(1);
-        verifyParsingValidInput(field, "123" + getDecimalSeparator(), BigDecimal.valueOf(123));
+        verifyParsingValidInput(field, "123" + NumberTextField.getDecimalSeparator(), BigDecimal.valueOf(123));
     }
 
     @Test
@@ -377,7 +375,7 @@ public class NumberTextFieldUnitTest {
         field.setMinValue(-1);
 
         String expectedErrorMessage = "The value can't be lower than " + field.getMinValue();
-        verifyParsingInvalidInput(field, "-1" + getDecimalSeparator() + "01", expectedErrorMessage);
+        verifyParsingInvalidInput(field, "-1" + NumberTextField.getDecimalSeparator() + "01", expectedErrorMessage);
     }
 
     @Test
@@ -389,7 +387,7 @@ public class NumberTextFieldUnitTest {
         field.setMaxValue(1);
 
         String expectedErrorMessage = "The value can't be greater than " + field.getMaxValue();
-        verifyParsingInvalidInput(field, "1" + getDecimalSeparator() + "01", expectedErrorMessage);
+        verifyParsingInvalidInput(field, "1" + NumberTextField.getDecimalSeparator() + "01", expectedErrorMessage);
     }
 
     private void verifyParsingInvalidInput(NumberTextField field, String input, String expectedErrorMessage) {
@@ -405,9 +403,4 @@ public class NumberTextFieldUnitTest {
         }
     }
 
-    private char getDecimalSeparator() {
-        DecimalFormat format = (DecimalFormat) DecimalFormat.getInstance();
-        DecimalFormatSymbols symbols = format.getDecimalFormatSymbols();
-        return symbols.getDecimalSeparator();
-    }
 }
