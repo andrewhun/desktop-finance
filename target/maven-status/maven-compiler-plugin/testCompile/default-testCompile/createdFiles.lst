@@ -1,3 +1,7 @@
 com/andrewhun/finance/numbertextfield/NumberTextFieldUnitTest.class
+com/andrewhun/finance/user/PasswordTest.class
+com/andrewhun/finance/user/UserTest.class
 com/andrewhun/finance/AppTest.class
+com/andrewhun/finance/user/UserMapperTest.class
+com/andrewhun/finance/database/DatabaseExtension.class
 com/andrewhun/finance/numbertextfield/NumberTextFieldIntegrationTest.class

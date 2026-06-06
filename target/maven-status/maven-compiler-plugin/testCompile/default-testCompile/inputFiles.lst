@@ -1,3 +1,7 @@
 /home/circleci/project/src/test/java/com/andrewhun/finance/numbertextfield/NumberTextFieldUnitTest.java
+/home/circleci/project/src/test/java/com/andrewhun/finance/user/UserTest.java
 /home/circleci/project/src/test/java/com/andrewhun/finance/AppTest.java
+/home/circleci/project/src/test/java/com/andrewhun/finance/user/PasswordTest.java
+/home/circleci/project/src/test/java/com/andrewhun/finance/database/DatabaseExtension.java
 /home/circleci/project/src/test/java/com/andrewhun/finance/numbertextfield/NumberTextFieldIntegrationTest.java
+/home/circleci/project/src/test/java/com/andrewhun/finance/user/UserMapperTest.java

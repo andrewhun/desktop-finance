@@ -1,5 +1,13 @@
-com/andrewhun/finance/numbertextfield/NumberTextField.class
+com/andrewhun/finance/user/UserMapper.class
 com/andrewhun/finance/Launcher.class
+com/andrewhun/finance/database/DatabaseInitializer.class
+com/andrewhun/finance/database/DatabaseTemplate$RowMapper.class
+com/andrewhun/finance/database/DatabaseTemplate$StatementBinder.class
+com/andrewhun/finance/user/Password.class
 com/andrewhun/finance/App$1.class
+com/andrewhun/finance/numbertextfield/NumberTextField.class
+com/andrewhun/finance/database/DatabaseConnection.class
+com/andrewhun/finance/user/User.class
 com/andrewhun/finance/App.class
 com/andrewhun/finance/numbertextfield/NumberTextFieldException.class
+com/andrewhun/finance/database/DatabaseTemplate.class
