@@ -1,21 +1,22 @@
 package com.andrewhun.finance;
 
 import com.andrewhun.finance.database.DatabaseExtension;
+import com.andrewhun.finance.user.User;
+import com.andrewhun.finance.user.UserMapper;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.framework.junit5.ApplicationTest;
-import org.testfx.api.FxToolkit;
+
+import java.math.BigDecimal;
 
 @ExtendWith(DatabaseExtension.class)
-public class AppTest extends ApplicationTest {
+public class AppWhenUserIsLoggedInTest extends ApplicationTest {
 
-    protected Stage stage;
-
+    private Stage stage;
 
     @BeforeAll
     static void setUpHeadlessMode() {
-
         System.setProperty("testfx.robot", "glass");
         System.setProperty("testfx.headless", "true");
         System.setProperty("prism.order", "sw");
@@ -25,11 +26,17 @@ public class AppTest extends ApplicationTest {
     @Override
     public void start(Stage stage) throws Exception {
         this.stage = stage;
+        UserMapper userMapper = new UserMapper();
+        User user = User.register("alice", "password", BigDecimal.valueOf(10000));
+        userMapper.save(user);
+        user.login();
+        userMapper.save(user);
         new App().start(stage);
     }
 
     @Test
-    void testDisplayingLoginPage() {
-        Assertions.assertEquals("Welcome to Desktop Finance!", stage.getTitle());
+    @DisplayName("Should show main window when a user is already logged in")
+    void testDirectsToMainWindowWhenUserIsAlreadyLoggedIn() {
+        Assertions.assertEquals("Desktop Finance", stage.getTitle());
     }
 }

@@ -1,24 +1,14 @@
-/*
-* This file contains the App class, which is responsible for starting up the application
-* with the appropriate window shown to the user.
- */
 package com.andrewhun.finance;
 
-/**
- * Hello world!
- *
- */
 import com.andrewhun.finance.database.DatabaseInitializer;
-import com.andrewhun.finance.numbertextfield.NumberTextField;
+import com.andrewhun.finance.services.Page;
+import com.andrewhun.finance.services.WindowNavigator;
+import com.andrewhun.finance.user.UserMapper;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class App extends Application {
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -26,22 +16,13 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         new DatabaseInitializer().initialize();
-        primaryStage.setTitle("Hello World!");
-        NumberTextField field = new NumberTextField();
-        Button btn = new Button();
-        btn.setText("Validate Number");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
+        UserMapper userMapper = new UserMapper();
 
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println(field.numberProperty());
-            }
-        });
-
-        StackPane root = new StackPane();
-        root.getChildren().add(field);
-        root.getChildren().add(btn);
-        primaryStage.setScene(new Scene(root, 300, 250));
-        primaryStage.show();
+        if (userMapper.findLoggedIn().isPresent()) {
+            WindowNavigator.showWindow(primaryStage, Page.MAIN_WINDOW);
+        }
+        else {
+            WindowNavigator.showWindow(primaryStage, Page.LOGIN);
+        }
     }
 }

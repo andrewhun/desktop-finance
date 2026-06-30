@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="370.0" prefWidth="500.0"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.andrewhun.finance.registerpage.RegisterPageController">
+    <children>
+        <Label layoutX="207.0" layoutY="35.0" text="Register">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="175.0" layoutY="160.0" text="Coming soon..." />
+        <Hyperlink layoutX="190.0" layoutY="300.0" onAction="#handleBackToLogin" text="Back to Login" />
+    </children>
+</AnchorPane>
