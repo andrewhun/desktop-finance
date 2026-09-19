@@ -2,16 +2,22 @@ package com.andrewhun.finance;
 
 import com.andrewhun.finance.config.AppContext;
 import com.andrewhun.finance.config.StorageMode;
+import com.andrewhun.finance.database.DatabaseConfig;
 import com.andrewhun.finance.user.User;
 import com.andrewhun.finance.usermapper.UserMapperFactory;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.io.TempDir;
 import org.testfx.api.FxToolkit;
 
 import java.math.BigDecimal;
+import java.nio.file.Path;
 import java.util.concurrent.TimeoutException;
 
 public class AppTest {
+
+    @TempDir
+    Path tempDir;
 
     private Stage stage;
 
@@ -52,6 +58,7 @@ public class AppTest {
 
     private void launchApp() throws TimeoutException {
         AppContext.reset();
+        DatabaseConfig.setTestDirectory(tempDir);
         FxToolkit.setupApplication(() -> new App(StorageMode.IN_MEMORY));
     }
 
