@@ -39,7 +39,7 @@ public class PasswordTest {
     @DisplayName("Should verify correctly after reconstitution from stored hash and salt")
     void testReconstitutedPasswordVerifiesCorrectly() throws Exception {
         Password original = Password.of("myPassword");
-        Password reconstituted = Password.reconstitute(original.hash, original.salt);
+        Password reconstituted = new Password(original.hash, original.salt);
         assertTrue(reconstituted.verify("myPassword"));
     }
 }

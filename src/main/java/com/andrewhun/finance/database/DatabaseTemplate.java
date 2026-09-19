@@ -7,6 +7,16 @@ import java.util.Optional;
 
 public class DatabaseTemplate {
 
+    private final ConnectionProvider connectionProvider;
+
+    public DatabaseTemplate() {
+        this.connectionProvider = DatabaseConfig.databaseConnectionProvider();
+    }
+
+    ConnectionProvider getConnectionProvider() {
+        return this.connectionProvider;
+    }
+
     @FunctionalInterface
     public interface StatementBinder {
         void bind(PreparedStatement stmt) throws SQLException;
@@ -17,9 +27,9 @@ public class DatabaseTemplate {
         T map(ResultSet rs) throws SQLException;
     }
 
-    public static <T> Optional<T> queryOne(String sql, StatementBinder binder, RowMapper<T> mapper)
+    public <T> Optional<T> queryOne(String sql, StatementBinder binder, RowMapper<T> mapper)
             throws SQLException {
-        try (Connection conn = DatabaseConnection.getConnection();
+        try (Connection conn = connectionProvider.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             binder.bind(stmt);
             try (ResultSet rs = stmt.executeQuery()) {
@@ -28,13 +38,13 @@ public class DatabaseTemplate {
         }
     }
 
-    public static <T> Optional<T> queryOne(String sql, RowMapper<T> mapper) throws SQLException {
+    public <T> Optional<T> queryOne(String sql, RowMapper<T> mapper) throws SQLException {
         return queryOne(sql, stmt -> {}, mapper);
     }
 
-    public static <T> List<T> queryMany(String sql, StatementBinder binder, RowMapper<T> mapper)
+    public <T> List<T> queryMany(String sql, StatementBinder binder, RowMapper<T> mapper)
             throws SQLException {
-        try (Connection conn = DatabaseConnection.getConnection();
+        try (Connection conn = connectionProvider.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             binder.bind(stmt);
             try (ResultSet rs = stmt.executeQuery()) {
@@ -47,20 +57,22 @@ public class DatabaseTemplate {
         }
     }
 
-    public static <T> List<T> queryMany(String sql, RowMapper<T> mapper) throws SQLException {
+    public <T> List<T> queryMany(String sql, RowMapper<T> mapper) throws SQLException {
         return queryMany(sql, stmt -> {}, mapper);
     }
 
-    public static void update(String sql, StatementBinder binder) throws SQLException {
-        try (Connection conn = DatabaseConnection.getConnection();
+    public void update(String sql, StatementBinder binder) throws SQLException {
+
+        try (Connection conn = connectionProvider.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             binder.bind(stmt);
             stmt.executeUpdate();
         }
     }
 
-    public static int updateAndGetKey(String sql, StatementBinder binder) throws SQLException {
-        try (Connection conn = DatabaseConnection.getConnection();
+    public int updateAndGetKey(String sql, StatementBinder binder) throws SQLException {
+
+        try (Connection conn = connectionProvider.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             binder.bind(stmt);
             stmt.executeUpdate();
@@ -70,8 +82,9 @@ public class DatabaseTemplate {
         }
     }
 
-    public static void execute(String sql) throws SQLException {
-        try (Connection conn = DatabaseConnection.getConnection();
+    public void execute(String sql) throws SQLException {
+
+        try (Connection conn = connectionProvider.getConnection();
              Statement stmt = conn.createStatement()) {
             stmt.execute(sql);
         }

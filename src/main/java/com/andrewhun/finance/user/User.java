@@ -5,39 +5,28 @@ import java.security.GeneralSecurityException;
 
 public class User {
 
-    Integer id;
-    private final String username;
-    Password password;
+    private Integer id;
+    private String username;
+    private Password password;
     private BigDecimal balance;
     private boolean loggedIn;
 
-    private User(Integer id, String username, Password password, BigDecimal balance, boolean loggedIn) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.balance = balance;
-        this.loggedIn = loggedIn;
+    public User() {
     }
 
     public static User register(String username, String password, BigDecimal balance)
-            throws GeneralSecurityException {
-        return new User(null, username, Password.of(password), balance, false);
-    }
-
-    static User reconstitute(Integer id, String username, Password password, BigDecimal balance, boolean loggedIn) {
-        return new User(id, username, password, balance, loggedIn);
+            throws GeneralSecurityException
+    {
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(Password.of(password));
+        user.setBalance(balance);
+        user.setLoggedIn(false);
+        return user;
     }
 
     public boolean authenticate(String password) throws GeneralSecurityException {
         return this.password.verify(password);
-    }
-
-    public void login() {
-        loggedIn = true;
-    }
-
-    public void logout() {
-        loggedIn = false;
     }
 
     public boolean isNew() {
@@ -48,12 +37,32 @@ public class User {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getUsername() {
         return username;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Password getPassword() {
+        return password;
+    }
+
+    public void setPassword(Password password) {
+        this.password = password;
+    }
+
     public BigDecimal getBalance() {
         return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
     public void adjustBalance(BigDecimal amount) {
@@ -62,5 +71,17 @@ public class User {
 
     public boolean isLoggedIn() {
         return loggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+    }
+
+    public void login() {
+        loggedIn = true;
+    }
+
+    public void logout() {
+        loggedIn = false;
     }
 }

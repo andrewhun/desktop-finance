@@ -16,7 +16,7 @@ public final class Password {
     final byte[] hash;
     final byte[] salt;
 
-    private Password(byte[] hash, byte[] salt) {
+    public Password(byte[] hash, byte[] salt) {
         this.hash = hash;
         this.salt = salt;
     }
@@ -34,6 +34,7 @@ public final class Password {
     }
 
     private static byte[] hash(String password, byte[] salt) throws GeneralSecurityException {
+
         PBEKeySpec spec = new PBEKeySpec(password.toCharArray(), salt, ITERATIONS, KEY_LENGTH);
         try {
             return SecretKeyFactory.getInstance(ALGORITHM).generateSecret(spec).getEncoded();
@@ -43,8 +44,12 @@ public final class Password {
         }
     }
 
-    static Password reconstitute(byte[] hash, byte[] salt) {
-        return new Password(hash, salt);
+    public byte[] getHash() {
+        return hash;
+    }
+
+    public byte[] getSalt() {
+        return salt;
     }
 
     public boolean verify(String attemptedPassword) throws GeneralSecurityException {

@@ -14,7 +14,8 @@ public class WindowNavigator {
 
     public static void showWindow(Stage stage, Page page) throws IOException {
 
-        Parent root = FXMLLoader.load(WindowNavigator.class.getResource(page.getFxmlPath()));
+        FXMLLoader loader = new FXMLLoader(WindowNavigator.class.getResource(page.getFxmlPath()));
+        Parent root = loader.load();
         stage.setTitle(page.getTitle());
         adjustWindowContent(stage, root);
         stage.show();

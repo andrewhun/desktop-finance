@@ -1,7 +1,5 @@
 package com.andrewhun.finance.database;
 
-import java.io.IOException;
-import java.nio.file.Files;
 import java.sql.SQLException;
 
 public class DatabaseInitializer {
@@ -17,21 +15,15 @@ public class DatabaseInitializer {
         )
         """;
 
-    public void initialize() throws SQLException {
-        createDatabaseDirectory();
-        createUsersTable();
+    public static void initialize() throws SQLException {
+
+        DatabaseTemplate template = new DatabaseTemplate();
+        ConnectionProvider provider = template.getConnectionProvider();
+        provider.ensureStorageExists();
+        createUsersTable(template);
     }
 
-    private void createDatabaseDirectory() throws SQLException {
-        try {
-            Files.createDirectories(DatabaseConnection.getDatabaseDirectory());
-        }
-        catch (IOException e) {
-            throw new SQLException("Could not create database directory: " + e.getMessage(), e);
-        }
-    }
-
-    private void createUsersTable() throws SQLException {
-        DatabaseTemplate.execute(CREATE_USERS_TABLE);
+    private static void createUsersTable(DatabaseTemplate template) throws SQLException {
+        template.execute(CREATE_USERS_TABLE);
     }
 }

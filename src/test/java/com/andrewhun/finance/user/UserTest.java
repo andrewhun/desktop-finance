@@ -19,17 +19,6 @@ public class UserTest {
         assertNull(user.getId());
     }
 
-    // ==================== Reconstitution Tests ====================
-
-    @Test
-    @DisplayName("Should not be considered new after reconstitution")
-    void testReconstituteHasNonNullId() throws Exception {
-        Password password = Password.of("password");
-        User user = User.reconstitute(1, "alice", password, BigDecimal.valueOf(10000), false);
-        assertFalse(user.isNew());
-        assertEquals(1, user.getId());
-    }
-
     // ==================== Authentication Tests ====================
 
     @Test
@@ -51,6 +40,7 @@ public class UserTest {
     @Test
     @DisplayName("Should set logged in to true after login")
     void testLoginSetsLoggedInTrue() throws Exception {
+
         User user = User.register("alice", "password", BigDecimal.valueOf(10000));
         assertFalse(user.isLoggedIn());
         user.login();
@@ -60,6 +50,7 @@ public class UserTest {
     @Test
     @DisplayName("Should set logged in to false after logout")
     void testLogoutSetsLoggedInFalse() throws Exception {
+
         User user = User.register("alice", "password", BigDecimal.valueOf(10000));
         user.login();
         user.logout();
