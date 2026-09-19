@@ -26,9 +26,12 @@ public class DatabaseConfig {
 
     public static ConnectionProvider databaseConnectionProvider() {
 
-        Path databaseDirectory = productionDirectory();
+        Path databaseDirectory;
         if(AppContext.storageMode() == StorageMode.TEST_DATABASE) {
             databaseDirectory = testDirectory();
+        }
+        else {
+            databaseDirectory = productionDirectory();
         }
         return new SqliteConnectionProvider(databaseDirectory.resolve(DATABASE_FILE_NAME));
     }
