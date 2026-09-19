@@ -27,7 +27,8 @@ public class DatabaseConfig {
     public static ConnectionProvider databaseConnectionProvider() {
 
         Path databaseDirectory;
-        if(AppContext.storageMode() == StorageMode.TEST_DATABASE) {
+        if(AppContext.storageMode() == StorageMode.TEST_DATABASE ||
+                AppContext.storageMode() == StorageMode.IN_MEMORY) {
             databaseDirectory = testDirectory();
         }
         else {
